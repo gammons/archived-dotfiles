@@ -1,0 +1,3 @@
+brew install hub vim
+brew install forego
+brew install zsh-completions zsh-syntax-highlighting

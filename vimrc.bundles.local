@@ -1,0 +1,38 @@
+" Colors
+" Plug 'rakr/vim-one'
+Plug 'chriskempson/base16-vim'
+
+" Other plugins
+Plug 'christoomey/vim-rfactory'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'derekprior/vim-trimmer'
+Plug 'fishbullet/deoplete-ruby'
+Plug 'henrik/vim-indexed-search'
+Plug 'itchyny/lightline.vim'
+Plug 'itspriddle/vim-marked', { 'for': 'markdown' }
+Plug 'jgdavey/vim-blockle', { 'for' : 'ruby' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc --64' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/gv.vim'
+Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'junegunn/vim-oblique' | Plug 'junegunn/vim-pseudocl'
+Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby'} | Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire' | Plug 'kana/vim-textobj-user'
+Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby'}
+Plug 'kopischke/vim-fetch'
+Plug 'neomake/neomake'
+Plug 'scrooloose/nerdTree'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neco-vim'
+Plug 'skwp/greplace.vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-unimpaired'
+Plug 'wellle/tmux-complete.vim'
+Plug 'zchee/deoplete-zsh'
+Plug 'zchee/deoplete-zsh'
+
+" Experiments
