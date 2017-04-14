@@ -13,10 +13,6 @@ inoremap <S-Tab> <C-P>
 nnoremap <C-\> :TComment<CR>
 vnoremap <C-\> :TComment<CR>
 
-" Complete from open tmux panes (from @junegunn)
-inoremap <expr> <C-X><C-T> tmuxcomplete#trigger()
-inoremap <expr> <C-X><C-K> fzf#complete('cat /usr/share/dict/words')
-
 " Rehighlight after moving text in visual mode
 vnoremap < <gv
 vnoremap > >gv
@@ -43,9 +39,6 @@ nnoremap Q :echoe "Disabled Ex mode"<CR>
 nnoremap U :echoe "Disabled lowercasing"<CR>
 vnoremap U :echoe "Disabled lowercasing"<CR>
 
-" Yank to end of line, like C, D
-" nnoremap Y y$
-
 nnoremap <C-P> :Files<CR>
 
 " additional vim-rspec mapping
@@ -53,6 +46,7 @@ nnoremap <Leader>a :TestSuite<CR>
 " Edit another file in the same directory as the current file
 " uses expression to extract path from current file's path
 noremap <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
+noremap <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
 noremap <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 
 " Split a string and move the portion after the next comma to the next line
