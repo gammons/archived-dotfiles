@@ -18,14 +18,14 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Up and down by visual lines, not literal lines
-nnoremap gj j
-nnoremap gk k
-nnoremap j gj
-nnoremap k gk
-vnoremap gj j
-vnoremap gk k
-vnoremap j gj
-vnoremap k gk
+" nnoremap gj j
+" nnoremap gk k
+" nnoremap j gj
+" nnoremap k gk
+" vnoremap gj j
+" vnoremap gk k
+" vnoremap j gj
+" vnoremap k gk
 
 " Bind K to grep word under cursor
 nnoremap K :set nois<CR> :StaticAg <C-R><C-W><CR>

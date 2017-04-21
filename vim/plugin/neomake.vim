@@ -1,5 +1,5 @@
 " Run NeoMake on read and write operations
-autocmd! BufReadPost,BufWritePost * Neomake
+autocmd! BufWritePost * Neomake
 
 " Disable inherited syntastic
 let g:syntastic_mode_map = {
