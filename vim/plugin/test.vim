@@ -1,2 +1,2 @@
-let test#ruby#minitest#executable = "bundle exec rake test"
-let test#strategy = "dispatch"
+map <Leader>r :call RunCurrentSpecFile()<CR>
+map <Leader>t :call RunNearestSpec()<CR>
