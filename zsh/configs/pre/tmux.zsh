@@ -4,7 +4,7 @@ _not_inside_tmux() {
 
 ensure_tmux_is_running() {
   if _not_inside_tmux; then
-    $HOME/.bin/tat
+    tmux attach -t grant || tmux new -s grant
   fi
 }
 
