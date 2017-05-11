@@ -5,10 +5,10 @@ Plug 'chriskempson/base16-vim'
 " Other plugins
 Plug 'alvan/vim-closetag'
 Plug 'benjie/neomake-local-eslint.vim'
-Plug 'christoomey/vim-rfactory'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'derekprior/vim-trimmer'
 Plug 'fishbullet/deoplete-ruby'
+Plug 'fatih/vim-go'
 Plug 'henrik/vim-indexed-search'
 Plug 'itchyny/lightline.vim'
 Plug 'itspriddle/vim-marked', { 'for': 'markdown' }
@@ -39,5 +39,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'wellle/tmux-complete.vim'
 Plug 'zchee/deoplete-zsh'
+Plug 'thoughtbot/vim-rspec'
 
 " Experiments
