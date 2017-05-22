@@ -10,7 +10,7 @@ set matchtime=0   " Speed up escape after (){} chars
 set nofoldenable
 set noshowmode
 set nowrap
- set scrolloff=0
+set scrolloff=0
 set synmaxcol=250 " Don't try to highlight lines longer than 250 characters.
 set smartcase     " searches are case-sensitive if a capital is in term
 set ttimeout      " Fast timeout
@@ -22,10 +22,14 @@ set winwidth=84
 set winheight=10
 set winminheight=5
 set wrap
+
 " Use old regex engine because it's faster?
 set re=1
 " Stop highlighting if it takes more than a second
 set redrawtime=1000
+
+" Thanks but no thanks
+set textwidth=999
 
 let g:one_allow_italics = 1
 
