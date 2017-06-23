@@ -1,0 +1,44 @@
+alias realias='source ~/.aliases'
+alias df='cd ~/dotfiles-local'
+alias ck='cd ~/local_code/convertkit'
+
+alias l="ls -lart"
+alias g="git status"
+
+alias n="cd ~/notes"
+
+alias gd="git diff"
+alias gdc="gd --cached"
+alias gc="git commit"
+alias gca="git commit --all"
+alias gco="git checkout"
+
+alias tmux="tmux -2"
+alias u="CACHE=true uni"
+alias pr="hub pull-request"
+alias be="bundle exec"
+alias m="ncmpcpp"
+alias r="ranger"
+alias t="todolist"
+alias tc="todolist l agenda by context"
+alias td="todolist l agenda by context"
+alias tp="todolist l agenda by project"
+alias tl="todolist l by project"
+alias w="wunderline"
+alias wa="wunderline add"
+alias j="fg %-"
+alias dev="tmuxinator development"
+alias pc="tmuxinator console"
+alias ud="tmuxinator ud"
+#alias v='nvim'
+#alias vim='nvim'
+alias s="tmux attach-session -t '$USER' || tmux new-session -s '$USER'"
+alias tm="tmuxinator grant"
+alias spotify="spotify --force-device-scale-factor=1.5 %U"
+alias f="fzf-tmux"
+
+alias db_connect_to_master='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_MASTER_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
+alias db_connect_to_slave='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
+alias db_connect_to_staging='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_STAGING_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
+alias db_connect_to_blue='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_BLUE_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
+alias prod_console="heroku run rails c -a ckapp-prod --size=performance-l"
