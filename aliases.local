@@ -36,6 +36,7 @@ alias s="tmux attach-session -t '$USER' || tmux new-session -s '$USER'"
 alias tm="tmuxinator grant"
 alias spotify="spotify --force-device-scale-factor=1.5 %U"
 alias f="fzf-tmux"
+alias fs="foreman start -f Procfile.dev"
 
 alias db_connect_to_master='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_MASTER_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias db_connect_to_slave='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
