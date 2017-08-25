@@ -1,6 +1,7 @@
 alias realias='source ~/.aliases'
-alias df='cd ~/dotfiles-local'
+alias dots='cd ~/dotfiles-local'
 alias ck='cd ~/local_code/convertkit'
+alias al='vim ~/dotfiles-local/aliases.local'
 
 alias l="ls -lart"
 alias g="git status"
