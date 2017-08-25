@@ -11,7 +11,6 @@ Plug 'fishbullet/deoplete-ruby'
 Plug 'fatih/vim-go'
 Plug 'henrik/vim-indexed-search'
 Plug 'itchyny/lightline.vim'
-Plug 'itspriddle/vim-marked', { 'for': 'markdown' }
 Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }
 Plug 'jgdavey/vim-blockle', { 'for' : 'ruby' }
 Plug 'jiangmiao/auto-pairs'
