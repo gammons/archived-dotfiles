@@ -23,6 +23,8 @@ set winheight=10
 set winminheight=5
 set wrap
 
+let g:ale_emit_conflict_warnings = 0
+
 " Use old regex engine because it's faster?
 set re=1
 " Stop highlighting if it takes more than a second
