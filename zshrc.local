@@ -3,6 +3,7 @@ export TERM=xterm-color
 source ~/dotfiles-local/antigen.zsh
 
 antigen use oh-my-zsh
+antigen bundle vi-mode
 antigen bundle ssh-agent
 antigen theme robbyrussell
 antigen apply

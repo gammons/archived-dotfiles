@@ -24,14 +24,12 @@ alias t="todolist"
 alias tc="todolist l agenda by context"
 alias td="todolist l agenda by context"
 alias tp="todolist l agenda by project"
-alias tl="todolist l by project"
-alias w="wunderline"
-alias wa="wunderline add"
+alias tl="todolist l agenda by project"
 alias j="fg %-"
 alias dev="tmuxinator development"
 alias pc="tmuxinator console"
 alias ud="tmuxinator ud"
-#alias v='nvim'
+alias v='vim'
 #alias vim='nvim'
 alias s="tmux attach-session -t '$USER' || tmux new-session -s '$USER'"
 alias tm="tmuxinator grant"
@@ -41,6 +39,7 @@ alias fs="foreman start -f Procfile.dev"
 
 alias db_connect_to_master='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_MASTER_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias db_connect_to_slave='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
+alias db_connect_to_slave2='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE_URL_2 --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias db_connect_to_staging='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_STAGING_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias db_connect_to_blue='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_BLUE_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias prod_console="heroku run rails c -a ckapp-prod --size=performance-l"
