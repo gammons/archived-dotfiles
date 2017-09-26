@@ -7,6 +7,8 @@ alias l="ls -lart"
 alias g="git status"
 
 alias n="cd ~/notes"
+alias nc="cd ~/notes/ck"
+alias cn="cd ~/notes/ck"
 
 alias gd="git diff"
 alias gdc="gd --cached"
