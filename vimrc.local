@@ -67,3 +67,5 @@ nnoremap <cr> :nohlsearch<cr>
 map <Leader>co :TComment<CR>
 
 autocmd! BufWritePost * Neomake
+
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
