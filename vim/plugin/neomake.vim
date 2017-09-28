@@ -10,7 +10,7 @@ let g:syntastic_mode_map = {
 let g:neomake_serialize = 1
 
 let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_typescript_enabled_makers = ['tslint', 'tsc']
+let g:neomake_typescript_enabled_makers = ['tsc', 'tslint']
 let g:neomake_jsx_enabled_makers = ['eslint']
 
 let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
