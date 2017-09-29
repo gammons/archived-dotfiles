@@ -7,3 +7,5 @@ antigen bundle vi-mode
 antigen bundle ssh-agent
 antigen theme robbyrussell
 antigen apply
+
+setopt no_auto_remove_slash
