@@ -168,4 +168,9 @@ hide_edge_borders both
 ############################
 
 bindsym $mod+c exec --no-startup-id zenity --calendar
+bindsym --release F12 exec --no-startup-id spectacle
 
+
+for_window [class="zoom"] floating enable, move container to workspace 2
+for_window [class="Slack"] move container to workspace 2
+for_window [class="Spotify"] move container to workspace 3
