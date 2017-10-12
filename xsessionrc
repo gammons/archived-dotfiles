@@ -1,2 +1,2 @@
-xset r rate 200 25
+xset r rate 200 35
 [[ -f ~/.Xmodmap  ]] && xmodmap ~/.Xmodmap
