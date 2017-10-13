@@ -155,6 +155,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id dropbox start
 exec --no-startup-id xscreensaver
 exec_always --no-startup-id dunst -config $HOME/.dunstrc
+exec_always --no-startup-id nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceCompositionPipeline = On   }"
 
 ############################
 # Further customization
@@ -175,3 +176,4 @@ bindsym --release F12 exec --no-startup-id spectacle
 for_window [class="zoom"] floating enable
 for_window [class="Slack"] move container to workspace 2
 for_window [class="Spotify"] move container to workspace 3
+#for_window [class="VirtualBox"] floating enable
