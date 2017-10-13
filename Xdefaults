@@ -1,4 +1,4 @@
-; prevents an absolutely enormous cursor in urxvt
+: prevents an absolutely enormous cursor in urxvt
 Xcursor.size: 16
 
 xvt.termName:         rxvt-256color
