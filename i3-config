@@ -167,7 +167,7 @@ hide_edge_borders both
 
 bindsym $mod+c exec --no-startup-id zenity --calendar
 bindsym --release F12 exec --no-startup-id spectacle
-bindsym $mod+y scratchpad show; move position center
+bindsym $mod+u scratchpad show; move position center
 
 ############################
 # Window behaviors
