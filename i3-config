@@ -150,7 +150,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id dropbox start
 exec --no-startup-id xscreensaver
 exec_always --no-startup-id dunst -config $HOME/.dunstrc
-exec_always --no-startup-id nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceCompositionPipeline = On   }"
+exec --no-startup-id nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceCompositionPipeline = On   }"
 
 ############################
 # Further customization
@@ -167,23 +167,26 @@ hide_edge_borders both
 
 bindsym $mod+c exec --no-startup-id zenity --calendar
 bindsym --release F12 exec --no-startup-id spectacle
-bindsym $mod+u scratchpad show; move position center
+
+bindsym $mod+u [instance="dropdown"] scratchpad show
+bindsym $mod+i [class="zoom"] scratchpad show
 
 ############################
 # Window behaviors
 ############################
 
-for_window [class="zoom"] floating enable
-for_window [class="Slack"] move container to workspace 2
-for_window [class="Spotify"] move container to workspace 3
+for_window [class="zoom"] move scratchpad
 for_window [class="VirtualBox"] floating enable
+
+assign [class="Slack"] 2
+assign [class="Spotify"] 3
 
 ############################
 # Scratchpad
 ############################
 
 for_window [instance="dropdown"] floating enable
-for_window [instance="dropdown"] resize set 625 400
+for_window [instance="dropdown"] resize set 925 700
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
-exec --no-startup-id urxvt -name dropdown
+exec_always --no-startup-id urxvt -name dropdown
