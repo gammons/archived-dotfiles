@@ -30,7 +30,8 @@ modules-right = cpuload temperature cpu date powermenu
 
 tray-position = right
 tray-padding = 2
-tray-background = #66333333
+;tray-background =
+tray-transparent = true
 
 
 ; MODULES
