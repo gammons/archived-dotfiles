@@ -17,4 +17,5 @@ URxvt.borderless: true
 URxvt*externalBorder:     0
 URxvt*internalBorder:     0
 
-
+URxvt.transparent:   true
+URxvt.shading:       20
