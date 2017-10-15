@@ -171,7 +171,7 @@ bindsym --release F12 exec --no-startup-id spectacle
 
 bindsym $mod+u [instance="dropdown"] scratchpad show
 bindsym $mod+i [class="zoom"] scratchpad show
-bindsym $mod+f exec dolphin
+bindsym $mod+f exec nautilus
 
 ############################
 # Window behaviors
