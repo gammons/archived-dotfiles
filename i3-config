@@ -151,6 +151,7 @@ exec --no-startup-id dropbox start
 exec --no-startup-id xscreensaver
 exec_always --no-startup-id dunst -config $HOME/.dunstrc
 exec --no-startup-id nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceCompositionPipeline = On   }"
+exec_always --no-startup-id $HOME/dotfiles-loca/compton.sh
 
 ############################
 # Further customization
@@ -186,10 +187,10 @@ assign [class="Spotify"] 3
 # gaps
 ############################
 
-gaps inner 15
-gaps outer 15
+gaps inner 30
+gaps outer 10
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 0
 
 ############################
 # Scratchpad
@@ -199,4 +200,4 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 925 700
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
-exec_always --no-startup-id urxvt -name dropdown
+exec --no-startup-id urxvt -name dropdown
