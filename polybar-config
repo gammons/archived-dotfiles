@@ -120,13 +120,8 @@ time-alt = %H:%M:%S
 
 label = %date% %time%
 format =    <label>
-;format-background = #ddffffff
-format-background = #88000000
-;format-foreground = #333
 
 format-padding = 5
-
-;label-padding = 5
 
 ;######################################################################
 ; padding module
@@ -209,9 +204,6 @@ exec = /home/gamehelp16/Documents/np
 interval = 1
 
 format = <label>
-;format-background = #dd00c6e0
-;format-foreground = #fff
-;format-padding = 4
 
 label = %output%
 
