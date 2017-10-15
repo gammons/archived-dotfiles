@@ -170,6 +170,8 @@ bindsym $mod+c exec --no-startup-id zenity --calendar
 bindsym --release F12 exec --no-startup-id spectacle
 
 bindsym $mod+u [instance="dropdown"] scratchpad show
+bindsym $mod+shift+u exec --no-startup-id urxvt -name dropdown
+
 bindsym $mod+i [class="zoom"] scratchpad show
 bindsym $mod+f exec nautilus
 
