@@ -69,7 +69,7 @@ bindsym $mod+Shift+g split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -170,6 +170,7 @@ bindsym --release F12 exec --no-startup-id spectacle
 
 bindsym $mod+u [instance="dropdown"] scratchpad show
 bindsym $mod+i [class="zoom"] scratchpad show
+bindsym $mod+f exec dolphin
 
 ############################
 # Window behaviors
