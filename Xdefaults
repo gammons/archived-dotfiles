@@ -2,7 +2,7 @@
 Xcursor.size: 16
 
 xvt.termName:         rxvt-256color
-URxvt.font:             xft:inconsolata:size=15
+URxvt.font:             xft:inconsolata:size=20
 URxvt.letterSpace:      -1
 
 URxvt.scrollBar: false
