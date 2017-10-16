@@ -43,6 +43,9 @@ alias f="fzf-tmux"
 alias fs="foreman start -f Procfile.dev"
 alias ic="vim ~/.config/i3/config"
 alias gp="git pull; git push"
+alias pull="git pull"
+alias push="git push"
+alias hps="heroku ps -a ckapp-prod"
 
 alias db_connect_to_master='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_MASTER_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias db_connect_to_slave='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
