@@ -179,7 +179,8 @@ bindsym $mod+f exec nautilus
 # Window behaviors
 ############################
 
-for_window [class="zoom"] move scratchpad
+for_window [class="zoom"] sticky enable
+for_window [class="zoom"] floating enable
 for_window [class="VirtualBox"] floating enable
 
 assign [class="Slack"] 2
