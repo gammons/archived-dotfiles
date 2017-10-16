@@ -5,6 +5,8 @@ xvt.termName:         rxvt-256color
 URxvt.font:             xft:inconsolata:size=15
 URxvt.letterSpace:      -1
 
+URxvt.cursorBlink: 1
+
 URxvt.scrollBar: false
 URxvt*scrollBar_floating: false
 URxvt.thickness: 0
