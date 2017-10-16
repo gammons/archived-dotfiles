@@ -52,7 +52,8 @@ endif
 
 set background=dark " for the dark version
 " set background=light " for the light version
-colorscheme base16-default-dark
+" colorscheme flattown
+colorscheme gruvbox
 
 " Highlight VCS conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
@@ -69,3 +70,6 @@ map <Leader>co :TComment<CR>
 autocmd! BufWritePost * Neomake
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
+
+hi Normal ctermbg=none
+hi NonText ctermbg=none
