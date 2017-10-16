@@ -152,6 +152,7 @@ exec --no-startup-id xscreensaver
 exec_always --no-startup-id dunst -config $HOME/.dunstrc
 exec --no-startup-id nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceCompositionPipeline = On   }"
 exec_always --no-startup-id $HOME/dotfiles-local/compton.sh
+exec --no-startup-id syndaemon -i 0.5 -t -K -R
 
 ############################
 # Further customization
