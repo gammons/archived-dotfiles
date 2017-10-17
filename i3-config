@@ -153,6 +153,9 @@ exec_always --no-startup-id dunst -config $HOME/.dunstrc
 exec --no-startup-id nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceCompositionPipeline = On   }"
 exec_always --no-startup-id $HOME/dotfiles-local/compton.sh
 exec --no-startup-id syndaemon -i 0.5 -t -K -R
+exec --no-startup-id synclient MaxTapTime=0 PalmDetect=1 TapButton1=0 TapButton2=0 TapButton3=0 HorizTwoFingerScroll=1
+exec --no-startup-id nm-applet
+exec --no-startup-id $HOME/dotfiles-local/wallpaper.sh
 
 ############################
 # Further customization
@@ -199,8 +202,8 @@ assign [class="Spotify"] 3
 # gaps
 ############################
 
-gaps inner 30
-gaps outer 10
+gaps inner 12
+gaps outer 12
 
 set $mode_gaps Toggle gaps: (1)OFF (2)NORMAL (3)HUGE
 mode "$mode_gaps" {
