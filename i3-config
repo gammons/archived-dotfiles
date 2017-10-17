@@ -3,7 +3,7 @@
 ############################
 
 set $mod Mod4
-set $term gnome-terminal
+set $term urxvt
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -170,17 +170,26 @@ hide_edge_borders both
 bindsym $mod+c exec --no-startup-id zenity --calendar
 bindsym --release F12 exec --no-startup-id spectacle
 
-bindsym $mod+u [instance="dropdown"] scratchpad show
+bindsym $mod+u [instance="dropdown"] scratchpad show; move position center
 bindsym $mod+shift+u exec --no-startup-id urxvt -name dropdown
 
 bindsym $mod+i [class="zoom"] scratchpad show
 bindsym $mod+f exec nautilus
 
 ############################
+# Music control
+############################
+
+bindsym $mod+F7 exec --no-startup-id playerctl previous
+bindsym $mod+F8 exec --no-startup-id playerctl play-pause
+bindsym $mod+F9 exec --no-startup-id playerctl next
+
+############################
 # Window behaviors
 ############################
 
-for_window [class="zoom"] move scratchpad
+for_window [class="zoom"] sticky enable
+for_window [class="zoom"] floating enable
 for_window [class="VirtualBox"] floating enable
 
 assign [class="Slack"] 2
@@ -192,6 +201,18 @@ assign [class="Spotify"] 3
 
 gaps inner 30
 gaps outer 10
+
+set $mode_gaps Toggle gaps: (1)OFF (2)NORMAL (3)HUGE
+mode "$mode_gaps" {
+  bindsym 1 mode "none", gaps inner all set 0, gaps outer all set 0
+  bindsym 2 mode "bigger", gaps inner all set 30, gaps outer all set 10
+  bindsym 3 mode "huge", gaps inner all set 160, gaps outer all set 10
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+bindsym $mod+g mode "$mode_gaps"
+
 
 for_window [class="^.*"] border pixel 0
 
