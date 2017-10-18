@@ -1,5 +1,5 @@
 [options]
-font = Inconsolata 19
+font = Inconsolata 17
 
 [colors]
 background = rgba(0,0,0,0.90)
