@@ -1,0 +1,5 @@
+[options]
+font = Inconsolata 19
+
+[colors]
+background = rgba(0,0,0,0.90)
