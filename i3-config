@@ -73,7 +73,7 @@ bindsym $mod+shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+# bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -174,6 +174,8 @@ bindsym $mod+shift+u exec --no-startup-id urxvt -name dropdown
 
 bindsym $mod+i [class="zoom"] scratchpad show
 bindsym $mod+f exec nautilus
+
+bindsym $mod+w exec --no-startup-id $HOME/dotfiles-local/wallpaper.sh
 
 ############################
 # Music control
