@@ -239,8 +239,12 @@ menu-2-0-padding = 3
 [module/cpuload]
 type = custom/script
 interval = 5
-format-underline = #f90000
 exec = ~/.config/polybar/cpuload.sh
+
+[module/weather]
+type = custom/script
+interval = 200
+exec = ~/.config/polybar/polyweather
 
 [module/mpd]
 type = internal/mpd
