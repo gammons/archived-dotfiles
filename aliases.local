@@ -47,6 +47,8 @@ alias pull="git pull"
 alias push="git push"
 alias hps="heroku ps -a ckapp-prod"
 
+alias w="$HOME/notes/ck/w"
+
 alias db_connect_to_master='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_MASTER_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias db_connect_to_slave='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias db_connect_to_slave2='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE_URL_2 --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
