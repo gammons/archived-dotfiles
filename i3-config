@@ -3,7 +3,7 @@
 ############################
 
 set $mod Mod4
-set $term urxvt
+set $term termite
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -34,7 +34,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+p exec rofi -show run
+bindsym $mod+p exec rofi -config $HOME/.config/rofi/android_notification.theme -show run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need thatLJKJK # installed. # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
@@ -73,7 +73,7 @@ bindsym $mod+shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+# bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -153,7 +153,7 @@ exec_always --no-startup-id dunst -config $HOME/.dunstrc
 exec --no-startup-id nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceCompositionPipeline = On   }"
 exec_always --no-startup-id $HOME/dotfiles-local/compton.sh
 exec --no-startup-id syndaemon -i 0.5 -t -K -R
-exec --no-startup-id synclient MaxTapTime=0 PalmDetect=1 TapButton1=0 TapButton2=0 TapButton3=0 HorizTwoFingerScroll=1
+exec --no-startup-id synclient MaxTapTime=0 PalmDetect=1 TapButton1=0 TapButton2=0 TapButton3=0 HorizTwoFingerScroll=1 HorizScrollDelta=-247 VertScrollDelta=-247
 exec --no-startup-id nm-applet
 exec --no-startup-id $HOME/dotfiles-local/wallpaper.sh
 
@@ -182,6 +182,11 @@ bindsym $mod+shift+u exec --no-startup-id urxvt -name dropdown
 bindsym $mod+i [class="zoom"] scratchpad show
 bindsym $mod+f exec nautilus
 
+bindsym $mod+w exec --no-startup-id $HOME/dotfiles-local/wallpaper.sh
+
+############################
+# Music control
+############################
 
 # Brightness
 bindsym $mod+F1 exec --no-startup-id ruby $HOME/dotfiles-local/brightness dec
