@@ -27,7 +27,6 @@ class Polyweather
 
   def to_s
     puts "#{icon} #{temperature}\u{00B0}F #{summary}"
-    puts icon
   end
 
   def temperature
@@ -40,19 +39,15 @@ class Polyweather
 
   def icon
     case currently["icon"]
-    when "clear-day" then "\uf00d"
-    when "clear-night" then "\u{f00d}"
-    when "rain" then "\u{f019}"
-    when "snow" then "\u{f01b}"
-    when "sleet" then "\u{f0b5}"
+    when "clear-day" then "\uf185"
+    when "clear-night" then "\uf185"
+    when "rain" then "\u{f2cc}"
+    when "snow" then "\u{f2dc}"
+    when "sleet" then "\u{f2dc}"
     when "wind" then "\u{f050}"
-    when "fog" then "\u{f014}"
-    when "cloudy" then "\u{f013}"
-    when "partly-cloudy-day" then "\u{f002}"
-    when "partly-cloudy-night" then "\u{f086}"
-    when "hail" then "\u{f015}"
-    when "thunderstorm" then "\u{f01e}"
-    when "tornado" then "\u{f056}"
+    when "cloudy" then "\u{f0c2}"
+    when "partly-cloudy-day" then "\u{f2cc}\u{f002}"
+    when "partly-cloudy-night" then "\u{f2cc}\u{f086}"
     end
   end
 
