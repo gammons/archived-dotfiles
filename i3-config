@@ -156,6 +156,7 @@ exec --no-startup-id syndaemon -i 0.5 -t -K -R
 exec --no-startup-id synclient MaxTapTime=0 PalmDetect=1 TapButton1=0 TapButton2=0 TapButton3=0 HorizTwoFingerScroll=1 HorizScrollDelta=-247 VertScrollDelta=-247
 exec --no-startup-id nm-applet
 exec --no-startup-id $HOME/dotfiles-local/wallpaper.sh
+exec --no-startup-id redshift-gtk
 
 # load the previously saved brightness
 exec --no-startup-id $HOME/dotfiles-local/brightness
