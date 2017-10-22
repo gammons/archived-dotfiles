@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 require 'net/http'
 require 'uri'
 require 'json'
@@ -61,6 +59,10 @@ class Polyweather
   attr_reader :api_key, :lat, :long, :result
 end
 
-p = Polyweather.new("5b6b96cc1b7dbdd2db851d95f8f2d3e9", "40.0756496", "-75.299668")
-p.fetch
-puts p.to_s
+begin
+  p = Polyweather.new("5b6b96cc1b7dbdd2db851d95f8f2d3e9", "40.0756496", "-75.299668")
+  p.fetch
+  puts p.to_s
+rescue
+  nil
+end

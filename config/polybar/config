@@ -27,7 +27,7 @@ font-2 = siji:pixelsize=10;0
 
 modules-left = i3
 modules-center = weather
-modules-right = cpuload temperature cpu battery date powermenu
+modules-right = power_now cpuload temperature cpu battery date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -244,7 +244,12 @@ exec = ~/.config/polybar/cpuload.sh
 [module/weather]
 type = custom/script
 interval = 200
-exec = ~/.config/polybar/polyweather
+exec = /opt/rubies/ruby-2.4.2/bin/ruby ~/.config/polybar/polyweather.rb
+
+[module/power_now]
+type = custom/script
+interval = 5
+exec = ~/.config/polybar/power_now
 
 [module/mpd]
 type = internal/mpd
