@@ -2,6 +2,7 @@
 font = Inconsolata 18
 cursor_blink = system
 cursor_shape = block
+scrollback_lines = 0
 
 [colors]
 background = rgba(0,0,0,0.90)
