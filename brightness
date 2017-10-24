@@ -5,7 +5,7 @@ require "pstore"
 
 class Brightness
   INITIAL_BRIGHTNESS = 500
-  INCREMENT = 25
+  INCREMENT = 150
 
   def initialize
     @store = PStore.new("#{ENV['HOME']}/.config/brightness.pstore")
@@ -36,7 +36,7 @@ class Brightness
 
   def transition_brightness(old, new)
     (old > new ? old.downto(new) : (old..new)).each do |n|
-      system "echo #{n} > /sys/class/backlight/intel_backlight/brightness"
+      system("echo #{n} > /sys/class/backlight/intel_backlight/brightness")
       sleep 0.001
     end
   end
