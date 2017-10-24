@@ -151,7 +151,7 @@ exec --no-startup-id dropbox start
 exec --no-startup-id xscreensaver
 exec_always --no-startup-id dunst -config $HOME/.dunstrc
 exec --no-startup-id nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceCompositionPipeline = On   }"
-exec_always --no-startup-id $HOME/dotfiles-local/compton.sh
+#exec_always --no-startup-id $HOME/dotfiles-local/compton.sh
 
 ############################
 # Further customization
@@ -215,7 +215,7 @@ mode "$mode_gaps" {
 bindsym $mod+g mode "$mode_gaps"
 
 
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 3
 
 ############################
 # Scratchpad
