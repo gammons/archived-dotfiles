@@ -17,15 +17,12 @@ class Polyweather
   end
 
   def currently
-    # {"time"=>1508405747, "summary"=>"Partly Cloudy", "icon"=>"partly-cloudy-night", "nearestStormDistance"=>299, "nearestStormBearing"=>198, "precipIntensity"=>0, "precipProbability"=>0, "temperature"=>46.06, "apparentTemperature"=>46.06, "dewPoint"=>43.31, "humidity"=>0.9, "pressure"=>1024.91, "windSpeed"=>1.03, "windGust"=>2.32, "windBearing"=>224, "cloudCover"=>0.29, "uvIndex"=>0, "visibility"=>10, "ozone"=>295.22}
-
     raise RuntimeError("Call fetch before calling currently") if result.nil?
     result["currently"]
   end
 
   def to_s
-    puts "#{icon} #{temperature}\u{00B0}F #{summary}"
-    puts icon
+    puts "#{icon}\t #{temperature}\u{00B0}F\t #{summary}"
   end
 
   def temperature
@@ -38,19 +35,15 @@ class Polyweather
 
   def icon
     case currently["icon"]
-    when "clear-day" then "\uf00d"
-    when "clear-night" then "\u{f00d}"
-    when "rain" then "\u{f019}"
-    when "snow" then "\u{f01b}"
-    when "sleet" then "\u{f0b5}"
+    when "clear-day" then "\uf185"
+    when "clear-night" then "\uf185"
+    when "rain" then "\u{f2cc}"
+    when "snow" then "\u{f2dc}"
+    when "sleet" then "\u{f2dc}"
     when "wind" then "\u{f050}"
-    when "fog" then "\u{f014}"
-    when "cloudy" then "\u{f013}"
-    when "partly-cloudy-day" then "\u{f002}"
-    when "partly-cloudy-night" then "\u{f086}"
-    when "hail" then "\u{f015}"
-    when "thunderstorm" then "\u{f01e}"
-    when "tornado" then "\u{f056}"
+    when "cloudy" then "\u{f0c2}"
+    when "partly-cloudy-day" then "\u{f2cc}\u{f002}"
+    when "partly-cloudy-night" then "\u{f2cc}\u{f086}"
     end
   end
 

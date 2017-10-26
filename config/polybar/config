@@ -32,7 +32,7 @@ modules-right = power_now cpuload temperature cpu battery date powermenu
 tray-position = right
 tray-padding = 2
 ;tray-background =
-tray-transparent = true
+;tray-transparent = true
 
 
 ; MODULES

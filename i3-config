@@ -228,7 +228,7 @@ mode "$mode_gaps" {
 bindsym $mod+g mode "$mode_gaps"
 
 
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 3
 
 ############################
 # Scratchpad
