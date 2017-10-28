@@ -171,6 +171,13 @@ focus_follows_mouse no
 hide_edge_borders both
 
 ############################
+# My vars
+############################
+
+set $brightness_increase /opt/rubies/ruby-2.4.2/bin/ruby /usr/local/bin/brightness inc > /tmp/bri 2>&1
+set $brightness_decrease /opt/rubies/ruby-2.4.2/bin/ruby /usr/local/bin/brightness dec > /tmp/bri 2>&1
+
+############################
 # My binds
 ############################
 
@@ -190,8 +197,8 @@ bindsym $mod+w exec --no-startup-id $HOME/dotfiles-local/wallpaper.sh
 ############################
 
 # Brightness
-bindsym $mod+F1 exec /opt/rubies/ruby-2.4.2/bin/ruby /usr/local/bin/brightness dec > /tmp/bri 2>&1
-bindsym $mod+F2 exec /opt/rubies/ruby-2.4.2/bin/ruby /usr/local/bin/brightness inc > /tmp/bri 2>&1
+bindsym $mod+F1 exec $brightness_decrease
+bindsym $mod+F2 exec $brightness_increase
 
 # Music control
 bindsym $mod+F7 exec --no-startup-id playerctl previous
