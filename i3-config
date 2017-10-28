@@ -187,14 +187,13 @@ bindsym --release F12 exec --no-startup-id spectacle
 bindsym $mod+u [instance="dropdown"] scratchpad show; move position center
 bindsym $mod+shift+u exec --no-startup-id urxvt -name dropdown
 
+bindsym $mod+m [instance="math"] scratchpad show; move position center
+bindsym $mod+shift+m exec --no-startup-id urxvt -name math -fn "xft:mono:pixelsize=24"
+
 bindsym $mod+i [class="zoom"] scratchpad show
 bindsym $mod+f exec thunar
 
 bindsym $mod+w exec --no-startup-id $HOME/dotfiles-local/wallpaper.sh
-
-############################
-# Music control
-############################
 
 # Brightness
 bindsym $mod+F1 exec $brightness_decrease
@@ -246,3 +245,9 @@ for_window [instance="dropdown"] resize set 925 700
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
 exec --no-startup-id urxvt -name dropdown
+
+for_window [instance="math"] floating enable
+for_window [instance="math"] resize set 800 300
+for_window [instance="math"] move position center
+for_window [instance="math"] move scratchpad
+exec --no-startup-id urxvt -name math -fn "xft:mono:pixelsize=24" -e irb
