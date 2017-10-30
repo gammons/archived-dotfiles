@@ -176,6 +176,7 @@ bindsym $mod+i [class="zoom"] scratchpad show
 bindsym $mod+f exec nautilus
 
 bindsym $mod+w exec --no-startup-id $HOME/dotfiles-local/wallpaper.sh
+bindsym $mod+q workspace back_and_forth
 
 ############################
 # Music control
