@@ -69,7 +69,7 @@ bindsym $mod+Shift+g split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+shift+f fullscreen toggle
+bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -191,7 +191,7 @@ bindsym $mod+m [instance="math"] scratchpad show; move position center
 bindsym $mod+shift+m exec --no-startup-id urxvt -name math -fn "xft:mono:pixelsize=24"
 
 bindsym $mod+i [class="zoom"] scratchpad show
-bindsym $mod+f exec thunar
+bindsym $mod+Shift+f exec thunar
 
 bindsym $mod+w exec --no-startup-id $HOME/dotfiles-local/wallpaper.sh
 
