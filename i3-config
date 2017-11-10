@@ -216,8 +216,8 @@ for_window [class="zoom"] sticky enable
 for_window [class="zoom"] floating enable
 for_window [class="VirtualBox"] floating enable
 
-assign [class="Slack"] 2
-assign [class="Spotify"] 3
+assign [class="Slack"] 3
+assign [class="Spotify"] 4
 
 ############################
 # gaps
