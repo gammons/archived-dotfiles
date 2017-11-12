@@ -175,8 +175,8 @@ hide_edge_borders both
 # My vars
 ############################
 
-set $brightness_increase /opt/rubies/ruby-2.4.2/bin/ruby /home/grant/dotfiles-local/brightness inc > /tmp/bri 2>&1
-set $brightness_decrease /opt/rubies/ruby-2.4.2/bin/ruby /home/grant/dotfiles-local/brightness dec > /tmp/bri 2>&1
+set $brightness_increase /opt/rubies/ruby-2.4.2/bin/ruby /home/grant/.bin/brightness inc > /tmp/bri 2>&1
+set $brightness_decrease /opt/rubies/ruby-2.4.2/bin/ruby /home/grant/.bin/brightness dec > /tmp/bri 2>&1
 
 ############################
 # My binds
@@ -194,7 +194,7 @@ bindsym $mod+shift+m exec --no-startup-id urxvt -name math -fn "xft:mono:pixelsi
 bindsym $mod+i [class="zoom"] scratchpad show
 bindsym $mod+Shift+f exec thunar
 
-bindsym $mod+w exec --no-startup-id $HOME/dotfiles-local/wallpaper.sh
+bindsym $mod+w exec --no-startup-id $HOME/.bin/wallpaper
 bindsym $mod+q workspace back_and_forth
 
 # Brightness
