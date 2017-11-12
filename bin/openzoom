@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+meeting_id = ARGV[0]
+
+system("/usr/bin/xdg-open https://zoom.us/j/#{meeting_id}")

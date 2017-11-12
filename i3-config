@@ -72,7 +72,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+#bindsym $mod+s layout stacking
 # bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -145,9 +145,10 @@ bindsym $mod+r mode "resize"
 # My vars
 ############################
 
-set $brightness_increase /opt/rubies/ruby-2.4.2/bin/ruby /home/grant/.bin/brightness inc > /tmp/bri 2>&1
-set $brightness_decrease /opt/rubies/ruby-2.4.2/bin/ruby /home/grant/.bin/brightness dec > /tmp/bri 2>&1
+set $brightness_increase /opt/rubies/ruby-2.4.2/bin/ruby /home/grant/.bin/brightness inc
+set $brightness_decrease /opt/rubies/ruby-2.4.2/bin/ruby /home/grant/.bin/brightness dec
 set $wallpaper_script $HOME/.bin/wallpaper
+set $ruby /opt/rubies/ruby-2.4.2/bin/ruby
 
 ############################
 # Exec this stuff
@@ -192,7 +193,6 @@ bindsym $mod+shift+u exec --no-startup-id urxvt -name dropdown
 bindsym $mod+m [instance="math"] scratchpad show; move position center
 bindsym $mod+shift+m exec --no-startup-id urxvt -name math -fn "xft:mono:pixelsize=24"
 
-bindsym $mod+i [class="zoom"] scratchpad show
 bindsym $mod+Shift+f exec thunar
 
 bindsym $mod+w exec --no-startup-id $wallpaper_script
@@ -212,6 +212,10 @@ bindsym $mod+F11 exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym $mod+F12 exec --no-startup-id pactl set-sink-volume 0 +5%
 
 bindsym $mod+z exec --no-startup-id i3lock -c 333333
+
+bindsym $mod+i exec --no-startup-id $ruby $HOME/.bin/openzoom 9849040235
+bindsym $mod+o exec --no-startup-id $ruby $HOME/.bin/openzoom 4283094446
+bindsym $mod+Shift+o exec --no-startup-id $HOME/.bin/killzoom
 
 ############################
 # Window behaviors
