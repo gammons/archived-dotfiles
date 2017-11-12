@@ -175,8 +175,8 @@ hide_edge_borders both
 # My vars
 ############################
 
-set $brightness_increase /opt/rubies/ruby-2.4.2/bin/ruby /usr/local/bin/brightness inc > /tmp/bri 2>&1
-set $brightness_decrease /opt/rubies/ruby-2.4.2/bin/ruby /usr/local/bin/brightness dec > /tmp/bri 2>&1
+set $brightness_increase /opt/rubies/ruby-2.4.2/bin/ruby /home/grant/dotfiles-local/brightness inc > /tmp/bri 2>&1
+set $brightness_decrease /opt/rubies/ruby-2.4.2/bin/ruby /home/grant/dotfiles-local/brightness dec > /tmp/bri 2>&1
 
 ############################
 # My binds
@@ -195,6 +195,7 @@ bindsym $mod+i [class="zoom"] scratchpad show
 bindsym $mod+Shift+f exec thunar
 
 bindsym $mod+w exec --no-startup-id $HOME/dotfiles-local/wallpaper.sh
+bindsym $mod+q workspace back_and_forth
 
 # Brightness
 bindsym $mod+F1 exec $brightness_decrease
@@ -240,7 +241,6 @@ mode "$mode_gaps" {
 }
 
 bindsym $mod+g mode "$mode_gaps"
-
 
 for_window [class="^.*"] border pixel 3
 

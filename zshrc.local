@@ -9,3 +9,6 @@ antigen theme robbyrussell
 antigen apply
 
 setopt no_auto_remove_slash
+
+# uncomment if you're doing minikube shit
+#eval $(minikube docker-env)
