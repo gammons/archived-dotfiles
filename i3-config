@@ -141,6 +141,13 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+############################
+# My vars
+############################
+
+set $brightness_increase /opt/rubies/ruby-2.4.2/bin/ruby /home/grant/.bin/brightness inc > /tmp/bri 2>&1
+set $brightness_decrease /opt/rubies/ruby-2.4.2/bin/ruby /home/grant/.bin/brightness dec > /tmp/bri 2>&1
+set $wallpaper_script $HOME/.bin/wallpaper
 
 ############################
 # Exec this stuff
@@ -156,7 +163,7 @@ exec_always --no-startup-id dunst -config $HOME/.dunstrc
 exec --no-startup-id syndaemon -i 0.5 -t -K -R
 exec --no-startup-id synclient MaxTapTime=0 PalmDetect=1 TapButton1=0 TapButton2=0 TapButton3=0 HorizTwoFingerScroll=1 HorizScrollDelta=-247 VertScrollDelta=-247
 exec --no-startup-id nm-applet
-exec --no-startup-id $HOME/dotfiles-local/wallpaper.sh
+exec --no-startup-id $wallpaper_script
 exec --no-startup-id redshift-gtk
 exec --no-startup-id xautolock -time 4 -locker "i3lock -c 333333"
 
@@ -171,13 +178,6 @@ focus_follows_mouse no
 
 # Set window border behavior
 hide_edge_borders both
-
-############################
-# My vars
-############################
-
-set $brightness_increase /opt/rubies/ruby-2.4.2/bin/ruby /home/grant/.bin/brightness inc > /tmp/bri 2>&1
-set $brightness_decrease /opt/rubies/ruby-2.4.2/bin/ruby /home/grant/.bin/brightness dec > /tmp/bri 2>&1
 
 ############################
 # My binds
@@ -195,7 +195,7 @@ bindsym $mod+shift+m exec --no-startup-id urxvt -name math -fn "xft:mono:pixelsi
 bindsym $mod+i [class="zoom"] scratchpad show
 bindsym $mod+Shift+f exec thunar
 
-bindsym $mod+w exec --no-startup-id $HOME/.bin/wallpaper
+bindsym $mod+w exec --no-startup-id $wallpaper_script
 bindsym $mod+q workspace back_and_forth
 
 # Brightness
