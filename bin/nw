@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'date'
+d = Date.today
+last_monday = d - (d.wday - 1) + 7
+system("vim ~/notes/ck/week-of-#{last_monday.strftime("%b").downcase}-#{last_monday.day}.md")
+
