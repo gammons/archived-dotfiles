@@ -161,8 +161,6 @@ exec --no-startup-id dropbox start
 exec --no-startup-id xscreensaver
 exec_always --no-startup-id dunst -config $HOME/.dunstrc
 #exec_always --no-startup-id $HOME/dotfiles-local/compton.sh
-exec --no-startup-id syndaemon -i 0.5 -t -K -R
-exec --no-startup-id synclient MaxTapTime=0 PalmDetect=1 TapButton1=0 TapButton2=0 TapButton3=0 HorizTwoFingerScroll=1 HorizScrollDelta=-247 VertScrollDelta=-247
 exec --no-startup-id nm-applet
 exec --no-startup-id $wallpaper_script
 exec --no-startup-id redshift-gtk
