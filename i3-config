@@ -154,7 +154,6 @@ set $ruby /opt/rubies/ruby-2.4.2/bin/ruby
 # Exec this stuff
 ############################
 
-exec_always --no-startup-id xrdb -load $HOME/.Xdefaults
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 exec --no-startup-id dropbox start
