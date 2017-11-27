@@ -5,4 +5,4 @@ cursor_shape = block
 scrollback_lines = 0
 
 [colors]
-background = rgba(0,0,0,0.90)
+background = rgba(0,0,0,0.95)
