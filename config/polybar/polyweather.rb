@@ -35,15 +35,15 @@ class Polyweather
 
   def icon
     case currently["icon"]
-    when "clear-day" then "\uf185"
-    when "clear-night" then "\uf185"
-    when "rain" then "\u{f2cc}"
-    when "snow" then "\u{f2dc}"
-    when "sleet" then "\u{f2dc}"
+    when "clear-day" then "\u{f00d}"
+    when "clear-night" then "\u{f00d}"
+    when "rain" then "\u{f019}"
+    when "snow" then "\u{f01b}"
+    when "sleet" then "\u{f0b5}"
     when "wind" then "\u{f050}"
-    when "cloudy" then "\u{f0c2}"
-    when "partly-cloudy-day" then "\u{f2cc}\u{f002}"
-    when "partly-cloudy-night" then "\u{f2cc}\u{f086}"
+    when "cloudy" then "\u{f013}"
+    when "partly-cloudy-day" then "\u{f002}"
+    when "partly-cloudy-night" then "\u{f086}"
     end
   end
 
