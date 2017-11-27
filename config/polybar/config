@@ -32,6 +32,7 @@ modules-right = power_now battery cpu date
 tray-position = right
 tray-padding = 2
 tray-background = #da222222
+tray-offset-y=1
 
 ; MODULES
 
