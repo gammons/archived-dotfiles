@@ -23,17 +23,15 @@ module-margin-right = 0
 
 font-0 = Noto Sans:pixelsize=13;0
 font-1 = FontAwesome:size=10;-2
-font-2 = siji:pixelsize=10;0
+font-2 = Weather Icons:size=13;0
 
 modules-left = i3
 modules-center = weather
-modules-right = power_now cpuload temperature cpu battery date powermenu
+modules-right = power_now battery cpu date
 
 tray-position = right
 tray-padding = 2
-;tray-background =
-;tray-transparent = true
-
+tray-background = #da222222
 
 ; MODULES
 
@@ -48,9 +46,6 @@ type = internal/cpu
 ; Default: 1
 interval = 0.5
 format = <label> <ramp-coreload>
-label = CPU
-
-label-padding = 2
 
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
@@ -168,6 +163,10 @@ animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-framerate = 750
 
+;######################################################################
+; backlight module
+;######################################################################
+
 [module/backlight]
 type = internal/backlight
 
@@ -182,6 +181,10 @@ ramp-1 = 🌔
 ramp-2 = 🌓
 ramp-3 = 🌒
 ramp-4 = 🌑
+
+;######################################################################
+; padding module
+;######################################################################
 
 [module/volume]
 type = internal/volume
@@ -199,57 +202,38 @@ ramp-volume-1 = 
 ramp-volume-2 = 
 ramp-headphones-0 = 
 
-[module/spotify]
-type = custom/script
-
-exec = /home/gamehelp16/Documents/np
-interval = 1
-
-format = <label>
-
-label = %output%
-
-[module/powermenu]
-type = custom/menu
-
-label-open = 
-;label-open-background = #dd0000
-;label-open-foreground = #fff
-label-close = cancel
-;label-close-background = #dd0000
-;label-close-foreground = #fff
-label-open-padding = 4
-label-close-padding = 3
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-menu-0-0-padding = 3
-menu-0-1-padding = 3
-
-menu-1-0 = reboot?
-menu-1-0-exec = sudo reboot
-menu-1-0-padding = 3
-
-menu-2-0 = power off?
-menu-2-0-exec = sudo poweroff
-menu-2-0-padding = 3
+;######################################################################
+; CPU load module
+;######################################################################
 
 [module/cpuload]
 type = custom/script
 interval = 5
 exec = ~/.config/polybar/cpuload.sh
 
+;######################################################################
+; weather module
+;######################################################################
+
 [module/weather]
 type = custom/script
+label = %{T3}%output%
 interval = 200
 exec = /opt/rubies/ruby-2.4.2/bin/ruby ~/.config/polybar/polyweather.rb
+
+;######################################################################
+; power (in watts) module
+;######################################################################
 
 [module/power_now]
 type = custom/script
 interval = 5
 exec = ~/.config/polybar/power_now
+format =  <label>
+
+;######################################################################
+; mpd module
+;######################################################################
 
 [module/mpd]
 type = internal/mpd
