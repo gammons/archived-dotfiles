@@ -163,9 +163,6 @@ exec --no-startup-id nm-applet
 exec --no-startup-id $wallpaper_script
 exec --no-startup-id redshift-gtk
 exec --no-startup-id xautolock -time 4 -locker "i3lock -c 333333"
-
-# load the previously saved brightness
-exec --no-startup-id $HOME/dotfiles-local/brightness
 exec_always --no-startup-id $HOME/dotfiles-local/bin/compton.sh
 
 ############################
@@ -196,8 +193,8 @@ bindsym $mod+w exec --no-startup-id $wallpaper_script
 bindsym $mod+q workspace back_and_forth
 
 # Brightness
-bindsym $mod+F1 exec $brightness_decrease
-bindsym $mod+F2 exec $brightness_increase
+bindsym $mod+F1 exec --no-startup-id xbacklight -dec 10
+bindsym $mod+F2 exec --no-startup-id xbacklight -inc 10
 
 # Music control
 bindsym $mod+F7 exec --no-startup-id playerctl previous
