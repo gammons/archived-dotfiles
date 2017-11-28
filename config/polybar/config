@@ -27,7 +27,7 @@ font-2 = Weather Icons:size=13;0
 
 modules-left = i3
 modules-center = weather
-modules-right = power_now battery cpu date
+modules-right = power_now battery cpu volume date
 
 tray-position = right
 tray-padding = 2
