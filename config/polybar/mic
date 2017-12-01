@@ -1,0 +1,1 @@
+pactl list sources | grep -qi 'Mute: yes' && echo 'M' || echo 'O'
