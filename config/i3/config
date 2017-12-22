@@ -180,8 +180,8 @@ hide_edge_borders both
 bindsym $mod+c exec --no-startup-id zenity --calendar
 bindsym --release F12 exec --no-startup-id spectacle
 
-bindsym $mod+u [instance="dropdown"] scratchpad show; move position center
-bindsym $mod+shift+u exec --no-startup-id urxvt -name dropdown
+bindsym $mod+u [title="dropdown"] scratchpad show; move position center
+bindsym $mod+shift+u exec --no-startup-id termite --title=dropdown
 
 bindsym $mod+m exec --no-startup-id $HOME/.bin/mic_toggle
 
@@ -246,14 +246,8 @@ for_window [class="^.*"] border pixel 3
 # Scratchpad
 ############################
 
-for_window [instance="dropdown"] floating enable
-for_window [instance="dropdown"] resize set 925 700
-for_window [instance="dropdown"] move position center
-for_window [instance="dropdown"] move scratchpad
-exec --no-startup-id urxvt -name dropdown
-
-for_window [instance="math"] floating enable
-for_window [instance="math"] resize set 800 300
-for_window [instance="math"] move position center
-for_window [instance="math"] move scratchpad
-exec --no-startup-id urxvt -name math -fn "xft:mono:pixelsize=24" -e irb
+for_window [title="dropdown"] floating enable
+for_window [title="dropdown"] resize set 925 700
+for_window [title="dropdown"] move position center
+for_window [title="dropdown"] move scratchpad
+exec --no-startup-id termite --title=dropdown
