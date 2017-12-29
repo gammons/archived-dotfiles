@@ -184,6 +184,8 @@ bindsym $mod+shift+u exec --no-startup-id termite --title=dropdown
 
 bindsym --release F2 exec --no-startup-id $HOME/.bin/mic_toggle
 
+bindsym --release F3 exec --no-startup-id $ruby $HOME/.bin/zoom_toggle
+
 bindsym $mod+Shift+f exec thunar
 
 bindsym $mod+w exec --no-startup-id $wallpaper_script
@@ -212,8 +214,10 @@ bindsym $mod+Shift+o exec --no-startup-id $HOME/.bin/killzoom
 # Window behaviors
 ############################
 
-for_window [class="zoom"] sticky enable
-for_window [class="zoom"] floating enable
+for_window [title="^Zoom Meeting ID$"] floating enable
+for_window [title="^Zoom Cloud Meetings$"] floating enable
+for_window [title="^Zoom - Pro Account$"] floating enable
+for_window [title="^Zoom - Pro Account$"] sticky enable
 for_window [class="VirtualBox"] floating enable
 
 assign [class="Slack"] 3

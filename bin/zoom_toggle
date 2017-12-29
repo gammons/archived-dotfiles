@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'json'
+
+def show_zoom
+  `i3-msg '[title="^Zoom Meeting"] move window to workspace current'`
+end
+
+def hide_zoom
+  `i3-msg '[title="^Zoom Meeting"] move window to workspace 9'`
+end
+
+def zoom_hidden?
+  workspaces = JSON.parse(`i3-msg -t get_workspaces`)
+  workspaces.any? {|w| w["num"] == 9 }
+end
+
+zoom_hidden? ? show_zoom : hide_zoom
