@@ -145,10 +145,8 @@ bindsym $mod+r mode "resize"
 # My vars
 ############################
 
-set $brightness_increase /opt/rubies/ruby-2.4.2/bin/ruby /home/grant/.bin/brightness inc
-set $brightness_decrease /opt/rubies/ruby-2.4.2/bin/ruby /home/grant/.bin/brightness dec
 set $wallpaper_script $HOME/.bin/wallpaper
-set $ruby /opt/rubies/ruby-2.4.2/bin/ruby
+set $ruby /opt/rubies/ruby-2.5.0/bin/ruby
 
 ############################
 # Exec this stuff

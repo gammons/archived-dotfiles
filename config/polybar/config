@@ -220,7 +220,7 @@ exec = ~/.config/polybar/cpuload.sh
 type = custom/script
 label = %{T3}%output%
 interval = 200
-exec = /opt/rubies/ruby-2.4.2/bin/ruby ~/.config/polybar/polyweather.rb
+exec = /opt/rubies/ruby-2.5.0/bin/ruby ~/.config/polybar/polyweather.rb
 
 ;######################################################################
 ; power (in watts) module

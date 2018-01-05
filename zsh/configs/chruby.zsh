@@ -3,4 +3,4 @@ if [ -n "$BASH_VERSION"  ] || [ -n "$ZSH_VERSION"  ]; then
   source /usr/local/share/chruby/auto.sh
 fi
 
-chruby ruby-2.4.2
+chruby ruby-2.5.0
