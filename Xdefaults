@@ -1,5 +1,6 @@
 : prevents an absolutely enormous cursor in urxvt
-Xcursor.size: 8
+Xcursor.size: 32
+Xft.dpi: 130
 
 xvt.termName:         rxvt-256color
 URxvt.font:             xft:inconsolata:size=20

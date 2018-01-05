@@ -1,4 +1,4 @@
 xset r rate 200 35
 xrdb -load $HOME/.Xdefaults
-xrandr --dpi 92
+xrandr --dpi 130
 [[ -f ~/.Xmodmap  ]] && xmodmap ~/.Xmodmap
