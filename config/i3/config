@@ -163,6 +163,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id $wallpaper_script
 exec --no-startup-id redshift-gtk
 exec_always --no-startup-id $HOME/dotfiles-local/bin/compton.sh
+exec --no-startup-id termite --title=dropdown
 
 ############################
 # Further customization
@@ -185,7 +186,6 @@ bindsym $mod+shift+u exec --no-startup-id termite --title=dropdown
 
 bindsym $mod+m exec --no-startup-id $HOME/.bin/mic_toggle
 
-
 bindsym $mod+Shift+f exec thunar
 
 bindsym $mod+w exec --no-startup-id $wallpaper_script
@@ -206,6 +206,7 @@ bindsym $mod+F12 exec --no-startup-id pactl set-sink-volume 0 +5%
 
 bindsym $mod+z exec --no-startup-id i3lock -c 333333
 
+# Join zoom meetings
 bindsym $mod+i exec --no-startup-id $ruby $HOME/.bin/openzoom 9849040235
 bindsym $mod+o exec --no-startup-id $ruby $HOME/.bin/openzoom 4283094446
 bindsym $mod+Shift+o exec --no-startup-id $HOME/.bin/killzoom
