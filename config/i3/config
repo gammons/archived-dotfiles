@@ -220,6 +220,7 @@ bindsym $mod+Shift+o exec --no-startup-id $HOME/.bin/killzoom
 for_window [title="^Zoom Meeting ID$"] floating enable
 for_window [title="^Zoom Cloud Meetings$"] floating enable
 for_window [title="^Zoom - Pro Account$"] floating enable
+for_window [class="zoom"] floating enable
 for_window [title="^Zoom - Pro Account$"] sticky enable
 for_window [class="VirtualBox"] floating enable
 
