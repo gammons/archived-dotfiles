@@ -182,8 +182,7 @@ bindsym --release F12 exec --no-startup-id spectacle
 bindsym $mod+u [title="dropdown"] scratchpad show; move position center
 bindsym $mod+shift+u exec --no-startup-id termite --title=dropdown
 
-bindsym $mod+m exec --no-startup-id $HOME/.bin/mic_toggle
-
+bindsym --release F2 exec --no-startup-id $HOME/.bin/mic_toggle
 
 bindsym $mod+Shift+f exec thunar
 
