@@ -4,7 +4,7 @@
 
 [bar/main]
 width = 100%
-height = 35
+height = 40
 offset-x = 0
 offset-y = -1
 ;bottom = true
@@ -21,9 +21,9 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = Noto Sans:pixelsize=13;0
-font-1 = FontAwesome:size=10;-2
-font-2 = Weather Icons:size=13;0
+font-0 = Noto Sans:pixelsize=16;0
+font-1 = FontAwesome:size=12;-2
+font-2 = Weather Icons:size=16;0
 
 modules-left = i3
 modules-center = weather
@@ -220,7 +220,7 @@ exec = ~/.config/polybar/cpuload.sh
 type = custom/script
 label = %{T3}%output%
 interval = 200
-exec = /opt/rubies/ruby-2.5.0/bin/ruby ~/.config/polybar/polyweather.rb
+exec = /home/grant/.rubies/ruby-2.5.0/bin/ruby ~/.config/polybar/polyweather.rb
 
 ;######################################################################
 ; power (in watts) module
