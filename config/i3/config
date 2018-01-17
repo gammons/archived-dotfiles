@@ -146,7 +146,7 @@ bindsym $mod+r mode "resize"
 ############################
 
 set $wallpaper_script $HOME/.bin/wallpaper
-set $ruby /opt/rubies/ruby-2.5.0/bin/ruby
+set $ruby /home/grant/.rubies/ruby-2.5.0/bin/ruby
 
 ############################
 # Exec this stuff
@@ -191,17 +191,17 @@ bindsym $mod+w exec --no-startup-id $wallpaper_script
 bindsym $mod+q workspace back_and_forth
 
 # Brightness
-bindsym $mod+F1 exec --no-startup-id xbacklight -dec 10
-bindsym $mod+F2 exec --no-startup-id xbacklight -inc 10
+bindsym $mod+F11 exec --no-startup-id $ruby $HOME/.bin/brightness dec > /tmp/brightness 2>&1
+bindsym $mod+F12 exec --no-startup-id $ruby $HOME/.bin/brightness inc > /tmp/brightness 2>&1
 
 # Music control
-bindsym $mod+F7 exec --no-startup-id playerctl previous
-bindsym $mod+F8 exec --no-startup-id playerctl play-pause
-bindsym $mod+F9 exec --no-startup-id playerctl next
+bindsym $mod+F4 exec --no-startup-id playerctl previous
+bindsym $mod+F5 exec --no-startup-id playerctl play-pause
+bindsym $mod+F6 exec --no-startup-id playerctl next
 
 # Volume control
-bindsym $mod+F11 exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym $mod+F12 exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume 0 -5% > /tmp/pactl 2>&1
+bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume 0 +5% > /tmp/pactl 2>&1
 
 bindsym $mod+z exec --no-startup-id i3lock -c 333333
 
