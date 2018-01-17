@@ -27,7 +27,7 @@ keycode  33 = p P p P
 keycode  34 = bracketleft braceleft bracketleft braceleft
 keycode  35 = bracketright braceright bracketright braceright
 keycode  36 = Return NoSymbol Return
-keycode  37 = Control_L NoSymbol Control_L
+keycode  37 = Shift_L NoSymbol Shift_L
 keycode  38 = a A a A
 keycode  39 = s S s S
 keycode  40 = d D d D
@@ -247,6 +247,7 @@ keycode 253 =
 keycode 254 =
 keycode 255 =
 
-remove Lock = Caps_Lock
-keysym Caps_Lock = Control_L
+clear lock
+clear control
+keycode 66 = Control_L
 add Control = Control_L
