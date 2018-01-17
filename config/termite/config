@@ -1,5 +1,5 @@
 [options]
-font = Inconsolata 18
+font = Inconsolata 16
 cursor_blink = system
 cursor_shape = block
 scrollback_lines = 0
