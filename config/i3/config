@@ -162,6 +162,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id $wallpaper_script
 exec --no-startup-id redshift-gtk
 exec_always --no-startup-id $HOME/dotfiles-local/bin/compton.sh
+exec_always --no-startup-id xscreensaver
 #exec --no-startup-id syndaemon -i 0.5 -t -K -R
 
 ############################
@@ -180,8 +181,8 @@ hide_edge_borders both
 bindsym $mod+c exec --no-startup-id zenity --calendar
 bindsym --release F12 exec --no-startup-id spectacle
 
-bindsym $mod+u [title="dropdown"] scratchpad show; move position center
-bindsym $mod+shift+u exec --no-startup-id termite --title=dropdown
+bindsym $mod+u [title="termite-dropdown"] scratchpad show; move position center
+bindsym $mod+shift+u exec --no-startup-id termite --title=termite-dropdown
 
 bindsym --release F2 exec --no-startup-id $HOME/.bin/mic_toggle
 
@@ -193,8 +194,8 @@ bindsym $mod+w exec --no-startup-id $wallpaper_script
 bindsym $mod+q workspace back_and_forth
 
 # Brightness
-bindsym $mod+F11 exec --no-startup-id $ruby $HOME/.bin/brightness dec > /tmp/brightness 2>&1
-bindsym $mod+F12 exec --no-startup-id $ruby $HOME/.bin/brightness inc > /tmp/brightness 2>&1
+bindsym $mod+F11 exec --no-startup-id xbacklight -dec 10
+bindsym $mod+F12 exec --no-startup-id xbacklight -inc 10
 
 # Music control
 bindsym $mod+F4 exec --no-startup-id playerctl previous
@@ -250,8 +251,8 @@ for_window [class="^.*"] border pixel 3
 # Scratchpad
 ############################
 
-for_window [title="dropdown"] floating enable
-for_window [title="dropdown"] resize set 925 700
-for_window [title="dropdown"] move position center
-for_window [title="dropdown"] move scratchpad
-exec --no-startup-id termite --title=dropdown
+for_window [title="termite-dropdown"] floating enable
+for_window [title="termite-dropdown"] resize set 925 700
+for_window [title="termite-dropdown"] move position center
+for_window [title="termite-dropdown"] move scratchpad
+exec --no-startup-id termite --title=termite-dropdown
