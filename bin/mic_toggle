@@ -1,1 +1,14 @@
-pactl list sources | grep -qi 'Mute: yes' && pactl set-source-mute 1 false || pactl set-source-mute 1 true
+#!/usr/bin/env ruby
+
+require 'byebug'
+
+source_ids = `pactl list sources | grep "Source #"`.split("\n").map {|s| s.gsub(/Source \#/,'')}
+status = `pactl list sources | grep -qi 'Mute: yes'; echo $?`
+puts "status is #{status}"
+if status.to_i == 1
+  # at least one device is not muted, so mute everything
+  source_ids.each {|sid| `pactl set-source-mute #{sid} true`}
+else
+  # all devices are muted, so assume all mics are muted, and unmute
+  source_ids.each {|sid| `pactl set-source-mute #{sid} false`}
+end
