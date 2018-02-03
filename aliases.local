@@ -10,6 +10,7 @@ alias n="cd ~/notes"
 alias nc="cd ~/notes/ck"
 alias cn="cd ~/notes/ck"
 
+alias ga="git add"
 alias gd="git diff"
 alias gdc="gd --cached"
 alias gc="git commit"
