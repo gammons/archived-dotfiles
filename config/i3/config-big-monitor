@@ -155,15 +155,15 @@ set $ruby /home/grant/.rubies/ruby-2.5.0/bin/ruby
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 exec --no-startup-id dropbox start
-exec --no-startup-id xscreensaver
 exec --no-startup-id $wallpaper_script
-exec_always --no-startup-id dunst -config $HOME/.dunstrc
+exec --no-startup-id dunst -config $HOME/.dunstrc
 exec --no-startup-id nm-applet
 exec --no-startup-id $wallpaper_script
 exec --no-startup-id redshift-gtk
-exec_always --no-startup-id $HOME/dotfiles-local/bin/compton.sh
-exec_always --no-startup-id xscreensaver
-exec --no-startup-id xautolock -time 30 -locker "systemctl suspend"
+exec --no-startup-id $HOME/dotfiles-local/bin/compton.sh
+exec --no-startup-id pasystray
+exec --no-startup-id xautolock -time 10 -locker 'i3lock' &
+#exec --no-startup-id gpg-agent --daemon --enable-ssh-support --log-file ~/.gnupg/gpg-agent.log
 
 ############################
 # Further customization
@@ -188,7 +188,7 @@ bindsym --release F2 exec --no-startup-id $ruby $HOME/.bin/mic_toggle
 
 bindsym --release F3 exec --no-startup-id $ruby $HOME/.bin/zoom_toggle
 
-bindsym $mod+Shift+f exec thunar
+bindsym $mod+Shift+f exec nautilus
 
 bindsym $mod+w exec --no-startup-id $wallpaper_script
 bindsym $mod+q workspace back_and_forth
@@ -204,6 +204,9 @@ bindsym $mod+F6 exec --no-startup-id playerctl next
 
 bindsym $mod+F7 exec --no-startup-id $HOME/.bin/laptop.sh
 bindsym $mod+F8 exec --no-startup-id $HOME/.bin/desktop.sh
+
+# have a key that will always turn on the laptop screen
+bindsym $mod+F9 exec --no-startup-id xrandr --output eDP1 --auto
 
 # Volume control
 bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume 0 -5% > /tmp/pactl 2>&1

@@ -155,15 +155,15 @@ set $ruby /home/grant/.rubies/ruby-2.5.0/bin/ruby
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 exec --no-startup-id dropbox start
-exec --no-startup-id xscreensaver
 exec --no-startup-id $wallpaper_script
-exec_always --no-startup-id dunst -config $HOME/.dunstrc
+exec --no-startup-id dunst -config $HOME/.dunstrc
 exec --no-startup-id nm-applet
 exec --no-startup-id $wallpaper_script
 exec --no-startup-id redshift-gtk
-exec_always --no-startup-id $HOME/dotfiles-local/bin/compton.sh
-exec_always --no-startup-id xscreensaver
-#exec --no-startup-id syndaemon -i 0.5 -t -K -R
+exec --no-startup-id $HOME/dotfiles-local/bin/compton.sh
+exec --no-startup-id pasystray
+#exec --no-startup-id gpg-agent --daemon --enable-ssh-support --log-file ~/.gnupg/gpg-agent.log
+exec --no-startup-id xautolock -time 10 -locker 'i3lock' &
 
 ############################
 # Further customization
@@ -188,7 +188,7 @@ bindsym --release F2 exec --no-startup-id $HOME/.bin/mic_toggle
 
 bindsym --release F3 exec --no-startup-id $ruby $HOME/.bin/zoom_toggle
 
-bindsym $mod+Shift+f exec thunar
+bindsym $mod+Shift+f exec nautilus
 
 bindsym $mod+w exec --no-startup-id $wallpaper_script
 bindsym $mod+q workspace back_and_forth
@@ -223,6 +223,7 @@ for_window [title="^Zoom Meeting ID$"] floating enable
 for_window [title="^Zoom Cloud Meetings$"] floating enable
 for_window [title="^Zoom - Pro Account$"] floating enable
 for_window [class="zoom"] floating enable
+for_window [class="Gpick"] floating enable
 for_window [title="^Zoom - Pro Account$"] sticky enable
 for_window [class="VirtualBox"] floating enable
 
