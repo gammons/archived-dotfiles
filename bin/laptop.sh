@@ -21,7 +21,3 @@ rm ~/.config/i3/config
 ln -s ~/.config/i3/config-laptop-monitor ~/.config/i3/config
 i3-msg reload
 i3-msg restart
-
-# restart pulseaudio so it sees the HDMI audio out, and uses it
-pulseaudio -k
-pulseaudio -D

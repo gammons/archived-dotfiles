@@ -9,8 +9,8 @@ ln -s ~/.Xdefaults-big-monitor ~/.Xdefaults
 ~/.xsessionrc
 
 # turn off the macbook monitor
-xrandr --output eDP1 --off
-xrandr --output DP1 --auto --right-of eDP1
+#xrandr --output eDP1 --off
+xrandr --output DP1-2 --auto
 
 # update polybar
 rm ~/.config/polybar/config
@@ -21,7 +21,3 @@ rm ~/.config/i3/config
 ln -s ~/.config/i3/config-big-monitor ~/.config/i3/config
 i3-msg reload
 i3-msg restart
-
-# restart pulseaudio so it sees the HDMI audio out, and uses it
-pulseaudio -k
-pulseaudio -D
