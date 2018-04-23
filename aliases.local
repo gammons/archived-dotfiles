@@ -61,3 +61,4 @@ alias db_connect_to_staging='mysql -u $STAG_USER --password=$STAG_PASSWORD -h $D
 alias db_connect_to_blue='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_BLUE_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 
 alias prod_console="heroku run rails c -a ckapp-prod --size=performance-l"
+alias unfuck_slack="unset XDG_CONFIG_DIRS"
