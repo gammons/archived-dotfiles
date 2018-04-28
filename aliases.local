@@ -50,6 +50,7 @@ alias pull="git pull"
 alias push="git push"
 alias hps="heroku ps -a ckapp-prod"
 alias teams="cat ~/notes/ck/teams.md"
+alias standup="vim ~/notes/ck/standup.md"
 alias lc="cd ~/local_code"
 alias un="vim ~/notes/ultradeck/next.md"
 
