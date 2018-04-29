@@ -1,3 +1,4 @@
+let g:ale_emit_conflict_warnings = 0
 UnPlug 'w0rp/ale'
 " Colors
 Plug 'chriskempson/base16-vim'
