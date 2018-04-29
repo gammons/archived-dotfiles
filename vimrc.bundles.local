@@ -1,3 +1,4 @@
+UnPlug 'w0rp/ale'
 " Colors
 Plug 'chriskempson/base16-vim'
 Plug 'noah/vim256-color'
