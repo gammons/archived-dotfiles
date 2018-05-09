@@ -8,8 +8,8 @@ ln -s ~/.Xdefaults-big-monitor ~/.Xdefaults
 # reload xsessionrc
 ~/.xsessionrc
 
-# turn off the macbook monitor
-#xrandr --output eDP1 --off
+xrandr --output DP1-2 --off
+sleep  1
 xrandr --output DP1-2 --auto
 
 # update polybar
