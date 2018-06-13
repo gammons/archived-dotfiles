@@ -145,9 +145,6 @@ NumericLiterals:
 OneLineConditional:
   Enabled: false
 
-OpMethod:
-  Enabled: false
-
 ParameterLists:
   Enabled: false
 
@@ -197,9 +194,6 @@ VariableInterpolation:
 TrailingCommaInArguments:
   Enabled: true
 
-TrailingCommaInLiteral:
-  Enabled: true
-
 TrivialAccessors:
   Enabled: false
 
@@ -236,12 +230,6 @@ ElseLayout:
   Enabled: false
 
 HandleExceptions:
-  Enabled: false
-
-InvalidCharacterLiteral:
-  Enabled: false
-
-LiteralInCondition:
   Enabled: false
 
 LiteralInInterpolation:
