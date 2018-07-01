@@ -54,6 +54,9 @@ alias standup="vim ~/notes/ck/standup.md"
 alias lc="cd ~/local_code"
 alias un="vim ~/notes/ultradeck/next.md"
 
+alias dark="base16_default-dark"
+alias light="base16_solarized-light"
+
 alias db_connect_to_master='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_MASTER_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias db_connect_to_slave='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias db_connect_to_slave2='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE2_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
