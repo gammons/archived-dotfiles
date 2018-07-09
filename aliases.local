@@ -65,5 +65,5 @@ alias innodb="db_connect_to_master -e 'show engine innodb status\G'"
 alias db_connect_to_staging='mysql -u $STAG_USER --password=$STAG_PASSWORD -h $DB_STAGING_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias db_connect_to_blue='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_BLUE_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 
-alias prod_console="heroku run rails c -a ckapp-prod --size=performance-l"
+alias prod_console="ssh -t 172.21.149.121 \"sudo su -c 'cd /srv/ckapp/current && bundle exec rails c' -s /bin/sh ckapp\""
 alias unfuck_slack="unset XDG_CONFIG_DIRS"
