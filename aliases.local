@@ -58,11 +58,15 @@ alias db_connect_to_master='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_MAS
 alias db_connect_to_slave='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias db_connect_to_slave2='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE2_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias db_connect_to_slave3='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE3_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
+
 alias db_connect_to_slave4='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE4_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
+alias db_connect_to_slave5='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE5_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
+alias db_connect_to_versions='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_VERSIONS_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 
 alias innodb="db_connect_to_master -e 'show engine innodb status\G'"
 
 alias db_connect_to_staging='mysql -u $STAG_USER --password=$STAG_PASSWORD -h $DB_STAGING_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
+alias db_connect_to_staging2='mysql -u $STAG_USER --password=$STAG_PASSWORD -h $DB_STAGING2_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias db_connect_to_blue='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_BLUE_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 
 alias prod_console="ssh -t 172.21.149.121 \"sudo su -c 'cd /srv/ckapp/current && bundle exec rails c' -s /bin/sh ckapp\""
