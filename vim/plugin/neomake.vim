@@ -22,31 +22,31 @@ let g:neomake_serialize_abort_on_error = 1
 
 
 " gogurt
-let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
-let g:neomake_go_gometalinter_maker = {
-  \ 'args': [
-  \   '--tests',
-  \   '--enable-gc',
-  \   '--concurrency=3',
-  \   '--fast',
-  \   '-D', 'aligncheck',
-  \   '-D', 'dupl',
-  \   '-D', 'gocyclo',
-  \   '-D', 'gotype',
-  \   '-E', 'errcheck',
-  \   '-E', 'misspell',
-  \   '-E', 'unused',
-  \   '%:p:h',
-  \ ],
-  \ 'append_file': 0,
-  \ 'errorformat':
-  \   '%E%f:%l:%c:%trror: %m,' .
-  \   '%W%f:%l:%c:%tarning: %m,' .
-  \   '%E%f:%l::%trror: %m,' .
-  \   '%W%f:%l::%tarning: %m'
-  \ }
-
-let g:go_def_mapping_enabled = 0
-"let g:go_fmt_command = 'goimports'
-"let g:go_fmt_fail_silently = 1
-let g:go_term_enabled = 1
+" let g:neomake_go_enabled_makers = [ 'go', 'gometalinter' ]
+" let g:neomake_go_gometalinter_maker = {
+"   \ 'args': [
+"   \   '--tests',
+"   \   '--enable-gc',
+"   \   '--concurrency=3',
+"   \   '--fast',
+"   \   '-D', 'aligncheck',
+"   \   '-D', 'dupl',
+"   \   '-D', 'gocyclo',
+"   \   '-D', 'gotype',
+"   \   '-E', 'errcheck',
+"   \   '-E', 'misspell',
+"   \   '-E', 'unused',
+"   \   '%:p:h',
+"   \ ],
+"   \ 'append_file': 0,
+"   \ 'errorformat':
+"   \   '%E%f:%l:%c:%trror: %m,' .
+"   \   '%W%f:%l:%c:%tarning: %m,' .
+"   \   '%E%f:%l::%trror: %m,' .
+"   \   '%W%f:%l::%tarning: %m'
+"   \ }
+"
+" let g:go_def_mapping_enabled = 0
+" "let g:go_fmt_command = 'goimports'
+" "let g:go_fmt_fail_silently = 1
+" let g:go_term_enabled = 1

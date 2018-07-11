@@ -1,45 +1,78 @@
 let g:ale_emit_conflict_warnings = 0
+
+" unplug a bunch of shit from thoughtbot's default config
 UnPlug 'w0rp/ale'
+UnPlug 'christoomey/vim-run-interactive'
+UnPlug 'elixir-lang/vim-elixir'
+UnPlug 'janko-m/vim-test'
+UnPlug 'kchmck/vim-coffee-script'
+UnPlug 'pangloss/vim-javascript'
+UnPlug 'pbrisbin/vim-mkdir'
+UnPlug 'slim-template/vim-slim'
+UnPlug 'tpope/vim-eunuch'
+UnPlug 'tpope/vim-projectionist'
+UnPlug 'tpope/vim-repeat'
+UnPlug 'tpope/vim-rhubarb'
+UnPlug 'vim-scripts/tComment'
+
+
+" Essentials
+Plug 'scrooloose/nerdTree'
+Plug 'neomake/neomake'
+Plug 'itchyny/lightline.vim'
+
 " Colors
 Plug 'chriskempson/base16-vim'
-Plug 'noah/vim256-color'
 
-" Other plugins
-Plug 'alvan/vim-closetag'
-Plug 'benjie/neomake-local-eslint.vim'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'fishbullet/deoplete-ruby'
-Plug 'fatih/vim-go'
-Plug 'henrik/vim-indexed-search'
-Plug 'itchyny/lightline.vim'
-Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }
-Plug 'jgdavey/vim-blockle', { 'for' : 'ruby' }
-Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc --64' }
+" Searching
+Plug 'google/vim-searchindex' " show number of search results
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc --64' } " used for ctrl+p searching
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/gv.vim'
-Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'junegunn/vim-oblique' | Plug 'junegunn/vim-pseudocl'
-Plug 'leafgarland/typescript-vim'
-Plug 'mxw/vim-jsx'
-Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby'} | Plug 'kana/vim-textobj-user'
-Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby'}
-Plug 'kopischke/vim-fetch'
-Plug 'neomake/neomake'
+
+" Global syntax
+Plug 'junegunn/rainbow_parentheses.vim'  " Make parens easier to see
+Plug 'tomtom/tcomment_vim' " Handle commenting for all languages
+Plug 'tpope/vim-endwise'
+
+" javascript / JSX
+" Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'scrooloose/nerdTree'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/neco-vim'
-Plug 'skwp/greplace.vim'
-Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'wellle/tmux-complete.vim'
-Plug 'zchee/deoplete-zsh'
-Plug 'thoughtbot/vim-rspec'
+Plug 'leafgarland/typescript-vim'
+
+" Markdown
+Plug 'gabrielelana/vim-markdown' ", { 'for': 'markdown' }
+
+" Other plugins
+" Plug 'alvan/vim-closetag'   " close xhtml tags
+"Plug 'benjie/neomake-local-eslint.vim'
+
+" Ruby
+"Plug 'fishbullet/deoplete-ruby'
+"  Plug 'jgdavey/vim-blockle', { 'for' : 'ruby' }
+" Plug 'thoughtbot/vim-rspec'
+
+" Go
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+
+" Plug 'christoomey/vim-tmux-navigator'
+" Plug 'henrik/vim-indexed-search'
+" Plug 'jiangmiao/auto-pairs'
+" Plug 'junegunn/gv.vim'
+" Plug 'junegunn/vim-oblique' | Plug 'junegunn/vim-pseudocl' " searching
+
+
+" Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby'} | Plug 'kana/vim-textobj-user'
+" Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby'}
+" Plug 'kopischke/vim-fetch'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/neco-vim'
+" Plug 'skwp/greplace.vim'
+" Plug 'tpope/vim-abolish'
+" Plug 'tpope/vim-dispatch'
+" Plug 'tpope/vim-surround'
+" Plug 'tpope/vim-unimpaired'
+" Plug 'wellle/tmux-complete.vim'
+" Plug 'zchee/deoplete-zsh'
 
 " Experiments
