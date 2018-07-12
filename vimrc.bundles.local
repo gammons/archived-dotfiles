@@ -7,7 +7,7 @@ Plug 'chriskempson/base16-vim'
 
 " Searching
 Plug 'google/vim-searchindex' " show number of search results
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc --64' } " used for ctrl+p searching
+Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
 " Global syntax
@@ -27,32 +27,5 @@ Plug 'gabrielelana/vim-markdown' ", { 'for': 'markdown' }
 " Other plugins
 " Plug 'alvan/vim-closetag'   " close xhtml tags
 
-" Ruby
-"Plug 'fishbullet/deoplete-ruby'
-"  Plug 'jgdavey/vim-blockle', { 'for' : 'ruby' }
-" Plug 'thoughtbot/vim-rspec'
-
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-
-" Plug 'christoomey/vim-tmux-navigator'
-" Plug 'henrik/vim-indexed-search'
-" Plug 'jiangmiao/auto-pairs'
-" Plug 'junegunn/gv.vim'
-" Plug 'junegunn/vim-oblique' | Plug 'junegunn/vim-pseudocl' " searching
-
-
-" Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby'} | Plug 'kana/vim-textobj-user'
-" Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby'}
-" Plug 'kopischke/vim-fetch'
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'Shougo/neco-vim'
-" Plug 'skwp/greplace.vim'
-" Plug 'tpope/vim-abolish'
-" Plug 'tpope/vim-dispatch'
-" Plug 'tpope/vim-surround'
-" Plug 'tpope/vim-unimpaired'
-" Plug 'wellle/tmux-complete.vim'
-" Plug 'zchee/deoplete-zsh'
-
-" Experiments
