@@ -49,6 +49,7 @@ map <Leader>co :TComment<CR>
 " autocmd! BufWritePost * Neomake
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
+autocmd BufRead,BufNewFile *.md setlocal nospell
 
 hi Normal ctermbg=none
 hi NonText ctermbg=none
