@@ -1,24 +1,5 @@
-let g:ale_emit_conflict_warnings = 0
-
-" unplug a bunch of shit from thoughtbot's default config
-UnPlug 'w0rp/ale'
-UnPlug 'christoomey/vim-run-interactive'
-UnPlug 'elixir-lang/vim-elixir'
-UnPlug 'janko-m/vim-test'
-UnPlug 'kchmck/vim-coffee-script'
-UnPlug 'pangloss/vim-javascript'
-UnPlug 'pbrisbin/vim-mkdir'
-UnPlug 'slim-template/vim-slim'
-UnPlug 'tpope/vim-eunuch'
-UnPlug 'tpope/vim-projectionist'
-UnPlug 'tpope/vim-repeat'
-UnPlug 'tpope/vim-rhubarb'
-UnPlug 'vim-scripts/tComment'
-
-
 " Essentials
 Plug 'scrooloose/nerdTree'
-Plug 'neomake/neomake'
 Plug 'itchyny/lightline.vim'
 
 " Colors
@@ -45,7 +26,6 @@ Plug 'gabrielelana/vim-markdown' ", { 'for': 'markdown' }
 
 " Other plugins
 " Plug 'alvan/vim-closetag'   " close xhtml tags
-"Plug 'benjie/neomake-local-eslint.vim'
 
 " Ruby
 "Plug 'fishbullet/deoplete-ruby'

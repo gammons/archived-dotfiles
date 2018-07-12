@@ -39,17 +39,19 @@ match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
 set colorcolumn=120
 
-" highlight Pmenu ctermbg=75 guibg=#2c323c
-" highlight PmenuSel ctermbg=17 guibg=#3c4452
+highlight Pmenu ctermbg=75 guibg=#2c323c
+highlight PmenuSel ctermbg=17 guibg=#3c4452
 
 map <Leader>n :NERDTreeToggle<CR>
 nnoremap <cr> :nohlsearch<cr>
 map <Leader>co :TComment<CR>
-
-" autocmd! BufWritePost * Neomake
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
 autocmd BufRead,BufNewFile *.md setlocal nospell
 
 hi Normal ctermbg=none
 hi NonText ctermbg=none
+
+highlight ALEWarning ctermfg=yellow ctermbg=238
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
