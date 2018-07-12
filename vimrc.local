@@ -55,3 +55,5 @@ hi NonText ctermbg=none
 highlight ALEWarning ctermfg=yellow ctermbg=238
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
+
+nnoremap <C-p> :Files<CR>
