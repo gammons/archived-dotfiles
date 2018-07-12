@@ -38,7 +38,7 @@ alias dev="tmuxinator development"
 alias pc="tmuxinator console"
 alias ud="tmuxinator ud"
 alias v='vim'
-#alias vim='nvim'
+alias vim='nvim'
 alias s="tmux attach-session -t '$USER' || tmux new-session -s '$USER'"
 alias tm="tmuxinator grant"
 alias spotify="spotify --force-device-scale-factor=1.5 %U"
