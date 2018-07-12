@@ -12,3 +12,7 @@ setopt no_auto_remove_slash
 
 # uncomment if you're doing minikube shit
 #eval $(minikube docker-env)
+
+if [[ ! "$PATH" == */home/grant/.fzf/bin* ]]; then
+  export PATH="$PATH:/home/grant/.fzf/bin"
+fi
