@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+val = `xbacklight -get`.to_f
+direction = ARGV.last
+
+`xbacklight -#{direction} #{val > 10 ? 10 : 1}`

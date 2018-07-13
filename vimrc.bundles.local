@@ -1,47 +1,36 @@
-let g:ale_emit_conflict_warnings = 0
-UnPlug 'w0rp/ale'
+" Essentials
+Plug 'scrooloose/nerdTree'
+Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'janko-m/vim-test'
+
 " Colors
 Plug 'chriskempson/base16-vim'
-Plug 'noah/vim256-color'
 
-" Other plugins
-Plug 'alvan/vim-closetag'
-Plug 'benjie/neomake-local-eslint.vim'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'derekprior/vim-trimmer'
-Plug 'fishbullet/deoplete-ruby'
-Plug 'fatih/vim-go'
-Plug 'henrik/vim-indexed-search'
-Plug 'itchyny/lightline.vim'
-Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }
-Plug 'jgdavey/vim-blockle', { 'for' : 'ruby' }
-Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all --no-update-rc --64' }
+" Searching
+Plug 'google/vim-searchindex' " show number of search results
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/gv.vim'
-Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'junegunn/vim-oblique' | Plug 'junegunn/vim-pseudocl'
-Plug 'leafgarland/typescript-vim'
-Plug 'mxw/vim-jsx'
-Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby'} | Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-entire' | Plug 'kana/vim-textobj-user'
-Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby'}
-Plug 'kopischke/vim-fetch'
-Plug 'neomake/neomake'
+
+" Global syntax
+Plug 'junegunn/rainbow_parentheses.vim'  " Make parens easier to see
+Plug 'tomtom/tcomment_vim' " Handle commenting for all languages
+Plug 'tpope/vim-endwise'
+
+" javascript / JSX
+" Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'scrooloose/nerdTree'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/neco-vim'
-Plug 'skwp/greplace.vim'
-Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'wellle/tmux-complete.vim'
-Plug 'zchee/deoplete-zsh'
-Plug 'thoughtbot/vim-rspec'
+Plug 'leafgarland/typescript-vim'
 
-" Experiments
+"ruby/rails
+Plug 'tpope/vim-rails'
+
+" Markdown
+Plug 'gabrielelana/vim-markdown' ", { 'for': 'markdown' }
+
+" Other plugins
+" Plug 'alvan/vim-closetag'   " close xhtml tags
+
+" Go
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }

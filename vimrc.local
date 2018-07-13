@@ -25,18 +25,12 @@ set wrap
 
 let g:ale_emit_conflict_warnings = 0
 
-" Use old regex engine because it's faster?
-set re=1
 " Stop highlighting if it takes more than a second
-set redrawtime=1000
+" set redrawtime=1000
 
 " Thanks but no thanks
 set textwidth=999
 
-let g:one_allow_italics = 1
-
-" colorscheme flattown
-" colorscheme gruvbox
 let base16colorspace=256
 colorscheme base16-default-dark
 
@@ -52,9 +46,17 @@ map <Leader>n :NERDTreeToggle<CR>
 nnoremap <cr> :nohlsearch<cr>
 map <Leader>co :TComment<CR>
 
-autocmd! BufWritePost * Neomake
-
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
+autocmd BufRead,BufNewFile *.md setlocal nospell
 
 hi Normal ctermbg=none
 hi NonText ctermbg=none
+
+highlight ALEWarning ctermfg=yellow ctermbg=238
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+
+nnoremap <C-p> :FZF<CR>
+nnoremap <Leader>t :TestNearest<CR>
+nnoremap <Leader>r :TestFile<CR>
+

@@ -6,4 +6,4 @@ export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
 export PATH="$PATH:$HOME/code/google-cloud-sdk/bin"
 export PATH="$PATH:/usr/local/opt/android-sdk/bin"
 export PATH="$PATH:$HOME/.local/bin"
-
+export PATH="$PATH:$HOME/.cargo/bin"
