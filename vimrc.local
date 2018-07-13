@@ -56,7 +56,7 @@ highlight ALEWarning ctermfg=yellow ctermbg=238
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
 
-nnoremap <C-p> :Files<CR>
+nnoremap <C-p> :FZF<CR>
 nnoremap <Leader>t :TestNearest<CR>
 nnoremap <Leader>r :TestFile<CR>
 

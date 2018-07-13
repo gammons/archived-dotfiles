@@ -9,7 +9,7 @@ Plug 'chriskempson/base16-vim'
 
 " Searching
 Plug 'google/vim-searchindex' " show number of search results
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Global syntax
