@@ -59,4 +59,7 @@ let g:ale_sign_warning = '⚠'
 nnoremap <C-p> :FZF<CR>
 nnoremap <Leader>t :TestNearest<CR>
 nnoremap <Leader>r :TestFile<CR>
+noremap <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
+noremap <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
+noremap <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 

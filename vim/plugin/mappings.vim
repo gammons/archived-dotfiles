@@ -64,3 +64,6 @@ nnoremap <Leader>m :w<CR>:Move <C-R>%
 nnoremap <Leader>p "*p
 nnoremap <Leader>q :call quickfix#ToggleQuickfixList()<CR>
 vnoremap <Leader>y "*y
+
+noremap <Leader>t :TestNearest<CR>
+noremap <Leader>r :TestFile<CR>
