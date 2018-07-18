@@ -181,8 +181,8 @@ hide_edge_borders both
 bindsym $mod+c exec --no-startup-id zenity --calendar
 bindsym --release F12 exec --no-startup-id spectacle
 
-bindsym $mod+u [title="termite-dropdown"] scratchpad show; move position center
-bindsym $mod+shift+u exec --no-startup-id termite --title=termite-dropdown
+bindsym $mod+u [title="dropdown-terminal"] scratchpad show; move position center
+bindsym $mod+shift+u exec --no-startup-id $term --title=dropdown-terminal
 
 bindsym --release F2 exec --no-startup-id $HOME/.bin/mic_toggle
 
@@ -255,8 +255,8 @@ for_window [class="^.*"] border pixel 3
 # Scratchpad
 ############################
 
-for_window [title="termite-dropdown"] floating enable
-for_window [title="termite-dropdown"] resize set 925 700
-for_window [title="termite-dropdown"] move position center
-for_window [title="termite-dropdown"] move scratchpad
-exec --no-startup-id termite --title=termite-dropdown
+for_window [title="dropdown-terminal"] floating enable
+for_window [title="dropdown-terminal"] resize set 925 700
+for_window [title="dropdown-terminal"] move position center
+for_window [title="dropdown-terminal"] move scratchpad
+exec --no-startup-id $term --title=dropdown-terminal
