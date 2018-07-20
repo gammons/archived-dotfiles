@@ -19,7 +19,7 @@ spacing = 1
 padding-left = 0
 padding-right = 0
 module-margin-left = 0
-module-margin-right = 0
+module-margin-right = 3
 
 font-0 =
 font-1 = FontAwesome:size=12;-2
@@ -159,9 +159,9 @@ adapter = AC0
 
 poll-interval = 5
 
-format-charging = <animation-charging>  <label-charging>
-format-discharging = <ramp-capacity>  <label-discharging>
-format-full = <ramp-capacity>  <label-full>
+format-charging = <animation-charging><label-charging>
+format-discharging = <ramp-capacity><label-discharging>
+format-full = <ramp-capacity><label-full>
 label-charging = %percentage%
 label-discharging = %percentage%
 label-full = %percentage%
@@ -192,7 +192,7 @@ type = internal/backlight
 card = intel_backlight
 enable-scroll = false
 
-format = <ramp> <label>
+format = <ramp><label>
 label = %percentage%
 
 ramp-0 = 🌕
@@ -208,7 +208,7 @@ ramp-4 = 🌑
 [module/volume]
 type = internal/volume
 
-format-volume = <ramp-volume>  <label-volume>
+format-volume = <ramp-volume><label-volume>
 format-muted = <label-muted>
 label-volume = %percentage%
 label-muted =   muted
@@ -248,7 +248,7 @@ exec = /home/grant/.rubies/ruby-2.5.1/bin/ruby ~/.config/polybar/polyweather.rb
 type = custom/script
 interval = 5
 exec = ~/.config/polybar/power_now
-format =  <label>
+format = <label>
 
 ;######################################################################
 ; mic module
