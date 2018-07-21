@@ -1,1 +1,2 @@
-autocmd FileType go nmap <leader>b  <Plug>(go-build)
+let g:go_highlight_types = 1
+autocmd BufWritePost *.go :GoBuild
