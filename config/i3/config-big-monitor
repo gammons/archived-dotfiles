@@ -3,7 +3,7 @@
 ############################
 
 set $mod Mod4
-set $term termite
+set $term alacritty
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -146,7 +146,7 @@ bindsym $mod+r mode "resize"
 ############################
 
 set $wallpaper_script $HOME/.bin/wallpaper
-set $ruby /home/grant/.rubies/ruby-2.5.0/bin/ruby
+set $ruby /home/grant/.rubies/ruby-2.5.1/bin/ruby
 
 ############################
 # Exec this stuff
@@ -181,8 +181,8 @@ hide_edge_borders both
 bindsym $mod+c exec --no-startup-id zenity --calendar
 bindsym --release F12 exec --no-startup-id spectacle
 
-bindsym $mod+u [title="termite-dropdown"] scratchpad show; move position center
-bindsym $mod+shift+u exec --no-startup-id termite --title=termite-dropdown
+bindsym $mod+u [title="dropdown-terminal"] scratchpad show; move position center
+bindsym $mod+shift+u exec --no-startup-id $term --title=dropdown-terminal
 
 bindsym --release F2 exec --no-startup-id $ruby $HOME/.bin/mic_toggle
 
@@ -201,12 +201,6 @@ bindsym $mod+F12 exec --no-startup-id xbacklight -inc 10
 bindsym $mod+F4 exec --no-startup-id playerctl previous
 bindsym $mod+F5 exec --no-startup-id playerctl play-pause
 bindsym $mod+F6 exec --no-startup-id playerctl next
-
-bindsym $mod+F7 exec --no-startup-id $HOME/.bin/laptop.sh
-bindsym $mod+F8 exec --no-startup-id $HOME/.bin/desktop.sh
-
-# have a key that will always turn on the laptop screen
-bindsym $mod+F9 exec --no-startup-id xrandr --output eDP1 --auto
 
 # Volume control
 bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume 0 -5% > /tmp/pactl 2>&1
@@ -257,8 +251,8 @@ for_window [class="^.*"] border pixel 3
 # Scratchpad
 ############################
 
-for_window [title="termite-dropdown"] floating enable
-for_window [title="termite-dropdown"] resize set 925 700
-for_window [title="termite-dropdown"] move position center
-for_window [title="termite-dropdown"] move scratchpad
-exec --no-startup-id termite --title=termite-dropdown
+for_window [title="dropdown-terminal"] floating enable
+for_window [title="dropdown-terminal"] resize set 925 700
+for_window [title="dropdown-terminal"] move position center
+for_window [title="dropdown-terminal"] move scratchpad
+exec --no-startup-id $term --title=dropdown-terminal
