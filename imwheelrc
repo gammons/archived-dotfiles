@@ -1,7 +1,7 @@
 ".*-chrome*"
-None,       Up,     Up,     4
-None,       Down,   Down,   4
+None,       Up,     Button4,     4
+None,       Down,   Button5,   4
 
 "^slack$"
-None,       Up,     Up,     4
-None,       Down,   Down,   4
+None,       Up,     Button4,     4
+None,       Down,   Button5,   4
