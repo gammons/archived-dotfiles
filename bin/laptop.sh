@@ -21,3 +21,6 @@ rm ~/.config/i3/config
 ln -s ~/.config/i3/config-laptop-monitor ~/.config/i3/config
 i3-msg reload
 i3-msg restart
+
+rm ~/.config/alacritty/alacritty.yml
+ln -s ~/.config/alacritty/alacritty.yml.laptop-monitor ~/.config/alacritty/alacritty.yml
