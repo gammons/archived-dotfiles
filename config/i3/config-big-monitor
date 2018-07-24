@@ -146,7 +146,7 @@ bindsym $mod+r mode "resize"
 ############################
 
 set $wallpaper_script $HOME/.bin/wallpaper
-set $ruby /home/grant/.rubies/ruby-2.5.1/bin/ruby
+set $ruby /opt/rubies/ruby-2.5.1/bin/ruby
 
 ############################
 # Exec this stuff
@@ -162,7 +162,7 @@ exec --no-startup-id $wallpaper_script
 exec --no-startup-id redshift-gtk
 exec --no-startup-id $HOME/dotfiles-local/bin/compton.sh
 exec --no-startup-id pasystray
-exec --no-startup-id xautolock -time 10 -locker 'i3lock' &
+exec --no-startup-id xautolock -time 60 -locker "systemctl suspend" &
 #exec --no-startup-id gpg-agent --daemon --enable-ssh-support --log-file ~/.gnupg/gpg-agent.log
 
 ############################

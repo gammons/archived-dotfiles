@@ -19,15 +19,15 @@ spacing = 1
 padding-left = 0
 padding-right = 0
 module-margin-left = 0
-module-margin-right = 0
+module-margin-right = 3
 
-font-0 = Noto Sans:pixelsize=12;0
+font-0 =
 font-1 = FontAwesome:size=9;-2
 font-2 = Weather Icons:size=12;0
 
 modules-left = i3
 modules-center = weather
-modules-right = power_now battery cpu volume mic date
+modules-right = battery cpu volume mic date
 
 tray-position = right
 tray-padding = 2
@@ -42,20 +42,38 @@ tray-offset-y=1
 
 [module/cpu]
 type = internal/cpu
-
-; Seconds to sleep between updates
-; Default: 1
 interval = 0.5
+
 format = <label> <ramp-coreload>
 
+label = CPU
+label-font = 3
+label-foreground = #99
+
 ramp-coreload-0 = ▁
+ramp-coreload-0-font = 2
+ramp-coreload-0-foreground = #aaff77
 ramp-coreload-1 = ▂
+ramp-coreload-1-font = 2
+ramp-coreload-1-foreground = #aaff77
 ramp-coreload-2 = ▃
+ramp-coreload-2-font = 2
+ramp-coreload-2-foreground = #aaff77
 ramp-coreload-3 = ▄
+ramp-coreload-3-font = 2
+ramp-coreload-3-foreground = #aaff77
 ramp-coreload-4 = ▅
+ramp-coreload-4-font = 2
+ramp-coreload-4-foreground = #fba922
 ramp-coreload-5 = ▆
+ramp-coreload-5-font = 2
+ramp-coreload-5-foreground = #fba922
 ramp-coreload-6 = ▇
+ramp-coreload-6-font = 2
+ramp-coreload-6-foreground = #ff5555
 ramp-coreload-7 = █
+ramp-coreload-7-font = 2
+ramp-coreload-7-foreground = #ff5555
 
 ;######################################################################
 ; temps
@@ -117,7 +135,7 @@ date-alt = %A, %d %B %Y
 time-alt = %H:%M:%S
 
 label = %date% %time%
-format =    <label>
+format =  <label>
 
 format-padding = 5
 
@@ -190,7 +208,7 @@ ramp-4 = 🌑
 [module/volume]
 type = internal/volume
 
-format-volume = <ramp-volume>  <label-volume>
+format-volume = <ramp-volume><label-volume>
 format-muted = <label-muted>
 label-volume = %percentage%
 label-muted =   muted
@@ -220,7 +238,7 @@ exec = ~/.config/polybar/cpuload.sh
 type = custom/script
 label = %{T3}%output%
 interval = 200
-exec = /home/grant/.rubies/ruby-2.5.1/bin/ruby ~/.config/polybar/polyweather.rb
+exec = /opt/rubies/ruby-2.5.1/bin/ruby ~/.config/polybar/polyweather.rb
 
 ;######################################################################
 ; power (in watts) module
