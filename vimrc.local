@@ -54,7 +54,8 @@ au FileType go nmap <leader>r <Plug>(go-run)
 hi Normal ctermbg=none
 hi NonText ctermbg=none
 
-highlight ALEWarning ctermfg=yellow ctermbg=238
+highlight ALEWarning ctermfg=yellow
+highlight ALEError ctermfg=124
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
 
