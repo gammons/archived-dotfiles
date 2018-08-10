@@ -1,4 +1,5 @@
 #!/bin/bash
 
-DISPLAY=:0.0 /usr/bin/feh --randomize --bg-fill /home/grant/Dropbox/wallpapers/
+wget -q -O /tmp/unsplash_wallpaper-$USER.jpg https://unsplash.it/3840/2160/?random
+DISPLAY=:0.0 /usr/bin/feh --randomize --bg-fill /tmp/unsplash_wallpaper-$USER.jpg
 
