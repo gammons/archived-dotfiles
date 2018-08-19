@@ -22,7 +22,7 @@ module-margin-left = 0
 module-margin-right = 3
 
 font-0 =
-font-1 = FontAwesome:size=12;-2
+font-1 = FontAwesome:size=12;0
 font-2 = Weather Icons:size=16;0
 
 modules-left = i3
@@ -31,7 +31,7 @@ modules-right = power_now backlight battery cpu volume mic date
 
 tray-position = right
 tray-padding = 2
-tray-background = #da222222
+;tray-background = #da222222
 tray-offset-y=1
 
 ; MODULES
