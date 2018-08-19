@@ -9,8 +9,8 @@ offset-x = 0
 offset-y = -1
 ;bottom = true
 
-background = #da222222
-foreground = #eee
+background = #13334c
+foreground = #FFFFF3
 
 underline-size = 2
 underline-color = #eee
@@ -97,7 +97,7 @@ label-padding = 5
 type = internal/i3
 
 label-focused = %index%
-label-focused-background = #da555555
+label-focused-background = #005792
 label-focused-padding = 3
 
 label-unfocused = %index%
