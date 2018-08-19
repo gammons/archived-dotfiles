@@ -112,7 +112,7 @@ LineEndConcatenation:
   Enabled: false
 
 LineLength:
-  Max: 80
+  Max: 120
   Exclude:
     - db/migrate/*.rb
     - spec/**/*.rb
@@ -249,3 +249,6 @@ UnderscorePrefixedVariableName:
 
 Void:
   Enabled: false
+
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context', 'it']
