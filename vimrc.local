@@ -58,6 +58,11 @@ highlight ALEWarning ctermfg=yellow
 highlight ALEError ctermfg=124
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
+let g:ale_fixers = {
+      \   'ruby': ['rubocop'],
+      \}
+" let g:ale_fix_on_save = 1
+let g:ale_enabled = 1
 
 nnoremap <C-p> :FZF<CR>
 nnoremap <Leader>t :TestNearest<CR>
