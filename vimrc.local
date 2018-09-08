@@ -47,7 +47,7 @@ nnoremap <cr> :nohlsearch<cr>
 map <Leader>co :TComment<CR>
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
-"autocmd BufRead,BufNewFile *.md setlocal nospell
+autocmd BufRead,BufNewFile *.md setlocal nospell
 
 au FileType go nmap <leader>r <Plug>(go-run)
 
