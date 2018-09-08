@@ -154,7 +154,6 @@ set $ruby ~/.rubies/ruby-2.5.1/bin/ruby
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec --no-startup-id dropbox start
 exec --no-startup-id $wallpaper_script
 exec --no-startup-id dunst -config $HOME/.dunstrc
 exec --no-startup-id nm-applet
