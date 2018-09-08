@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+`ssh-agent -k`
+`killall -QUIT syncthing`
+`i3-msg exit`
+
