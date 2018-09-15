@@ -1,1 +1,1 @@
-pactl list sources | grep -qi 'Mute: yes' && echo 'M' || echo 'O'
+pactl list sources | grep -qi 'Mute: yes' && echo '%{B#f00}M' || echo '%{F#aaff77}O'
