@@ -18,7 +18,7 @@ Plug 'tomtom/tcomment_vim' " Handle commenting for all languages
 Plug 'tpope/vim-endwise'
 
 " javascript / JSX
-" Plug 'mxw/vim-jsx'
+Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'leafgarland/typescript-vim'
