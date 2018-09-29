@@ -146,7 +146,7 @@ bindsym $mod+r mode "resize"
 ############################
 
 set $wallpaper_script $HOME/.bin/wallpaper
-set $ruby /opt/rubies/ruby-2.5.1/bin/ruby
+set $ruby ruby
 
 ############################
 # Exec this stuff
