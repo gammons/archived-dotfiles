@@ -71,3 +71,5 @@ noremap <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
 noremap <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
 noremap <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 
+" kill extra whitespace when saving
+let g:strip_whitespace_on_save=1

@@ -3,6 +3,7 @@ Plug 'scrooloose/nerdTree'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'janko-m/vim-test'
+Plug 'ntpeters/vim-better-whitespace'
 
 " Colors
 Plug 'chriskempson/base16-vim'
