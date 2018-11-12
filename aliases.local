@@ -57,6 +57,9 @@ alias un="vim ~/notes/ultradeck/next.md"
 alias dark="base16_default-dark"
 alias light="base16_solarized-light"
 
+alias rs="docker-compose run -e \"RAILS_ENV=test\" app rspec"
+alias rc="docker-compose run app rails c"
+
 alias db_connect_to_master='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_MASTER_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias db_connect_to_slave='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias db_connect_to_slave2='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE2_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
@@ -72,6 +75,6 @@ alias db_connect_to_staging='mysql -u $STAG_USER --password=$STAG_PASSWORD -h $D
 alias db_connect_to_staging2='mysql -u $STAG_USER --password=$STAG_PASSWORD -h $DB_STAGING2_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias db_connect_to_blue='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_BLUE_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 
-alias prod_console="ssh -t 172.21.153.93 \"sudo su -c 'cd /srv/ckapp/current && bundle exec rails c' -s /bin/sh ckapp\""
+alias prod_console="ssh -t 172.21.147.230 \"sudo su -c 'cd /srv/ckapp/current && bundle exec rails c' -s /bin/sh ckapp\""
 alias utility="ssh 172.21.149.121"
 alias unfuck_slack="unset XDG_CONFIG_DIRS"
