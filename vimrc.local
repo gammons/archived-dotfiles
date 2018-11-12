@@ -71,3 +71,4 @@ noremap <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
 noremap <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
 noremap <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 
+let test#ruby#rspec#executable = 'docker-compose run -e "RAILS_ENV=test" app rspec'
