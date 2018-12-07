@@ -164,6 +164,7 @@ exec --no-startup-id $HOME/dotfiles-local/bin/compton.sh
 exec --no-startup-id pasystray
 exec --no-startup-id imwheel
 exec --no-startup-id xautolock -time 60 -locker "systemctl suspend" &
+exec --no-startup-id v4l2ctrl ~/.config/webcam-settings
 #exec --no-startup-id gpg-agent --daemon --enable-ssh-support --log-file ~/.gnupg/gpg-agent.log
 
 ############################
