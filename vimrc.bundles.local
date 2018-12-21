@@ -4,6 +4,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'janko-m/vim-test'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'tpope/vim-surround'
 
 " Colors
 Plug 'chriskempson/base16-vim'
