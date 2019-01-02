@@ -59,9 +59,11 @@ highlight ALEError ctermfg=124
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
 let g:ale_fixers = {
+      \   'javascript': ['prettier'],
+      \   'css': ['prettier'],
       \   'ruby': ['rubocop'],
       \}
-" let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 1
 let g:ale_enabled = 1
 
 nnoremap <C-p> :FZF<CR>
@@ -76,3 +78,5 @@ let test#ruby#rspec#executable = 'docker-compose run -e "RAILS_ENV=test" app rsp
 
 " kill extra whitespace when saving
 let g:strip_whitespace_on_save=1
+
+
