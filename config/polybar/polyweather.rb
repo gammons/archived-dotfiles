@@ -26,7 +26,11 @@ class Polyweather
   end
 
   def temperature
-    currently["temperature"]
+    url = "https://stationdata.wunderground.com/cgi-bin/stationlookup?station=KPACONSH4&units=english&v=2.0&format=json"
+    uri = URI.parse(url)
+    response = Net::HTTP.get_response(uri)
+    result = JSON.parse(response.body)
+    result["stations"]["KPACONSH4"]["temperature"]
   end
 
   def summary
