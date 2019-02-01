@@ -59,7 +59,7 @@ highlight ALEError ctermfg=124
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
 let g:ale_fixers = {
-      \   'javascript': ['prettier'],
+      \   'javascript': ['eslint','prettier','importjs'],
       \   'css': ['prettier'],
       \   'ruby': ['rubocop'],
       \}
@@ -74,7 +74,7 @@ noremap <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
 noremap <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 
 " Use docker-compose for running specs
-let test#ruby#rspec#executable = 'docker-compose run -e "RAILS_ENV=test" app rspec'
+" let test#ruby#rspec#executable = 'docker-compose run -e "RAILS_ENV=test" app rspec'
 
 " kill extra whitespace when saving
 let g:strip_whitespace_on_save=1
