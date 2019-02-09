@@ -9,8 +9,9 @@ ln -s ~/.Xdefaults-laptop-monitor ~/.Xdefaults
 ~/.xsessionrc
 
 # turn off the main monitor, turn on the laptop monitor
+xrandr --output eDP-1 --auto
 xrandr --output eDP1 --auto
-xrandr --output DP1 --off
+xrandr --output DP-1-2 --off
 
 #update polybar
 rm ~/.config/polybar/config

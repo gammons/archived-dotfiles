@@ -8,9 +8,10 @@ ln -s ~/.Xdefaults-big-monitor ~/.Xdefaults
 # reload xsessionrc
 ~/.xsessionrc
 
-xrandr --output DP1-2 --off
+xrandr --output eDP-1 --off
+xrandr --output DP-2-2 --off
 sleep  1
-xrandr --output DP1-2 --auto
+xrandr --output DP-2-2 --auto
 
 # update polybar
 rm ~/.config/polybar/config
