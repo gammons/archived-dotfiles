@@ -23,5 +23,10 @@ ln -s ~/.config/i3/config-big-monitor ~/.config/i3/config
 i3-msg reload
 i3-msg restart
 
+# update keyboard configuration
+rm ~/.Xmodmap
+ln -s ~/.Xmodmap-big-monitor ~/.Xmodmap
+xmodmap ~/.Xmodmap
+
 rm ~/.config/alacritty/alacritty.yml
 ln -s ~/.config/alacritty/alacritty.yml.big-monitor ~/.config/alacritty/alacritty.yml
