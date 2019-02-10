@@ -9,7 +9,7 @@ offset-x = 0
 offset-y = -1
 ;bottom = true
 
-background = #da222222
+background = #da223262
 foreground = #eee
 
 underline-size = 2
