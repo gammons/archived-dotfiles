@@ -81,4 +81,5 @@ alias prod_console="ssh -t 172.21.155.56 \"sudo su -c 'cd /srv/ckapp/current && 
 alias utility="ssh 172.21.149.121"
 
 alias weather='curl wttr.in/conshohocken'
+alias fix_video='v4l2ctrl -d /dev/video2 -l ~/.config/webcam-settings'
 
