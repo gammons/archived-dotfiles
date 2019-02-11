@@ -31,7 +31,7 @@ modules-right = battery cpu volume mic date
 
 tray-position = right
 tray-padding = 2
-tray-background = #da222222
+tray-background = #da223262
 tray-offset-y=1
 
 ; MODULES
