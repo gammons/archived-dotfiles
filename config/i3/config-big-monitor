@@ -186,27 +186,32 @@ bindsym --release F12 exec --no-startup-id spectacle
 bindsym $mod+u [title="dropdown-terminal"] scratchpad show; move position center
 bindsym $mod+shift+u exec --no-startup-id $term --title=dropdown-terminal
 
-bindsym --release F2 exec --no-startup-id $ruby $HOME/.bin/mic_toggle
-
-bindsym --release F3 exec --no-startup-id $ruby $HOME/.bin/zoom_toggle
-
 bindsym $mod+Shift+f exec nautilus
 
 bindsym $mod+w exec --no-startup-id $wallpaper_script
 bindsym $mod+q workspace back_and_forth
 
-# Brightness
-bindsym $mod+F11 exec --no-startup-id xbacklight -dec 10
-bindsym $mod+F12 exec --no-startup-id xbacklight -inc 10
+# mute script and zoom window thingy
+bindsym --release F2 exec --no-startup-id $ruby $HOME/.bin/mic_toggle
+bindsym --release F3 exec --no-startup-id $ruby $HOME/.bin/zoom_toggle
+
+# Volume control
+bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume 0 -5% > /tmp/pactl 2>&1
+bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume 0 +5% > /tmp/pactl 2>&1
 
 # Music control
 bindsym $mod+F4 exec --no-startup-id playerctl previous
 bindsym $mod+F5 exec --no-startup-id playerctl play-pause
 bindsym $mod+F6 exec --no-startup-id playerctl next
 
-# Volume control
-bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume 0 -5% > /tmp/pactl 2>&1
-bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume 0 +5% > /tmp/pactl 2>&1
+# Desktop / laptop switcheroo
+bindsym $mod+F7 exec --no-startup-id ~/.bin/laptop.sh
+bindsym $mod+F8 exec --no-startup-id ~/.bin/desktop.sh
+
+# Brightness
+bindsym $mod+F11 exec --no-startup-id xbacklight -dec 10
+bindsym $mod+F12 exec --no-startup-id xbacklight -inc 10
+
 
 bindsym $mod+z exec --no-startup-id i3lock -c 333333
 
