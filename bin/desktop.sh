@@ -24,9 +24,8 @@ i3-msg reload
 i3-msg restart
 
 # update keyboard configuration
-rm ~/.Xmodmap
-ln -s ~/.Xmodmap-big-monitor ~/.Xmodmap
-xmodmap ~/.Xmodmap
+setxkbmap -option ''
+setxkbmap -option ctrl:swapcaps -option altwin:swap_alt_win
 
 rm ~/.config/alacritty/alacritty.yml
 ln -s ~/.config/alacritty/alacritty.yml.big-monitor ~/.config/alacritty/alacritty.yml

@@ -8,9 +8,12 @@ ln -s ~/.Xdefaults-laptop-monitor ~/.Xdefaults
 # reload xsessionrc
 ~/.xsessionrc
 
-# turn off the main monitor, turn on the laptop monitor
+# turn on the laptop monitor
 xrandr --output eDP-1 --auto
 xrandr --output eDP1 --auto
+
+# turn off the main monitor
+xrandr --output DP-2-2 --off
 xrandr --output DP-1-2 --off
 
 #update polybar
@@ -24,9 +27,8 @@ i3-msg reload
 i3-msg restart
 
 # update keyboard configuration
-rm ~/.Xmodmap
-ln -s ~/.Xmodmap-laptop-monitor ~/.Xmodmap
-xmodmap ~/.Xmodmap
+setxkbmap -option ''
+setxkbmap -option ctrl:swapcaps
 
 rm ~/.config/alacritty/alacritty.yml
 ln -s ~/.config/alacritty/alacritty.yml.laptop-monitor ~/.config/alacritty/alacritty.yml
