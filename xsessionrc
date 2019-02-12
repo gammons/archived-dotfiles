@@ -1,3 +1,2 @@
 xset r rate 200 35
 xrdb -load $HOME/.Xdefaults
-xmodmap ~/.Xmodmap
