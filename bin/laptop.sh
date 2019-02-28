@@ -32,3 +32,6 @@ setxkbmap -option ctrl:swapcaps
 
 rm ~/.config/alacritty/alacritty.yml
 ln -s ~/.config/alacritty/alacritty.yml.laptop-monitor ~/.config/alacritty/alacritty.yml
+
+# kill imwheel as it makes the trackpad jumpy
+killall imwheel
