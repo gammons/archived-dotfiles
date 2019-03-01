@@ -27,7 +27,7 @@ font-2 = Weather Icons:size=16;0
 
 modules-left = i3
 modules-center = weather
-modules-right = power_now backlight battery cpu volume mic date
+modules-right = power_now backlight battery cpuhz cpu volume mic date
 
 tray-position = right
 tray-padding = 2
@@ -249,6 +249,15 @@ type = custom/script
 interval = 5
 exec = ~/.config/polybar/power_now
 format = <label>
+
+;######################################################################
+; CPU in hz
+;######################################################################
+
+[module/cpuhz]
+type = custom/script
+interval = 5
+exec = ~/.config/polybar/cpupower.sh
 
 ;######################################################################
 ; mic module
