@@ -77,7 +77,7 @@ alias db_connect_to_staging='mysql -u $STAG_USER --password=$STAG_PASSWORD -h $D
 alias db_connect_to_staging2='mysql -u $STAG_USER --password=$STAG_PASSWORD -h $DB_STAGING2_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias db_connect_to_blue='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_BLUE_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 
-alias prod_console="ssh -t 172.21.155.56 \"sudo su -c 'cd /srv/ckapp/current && bundle exec rails c' -s /bin/sh ckapp\""
+alias prod_console="ssh -t 172.21.145.222 \"sudo su -c 'cd /srv/ckapp/current && bundle exec rails c' -s /bin/sh ckapp\""
 alias utility="ssh 172.21.149.121"
 
 alias weather='curl wttr.in/conshohocken'
