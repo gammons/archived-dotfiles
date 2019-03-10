@@ -4,7 +4,7 @@
 
 [bar/main]
 width = 100%
-height = 40
+height = 50
 offset-x = 0
 offset-y = -1
 ;bottom = true
@@ -22,8 +22,8 @@ module-margin-left = 0
 module-margin-right = 3
 
 font-0 =
-font-1 = FontAwesome:size=12;0
-font-2 = Weather Icons:size=16;0
+font-1 = FontAwesome:size=14;0
+font-2 = Weather Icons:size=18;0
 
 modules-left = i3
 modules-center = weather
