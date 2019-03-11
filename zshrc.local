@@ -1,4 +1,5 @@
 export TERM=xterm-256color
+export WINIT_HIDPI_FACTOR=2.0
 
 source ~/dotfiles-local/antigen.zsh
 
