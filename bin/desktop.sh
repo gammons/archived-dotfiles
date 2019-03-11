@@ -3,12 +3,15 @@ xrandr --dpi 92
 
 # copy over the right Xdefaults
 rm ~/.Xdefaults
+rm ~/.Xresources
 ln -s ~/.Xdefaults-big-monitor ~/.Xdefaults
+ln -s ~/.Xdefaults-big-monitor ~/.Xresources
 
 # reload xsessionrc
 ~/.xsessionrc
 
 xrandr --output eDP-1 --off
+xrandr --output eDP1 --off
 xrandr --output DP-2-2 --off
 sleep  1
 xrandr --output DP-2-2 --auto
