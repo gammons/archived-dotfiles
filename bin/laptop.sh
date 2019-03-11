@@ -1,8 +1,10 @@
 # set dpi
-xrandr --dpi 140
+xrandr --dpi 92
 
 # copy over the right Xdefaults
 rm ~/.Xdefaults
+rm ~/.Xresources
+ln -s ~/.Xdefaults-laptop-monitor ~/.Xresources
 ln -s ~/.Xdefaults-laptop-monitor ~/.Xdefaults
 
 # reload xsessionrc
