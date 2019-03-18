@@ -10,11 +10,7 @@ ln -s ~/.Xdefaults-big-monitor ~/.Xresources
 # reload xsessionrc
 ~/.xsessionrc
 
-# xrandr --output eDP-1 --off
-# xrandr --output eDP1 --off
-# xrandr --output DP-2-2 --off
-sleep  1
-xrandr --output DP-2-2 --auto
+xrandr --output DP2 --auto
 
 # cp the correct i3 config for the monitor setup
 rm ~/.config/i3/config
