@@ -4,7 +4,7 @@
 
 [bar/main]
 width = 100%
-height = 35
+height = 50
 offset-x = 0
 offset-y = -1
 ;bottom = true
@@ -22,16 +22,16 @@ module-margin-left = 0
 module-margin-right = 3
 
 font-0 =
-font-1 = FontAwesome:size=9;-2
-font-2 = Weather Icons:size=12;0
+font-1 = FontAwesome:size=14;0
+font-2 = Weather Icons:size=18;0
 
 modules-left = i3
 modules-center = weather
-modules-right = battery cpuhz cpu volume mic date
+modules-right = power_now backlight battery cpuhz cpu volume mic whoami date
 
 tray-position = right
 tray-padding = 2
-tray-background = #da222222
+;tray-background = #da222222
 tray-offset-y=1
 
 ; MODULES
@@ -135,7 +135,7 @@ date-alt = %A, %d %B %Y
 time-alt = %H:%M:%S
 
 label = %date% %time%
-format =  <label>
+format =    <label>
 
 format-padding = 5
 
@@ -159,9 +159,9 @@ adapter = AC0
 
 poll-interval = 5
 
-format-charging = <animation-charging>  <label-charging>
-format-discharging = <ramp-capacity>  <label-discharging>
-format-full = <ramp-capacity>  <label-full>
+format-charging = <animation-charging><label-charging>
+format-discharging = <ramp-capacity><label-discharging>
+format-full = <ramp-capacity><label-full>
 label-charging = %percentage%
 label-discharging = %percentage%
 label-full = %percentage%
@@ -192,7 +192,7 @@ type = internal/backlight
 card = intel_backlight
 enable-scroll = false
 
-format = <ramp> <label>
+format = <ramp><label>
 label = %percentage%
 
 ramp-0 = 🌕
@@ -231,6 +231,17 @@ interval = 5
 exec = ~/.config/polybar/cpuload.sh
 
 ;######################################################################
+; whoami module
+;######################################################################
+
+[module/whoami]
+type = custom/script
+label = %{T3}%output%
+exec = whoami
+format =  <label>
+
+
+;######################################################################
 ; weather module
 ;######################################################################
 
@@ -248,7 +259,7 @@ exec = ruby ~/.config/polybar/polyweather.rb
 type = custom/script
 interval = 5
 exec = ~/.config/polybar/power_now
-format =  <label>
+format = <label>
 
 ;######################################################################
 ; CPU in hz

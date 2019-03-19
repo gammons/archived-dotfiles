@@ -10,15 +10,11 @@ ln -s ~/.Xdefaults-big-monitor ~/.Xresources
 # reload xsessionrc
 ~/.xsessionrc
 
-xrandr --output eDP-1 --off
-xrandr --output eDP1 --off
-xrandr --output DP-2-2 --off
+# xrandr --output eDP-1 --off
+# xrandr --output eDP1 --off
+# xrandr --output DP-2-2 --off
 sleep  1
 xrandr --output DP-2-2 --auto
-
-# update polybar
-rm ~/.config/polybar/config
-ln -s ~/.config/polybar/config-big-monitor ~/.config/polybar/config
 
 # cp the correct i3 config for the monitor setup
 rm ~/.config/i3/config
