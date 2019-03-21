@@ -12,12 +12,6 @@ ln -s ~/.Xdefaults-big-monitor ~/.Xresources
 
 xrandr --output DP2 --auto
 
-# cp the correct i3 config for the monitor setup
-rm ~/.config/i3/config
-ln -s ~/.config/i3/config-big-monitor ~/.config/i3/config
-i3-msg reload
-i3-msg restart
-
 # update keyboard configuration
 setxkbmap -option ''
 setxkbmap -option ctrl:swapcaps -option altwin:swap_alt_win
