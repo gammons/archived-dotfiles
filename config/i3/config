@@ -2,7 +2,7 @@
 # Variables
 ############################
 
-set $mod Mod1
+set $mod Mod4
 set $term alacritty
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -117,7 +117,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' '~/.bin/exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -146,7 +146,7 @@ bindsym $mod+r mode "resize"
 ############################
 
 set $wallpaper_script $HOME/.bin/wallpaper
-set $ruby ~/.rubies/ruby-2.6.1/bin/ruby
+set $ruby ruby
 
 ############################
 # Exec this stuff
@@ -154,14 +154,15 @@ set $ruby ~/.rubies/ruby-2.6.1/bin/ruby
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# exec --no-startup-id $wallpaper_script
+exec --no-startup-id xfce4-clipman
+exec --no-startup-id $wallpaper_script
 exec --no-startup-id dunst -config $HOME/.dunstrc
 exec --no-startup-id nm-applet
 exec --no-startup-id $wallpaper_script
 exec --no-startup-id redshift-gtk
 exec --no-startup-id pasystray
 exec --no-startup-id syncthing
-exec_always --no-startup-id xautolock -time 10 -locker 'i3lock' &
+exec --no-startup-id xautolock -time 60 -locker "systemctl suspend" &
 
 ############################
 # Further customization
@@ -177,7 +178,7 @@ hide_edge_borders both
 ############################
 
 bindsym $mod+c exec --no-startup-id zenity --calendar
-bindsym --release F12 exec --no-startup-id deepin-screenshot
+bindsym --release F12 exec --no-startup-id deepin-screenshot -n
 
 bindsym $mod+u [title="dropdown-terminal"] scratchpad show; move position center
 bindsym $mod+shift+u exec --no-startup-id $term --title=dropdown-terminal
@@ -187,8 +188,8 @@ bindsym $mod+Shift+f exec nautilus
 bindsym $mod+w exec --no-startup-id $wallpaper_script
 bindsym $mod+q workspace back_and_forth
 
-# Mute script and zoom window finder
-bindsym --release F2 exec --no-startup-id $HOME/.bin/mic_toggle
+# mute script and zoom window thingy
+bindsym --release F2 exec --no-startup-id $ruby $HOME/.bin/mic_toggle
 bindsym --release F3 exec --no-startup-id $ruby $HOME/.bin/zoom_toggle
 
 # Volume control
@@ -200,12 +201,14 @@ bindsym $mod+F4 exec --no-startup-id playerctl previous
 bindsym $mod+F5 exec --no-startup-id playerctl play-pause
 bindsym $mod+F6 exec --no-startup-id playerctl next
 
-bindsym $mod+F7 exec --no-startup-id $HOME/.bin/laptop.sh
-bindsym $mod+F8 exec --no-startup-id $HOME/.bin/desktop.sh
+# Desktop / laptop switcheroo
+bindsym $mod+F7 exec --no-startup-id ~/.bin/laptop.sh
+bindsym $mod+F8 exec --no-startup-id ~/.bin/desktop.sh
 
 # Brightness
-bindsym $mod+F11 exec --no-startup-id $ruby $HOME/.bin/backlight dec
-bindsym $mod+F12 exec --no-startup-id $ruby $HOME/.bin/backlight inc
+bindsym $mod+F11 exec --no-startup-id xbacklight -dec 10
+bindsym $mod+F12 exec --no-startup-id xbacklight -inc 10
+
 
 bindsym $mod+z exec --no-startup-id i3lock -c 333333
 
@@ -221,11 +224,10 @@ for_window [title="^Zoom Meeting ID$"] floating enable
 for_window [title="^Zoom Cloud Meetings$"] floating enable
 for_window [title="^Zoom - Pro Account$"] floating enable
 for_window [class="zoom"] floating enable
-for_window [class="Gpick"] floating enable
 for_window [title="^Zoom - Pro Account$"] sticky enable
 for_window [class="VirtualBox"] floating enable
 
-assign [class="Slack"] 3
+assign [class="Slack"] 2
 assign [class="Spotify"] 4
 
 ############################
