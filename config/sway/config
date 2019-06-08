@@ -1,4 +1,4 @@
-output eDP-1 scale 1.0 pos 0 0 res 3840x2160
+output eDP-1 scale 1.5 pos 0 0 res 3840x2160
 output DP-4 scale 1.0 pos 1920 0 res 3840x2160
 
 default_border pixel
