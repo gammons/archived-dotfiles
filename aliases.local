@@ -26,14 +26,21 @@ alias pr="hub pull-request"
 alias be="bundle exec"
 alias m="neomutt"
 alias r="ranger"
+
 alias t="ultralist"
 alias tc="ultralist l agenda by context"
 alias td="ultralist l agenda by context"
 alias tp="ultralist l agenda by project"
 alias tl="ultralist l agenda by project"
+alias tod="ultralist l by project due tod"
 alias tom="ultralist l by project due tom"
 alias mon="ultralist l by project due mon"
+alias tue="ultralist l by project due tue"
+alias wed="ultralist l by project due wed"
+alias thu="ultralist l by project due thu"
+alias fri="ultralist l by project due fri"
 alias c="ultralist l completed tod"
+
 alias j="fg %-"
 alias dev="tmuxinator development"
 alias pc="tmuxinator console"
@@ -77,7 +84,7 @@ alias db_connect_to_staging='mysql -u $STAG_USER --password=$STAG_PASSWORD -h $D
 alias db_connect_to_staging2='mysql -u $STAG_USER --password=$STAG_PASSWORD -h $DB_STAGING2_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 alias db_connect_to_blue='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_BLUE_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
 
-alias prod_console="ssh -t 172.21.149.76 \"sudo su -c 'cd /srv/ckapp/current && bundle exec rails c' -s /bin/sh ckapp\""
+alias prod_console="ssh -t 172.21.153.54 \"sudo su -c 'cd /srv/ckapp/current && bundle exec rails c' -s /bin/sh ckapp\""
 alias utility="ssh 172.21.149.121"
 
 alias weather='curl wttr.in/conshohocken'
