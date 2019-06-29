@@ -1,0 +1,35 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-size: 22px;
+  min-height: 0;
+  padding: 3px;
+  background: #222222;
+  color: #eeeeee;
+}
+
+window#waybar {
+  background: #222222;
+  color: #eeeeee;
+}
+
+#workspaces .button {
+  border: 1px solid blue;
+}
+
+#custom-weather {
+  font-family: "Weather Icons";
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#workspaces,
+#tray,
+#mode {
+  padding: 0 10px;
+  margin: 0 5px;
+}
