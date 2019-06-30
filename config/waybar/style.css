@@ -13,8 +13,8 @@ window#waybar {
   color: #eeeeee;
 }
 
-#workspaces .button {
-  border: 1px solid blue;
+#workspaces button.focused {
+  color: #da5555;
 }
 
 #custom-weather {

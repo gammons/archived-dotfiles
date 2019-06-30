@@ -2,12 +2,15 @@
   "layer": "top",
     "modules-left": ["sway/workspaces"],
     "modules-center": ["custom/weather"],
-    "modules-right": ["custom/power_now", "backlight", "battery", "custom/cpupower", "pulseaudio", "custom/mic", "clock", "tray"],
+    "modules-right": ["custom/power_now", "backlight", "battery", "custom/cpupower", "pulseaudio", "custom/mic", "custom/test", "clock", "tray"],
     "sway/window": {
       "max-length": 50
     },
+    "sway/workspaces": {
+      "current-only": true
+    },
     "battery": {
-      "format": "{capacity}% {icon}",
+      "format": "{icon} {capacity}%",
       "format-icons": ["", "", "", "", ""]
     },
     "backlight": {
@@ -15,13 +18,13 @@
       "format-icons": ["🌕","🌔","🌓","🌒","🌑"]
     },
     "clock": {
-      "format-alt": "{:%a, %d. %b  %H:%M}"
+      "format": "{:%a, %d %b %H:%M}"
     },
     "pulseaudio": {
       "format": " {volume}% {icon}"
     },
     "custom/cpupower": {
-      "format": "- {} -",
+      "format": "{}",
       "interval": 5,
       "exec": "~/.config/polybar/cpupower.sh"
     },
@@ -36,8 +39,8 @@
       "exec": "ruby ~/.config/polybar/polyweather.rb"
     },
     "custom/mic": {
-      "format": " {}",
+      "format": "{}",
       "interval": 1,
-      "exec": "~/.config/polybar/mic"
+      "exec": "~/.config/polybar/waybar_mic"
     }
 }
