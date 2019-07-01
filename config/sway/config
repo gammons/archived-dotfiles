@@ -185,19 +185,11 @@ set $ruby ~/.rubies/ruby-2.6.1/bin/ruby
 # Exec this stuff
 ############################
 
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+set $locker 'swaylock -c 1d2021 --incide-color 000000b3'
 
-# exec --no-startup-id $wallpaper_script
 exec --no-startup-id dunst -config $HOME/.dunstrc
-exec --no-startup-id nm-applet
-# exec --no-startup-id $wallpaper_script
-exec --no-startup-id redshift-gtk
-# exec --no-startup-id $HOME/dotfiles-local/bin/compton.sh
-exec --no-startup-id pasystray
-# exec --no-startup-id imwheel
-# exec --no-startup-id syncthing
-#exec --no-startup-id gpg-agent --daemon --enable-ssh-support --log-file ~/.gnupg/gpg-agent.log
-# exec --no-startup-id xautolock -time 10 -locker 'i3lock' &
+exec swayidle -w timeout 1800 $locker
+exec swaybg --color=#000000
 
 ############################
 # Further customization
@@ -244,7 +236,7 @@ bindsym $mod+F8 exec --no-startup-id $HOME/.bin/desktop.sh
 bindsym $mod+F11 exec --no-startup-id /usr/bin/brightnessctl set 5%- 2&>1 > /tmp/brightness
 bindsym $mod+shift+F11 exec --no-startup-id /usr/bin/brightnessctl set +5%
 
-bindsym $mod+z exec --no-startup-id i3lock -c 333333
+bindsym $mod+z exec --no-startup-id swaylock -c 333333
 
 bindsym $mod+i exec --no-startup-id $ruby $HOME/.bin/openzoom 9849040235
 bindsym $mod+o exec --no-startup-id $ruby $HOME/.bin/openzoom 4283094446
