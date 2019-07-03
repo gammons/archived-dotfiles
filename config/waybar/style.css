@@ -14,12 +14,13 @@ window#waybar {
 }
 
 #workspaces button {
-  padding: 13px 5px;
+  padding: 13px 10px;
   color: #ffffff;
 }
 
 #workspaces button.focused {
-  background: #1976d2;
+  background: #fff176;
+  color: #333;
 }
 
 #custom-weather {
