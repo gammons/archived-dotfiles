@@ -7,7 +7,6 @@
       "max-length": 50
     },
     "sway/workspaces": {
-      "current-only": true
     },
     "battery": {
       "format": "{icon} {capacity}%",

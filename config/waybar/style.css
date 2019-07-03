@@ -3,9 +3,9 @@
   border-radius: 0;
   font-size: 22px;
   min-height: 0;
-  padding: 3px;
-  background: #222222;
-  color: #eeeeee;
+}
+
+#window {
 }
 
 window#waybar {
@@ -13,8 +13,13 @@ window#waybar {
   color: #eeeeee;
 }
 
+#workspaces button {
+  padding: 13px 5px;
+  color: #ffffff;
+}
+
 #workspaces button.focused {
-  color: #da5555;
+  background: #1976d2;
 }
 
 #custom-weather {
@@ -31,5 +36,4 @@ window#waybar {
 #tray,
 #mode {
   padding: 0 10px;
-  margin: 0 5px;
 }
