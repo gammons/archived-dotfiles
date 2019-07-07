@@ -161,8 +161,8 @@ exec --no-startup-id nm-applet
 exec --no-startup-id $wallpaper_script
 exec --no-startup-id redshift-gtk
 exec --no-startup-id pasystray
-exec --no-startup-id syncthing
 exec --no-startup-id xautolock -time 60 -locker "systemctl suspend" &
+exec --no-startup-id xscreensaver --nosplash
 
 ############################
 # Further customization
@@ -206,11 +206,10 @@ bindsym $mod+F7 exec --no-startup-id ~/.bin/laptop.sh
 bindsym $mod+F8 exec --no-startup-id ~/.bin/desktop.sh
 
 # Brightness
-bindsym $mod+F11 exec --no-startup-id xbacklight -dec 10
-bindsym $mod+F12 exec --no-startup-id xbacklight -inc 10
+bindsym $mod+F11 exec --no-startup-id brightnessctl set 5%-
+bindsym $mod+F12 exec --no-startup-id brightnessctl set +5%
 
-
-bindsym $mod+z exec --no-startup-id i3lock -c 333333
+bindsym $mod+z exec --no-startup-id xscreensaver-command -lock
 
 bindsym $mod+i exec --no-startup-id $ruby $HOME/.bin/openzoom 9849040235
 bindsym $mod+o exec --no-startup-id $ruby $HOME/.bin/openzoom 4283094446
