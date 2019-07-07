@@ -20,7 +20,7 @@ xrandr --output DP-1-2 --off
 
 # update keyboard configuration
 setxkbmap -option ''
-setxkbmap -option ctrl:swapcaps -option altwin:swap_alt_win
+setxkbmap -option ctrl:swapcaps -option altwin:hyper_win
 
 rm ~/.config/alacritty/alacritty.yml
 ln -s ~/.config/alacritty/alacritty.yml.laptop-monitor ~/.config/alacritty/alacritty.yml
