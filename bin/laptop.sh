@@ -16,6 +16,7 @@ xrandr --output eDP1 --auto
 
 # turn off the main monitor
 xrandr --output DP-2-2 --off
+xrandr --output DP-2 --off
 xrandr --output DP-1-2 --off
 
 # update keyboard configuration
