@@ -163,9 +163,11 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id pasystray
 exec --no-startup-id xautolock -time 60 -locker "systemctl suspend" &
 exec --no-startup-id xscreensaver -nosplash
+exec --no-startup-id compton -b
+exec --no-startup-id feh --randomize --bg-fill ~/.wallpapers/*
 
-exect --no-startup-id setxkbmap -option ''
-exect --no-startup-id setxkbmap -option ctrl:swapcaps -option altwin:hyper_win
+exec --no-startup-id setxkbmap -option ''
+exec --no-startup-id setxkbmap -option ctrl:swapcaps -option altwin:hyper_win
 
 ############################
 # Further customization
