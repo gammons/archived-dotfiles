@@ -20,4 +20,5 @@ rm ~/.config/alacritty/alacritty.yml
 ln -s ~/.config/alacritty/alacritty.yml.big-monitor ~/.config/alacritty/alacritty.yml
 
 # start imwheel to make scrolling faster
+killall imwheel # make idempotent
 imwheel
