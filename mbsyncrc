@@ -10,6 +10,7 @@ Account personal
 MaildirStore local
 Subfolders Verbatim
 Path ~/mail/
+Inbox ~/mail/Inbox
 Flatten .
 
 Channel personal
