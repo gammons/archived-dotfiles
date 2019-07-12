@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require 'time'
+path = "#{ENV['HOME']}/mail"
+
+last_email_time = Time.parse(File.read("#{path}/.last_email_time"))
+last_mutt_open = Time.parse(File.read("#{path}/.last_mutt_open"))
+
+if last_email_time > last_mutt_open
+  puts ""
+else
+  puts " "
+end

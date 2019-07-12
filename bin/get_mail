@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+`/usr/bin/mbsync -Va`
+
+dir = "#{ENV['HOME']}/mail"
+
+times = Dir["#{dir}/**/*"].map {|f| File.mtime(f) }
+f = File.open("#{dir}/.last_email_time","w")
+f << times.max
+f.close

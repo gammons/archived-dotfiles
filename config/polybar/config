@@ -27,7 +27,7 @@ font-2 = Weather Icons:size=18;0
 
 modules-left = i3
 modules-center = weather
-modules-right = power_now backlight battery cpuhz cpu volume mic whoami date
+modules-right = power_now backlight battery cpuhz cpu volume mic whoami date mail
 
 tray-position = right
 tray-padding = 2
@@ -279,6 +279,16 @@ type = custom/script
 interval = 0.5
 exec = ~/.config/polybar/mic
 format =  <label>
+
+;######################################################################
+; mail module
+;######################################################################
+
+[module/mail]
+type = custom/script
+interval = 20
+exec = ~/.config/polybar/mail
+format = <label>
 
 ;######################################################################
 ; mpd module
