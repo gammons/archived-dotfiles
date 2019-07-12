@@ -31,6 +31,10 @@ set thorough_search      # strip headers and eval mimes before searching
 # Account settings
 ###########################
 
+set my_name = "Grant Ammons"
+set from = "grant@grant.dev"
+set use_from = yes
+
 mailboxes +/Inbox \
           +/github-convertkit \
           +/finance \
@@ -41,6 +45,14 @@ mailboxes +/Inbox \
           +/Archives.2019 \
 
 set mbox = +/Archives.2019
+
+###########################
+# Sending mail
+###########################
+
+set sendmail="/usr/bin/msmtp"
+set record=+/Sent
+
 ###########################
 # Index view
 ###########################
