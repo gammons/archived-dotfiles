@@ -24,7 +24,7 @@ alias tmux="tmux -2"
 alias u="CACHE=true uni"
 alias pr="hub pull-request"
 alias be="bundle exec"
-alias m="echo `date` > ~/mail/.last_mutt_open && neomutt"
+alias m="date > ~/mail/.last_mutt_open && neomutt"
 alias r="ranger"
 
 alias t="ultralist"

@@ -3,4 +3,4 @@ Description=Mailbox synchronization service
 
 [Service]
 Type=oneshot
-ExecStart=~/.bin/get_mail
+ExecStart=/usr/bin/get_mail
