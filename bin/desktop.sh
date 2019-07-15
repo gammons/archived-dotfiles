@@ -11,7 +11,7 @@ ln -s ~/.Xdefaults-big-monitor ~/.Xresources
 ~/.xsessionrc
 
 xrandr --output DP-2 --auto
-xrandr --output eDP-1 --off
+xrandr --output eDP-1 --same-as DP-2
 
 # update keyboard configuration
 setxkbmap -option ''
