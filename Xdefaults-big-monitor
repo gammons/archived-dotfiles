@@ -1,5 +1,6 @@
 : prevents an absolutely enormous cursor in urxvt
 Xcursor.size: 16
+Xcursor.theme: breeze_cursors
 Xft.dpi: 110
 
 xvt.termName:         rxvt-256color
