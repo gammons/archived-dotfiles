@@ -4,7 +4,9 @@
 
 dir = "#{ENV['HOME']}/mail"
 
-times = Dir["#{dir}/**/*"].map {|f| File.mtime(f) }
-f = File.open("#{dir}/.last_email_time","w")
-f << times.max
+times = Dir["#{dir}/**/*"].map { |f| { file: f, time: File.mtime(f) } }
+max = times.max_by { |t| t[:time] }
+
+f = File.open("#{dir}/.last_email_time", "w")
+f << max[:time]
 f.close
