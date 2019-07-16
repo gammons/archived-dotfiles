@@ -25,6 +25,7 @@ alias u="CACHE=true uni"
 alias pr="hub pull-request"
 alias be="bundle exec"
 alias m="date > ~/mail/.last_mutt_open && neomutt"
+alias wm="date > ~/workmail/.last_mutt_open && neomutt -F ~/.workmuttrc"
 alias r="ranger"
 
 alias t="ultralist"
