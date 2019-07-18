@@ -1,3 +1,7 @@
+#################################
+# personal mail
+#################################
+
 IMAPAccount personal
 User grant
 Host mail
@@ -16,6 +20,34 @@ Flatten .
 Channel personal
 Master :remote:
 Slave :local:
+Patterns *
+Create Both
+SyncState *
+
+
+#################################
+# Work mail
+#################################
+
+IMAPAccount gmail
+Host imap.gmail.com
+User grant@convertkit.com
+PassCmd "cat ~/.workmailpass"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore gmail-remote
+Account gmail
+
+MaildirStore work-local
+Subfolders Verbatim
+Path ~/workmail/
+Inbox ~/workmail/Inbox
+Flatten .
+
+Channel work
+Master :gmail-remote:
+Slave :work-local:
 Patterns *
 Create Both
 SyncState *
