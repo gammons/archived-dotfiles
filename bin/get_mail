@@ -6,9 +6,14 @@ dir = "#{ENV['HOME']}/mail"
 
 ignore_dirs = ["#{dir}/paptertrail","#{dir}/indyhall","#{dir}/meetups"]
 
-times = Dir["#{dir}/**/*"].map { |f| { file: f, time: File.mtime(f) } }
+times = Dir["#{dir}/**/*"].map { |f| File.directory?(f) ? nil : { file: f, time: File.mtime(f) } }.compact
 times.reject! {|t| ignore_dirs.any? {|dir| t[:file].start_with?(dir) } }
 max = times.max_by { |t| t[:time] }
+
+g = File.open("#{dir}/.last_email","w")
+g << max.inspect
+g.close
+
 
 f = File.open("#{dir}/.last_email_time", "w")
 f << max[:time]
