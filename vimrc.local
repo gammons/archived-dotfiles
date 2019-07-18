@@ -63,7 +63,7 @@ let g:ale_fixers = {
       \   'css': ['prettier'],
       \   'ruby': ['rubocop'],
       \}
-let g:ale_fix_on_save = 1
+"let g:ale_fix_on_save = 1
 let g:ale_enabled = 1
 
 nnoremap <C-p> :FZF<CR>
@@ -74,15 +74,14 @@ noremap <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
 noremap <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 
 function! DockerTransform(cmd)
-  return('cd ~/local_code/ultralist; '.a:cmd)
+  return('cd ~/local_code/convertkit-docker; '.a:cmd)
 endfunction
 
-let test#ruby#rspec#executable = 'docker-compose run -e RAILS_ENV=test backend bundle exec rspec'
 let g:test#custom_transformations = {'docker': function('DockerTransform')}
 let g:test#transformation = 'docker'
 
 " Use docker-compose for running specs
-" let test#ruby#rspec#executable = 'docker-compose run -e "RAILS_ENV=test" app rspec'
+let test#ruby#rspec#executable = './bin/rspec'
 " normal-ass setup
 " let test#ruby#rspec#executable = 'bundle exec rspec'
 
