@@ -1,2 +1,2 @@
-text/html; elinks -dump ; copiousoutput;
-auto_view text/html
+text/html;  /usr/bin/google-chrome-beta %s >/dev/null 1>&1; needsterminal
+text/html;  elinks -dump %s; nametemplate=%s.html; copiousoutput
