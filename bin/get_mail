@@ -14,7 +14,6 @@ g = File.open("#{dir}/.last_email","w")
 g << max.inspect
 g.close
 
-
 f = File.open("#{dir}/.last_email_time", "w")
 f << max[:time]
 f.close
