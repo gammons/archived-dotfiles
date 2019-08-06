@@ -158,13 +158,11 @@ exec --no-startup-id xfce4-clipman
 exec --no-startup-id $wallpaper_script
 exec --no-startup-id dunst -config $HOME/.dunstrc
 exec --no-startup-id nm-applet
-exec --no-startup-id $wallpaper_script
 exec --no-startup-id redshift-gtk
 exec --no-startup-id pasystray
 exec --no-startup-id xautolock -time 60 -locker "systemctl suspend" &
 exec --no-startup-id xscreensaver -nosplash
 exec --no-startup-id compton -D 0 -b
-exec --no-startup-id feh --randomize --bg-fill ~/.wallpapers/*
 
 exec --no-startup-id setxkbmap -option ''
 exec --no-startup-id setxkbmap -option ctrl:swapcaps -option altwin:hyper_win
