@@ -28,6 +28,9 @@ set pipe_decode          # strip headers and eval mimes when piping
 set thorough_search      # strip headers and eval mimes before searching
 set sleep_time=0
 
+alternative_order text/plain text/html
+auto_view text/html
+
 ###########################
 # Account settings
 ###########################
