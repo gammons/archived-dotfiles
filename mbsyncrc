@@ -3,8 +3,8 @@
 #################################
 
 IMAPAccount personal
-User grant
-Host mail
+User grant@grant.dev
+Host imap.gmail.com
 PassCmd "cat ~/.mailpass"
 SSLType none
 
