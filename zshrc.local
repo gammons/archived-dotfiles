@@ -6,6 +6,8 @@ export ANDROID_HOME=/home/$USER/Android/sdk
 export ANDROID_SDK_ROOT=/home/$USER/Android/sdk
 export ANDROID_AVD_HOME=/home/$USER/.android/avd
 
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude node_modules'
+
 source ~/dotfiles-local/antigen.zsh
 
 antigen bundle vi-mode
