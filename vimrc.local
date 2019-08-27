@@ -24,6 +24,7 @@ set winminheight=5
 set wrap
 
 let g:ale_emit_conflict_warnings = 0
+let NERDTreeShowHidden=1 "show hidden files in NERD
 
 " Stop highlighting if it takes more than a second
 " set redrawtime=1000
@@ -41,6 +42,7 @@ set colorcolumn=120
 
 highlight Pmenu ctermbg=75 guibg=#2c323c
 highlight PmenuSel ctermbg=17 guibg=#3c4452
+
 
 map <Leader>n :NERDTreeToggle<CR>
 nnoremap <cr> :nohlsearch<cr>
@@ -63,8 +65,11 @@ let g:ale_fixers = {
       \   'css': ['prettier'],
       \   'ruby': ['rubocop'],
       \}
-"let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 1
 let g:ale_enabled = 1
+
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 nnoremap <C-p> :FZF<CR>
 nnoremap <Leader>t :TestNearest<CR>

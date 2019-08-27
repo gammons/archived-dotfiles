@@ -24,6 +24,7 @@ Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'leafgarland/typescript-vim'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 "ruby/rails
 Plug 'tpope/vim-rails'
