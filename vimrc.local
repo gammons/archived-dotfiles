@@ -64,12 +64,14 @@ let g:ale_fixers = {
       \   'javascript': ['eslint','prettier','importjs'],
       \   'css': ['prettier'],
       \   'ruby': ['rubocop'],
+      \   'markdown': [],
       \}
+
 let g:ale_fix_on_save = 1
 let g:ale_enabled = 1
 
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
 
 nnoremap <C-p> :FZF<CR>
 nnoremap <Leader>t :TestNearest<CR>
