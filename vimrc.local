@@ -67,13 +67,15 @@ let g:ale_fixers = {
       \   'javascript': ['eslint','prettier','importjs'],
       \   'css': ['prettier'],
       \   'ruby': ['rubocop'],
+      \   'markdown': [],
       \}
+
 let g:ale_fix_on_save = 1
 let g:ale_sign_column_always = 1
 let g:ale_enabled = 1
 
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
 
 nnoremap <C-p> :FZF<CR>
 nnoremap <Leader>t :TestNearest<CR>
@@ -82,17 +84,17 @@ noremap <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
 noremap <Leader>s :split <C-R>=expand("%:p:h") . '/'<CR>
 noremap <Leader>v :vnew <C-R>=expand("%:p:h") . '/'<CR>
 
-function! DockerTransform(cmd)
-  return('cd ~/local_code/convertkit-docker; '.a:cmd)
-endfunction
+"function! DockerTransform(cmd)
+"  return('cd ~/local_code/convertkit-docker; '.a:cmd)
+"endfunction
 
-let g:test#custom_transformations = {'docker': function('DockerTransform')}
-let g:test#transformation = 'docker'
+"let g:test#custom_transformations = {'docker': function('DockerTransform')}
+"let g:test#transformation = 'docker'
 
 " Use docker-compose for running specs
-let test#ruby#rspec#executable = './bin/rspec'
+" let test#ruby#rspec#executable = './bin/rspec'
 " normal-ass setup
-" let test#ruby#rspec#executable = 'bundle exec rspec'
+let test#ruby#rspec#executable = 'bundle exec rspec'
 
 " kill extra whitespace when saving
 let g:strip_whitespace_on_save=1

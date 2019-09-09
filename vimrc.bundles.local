@@ -22,7 +22,9 @@ Plug 'tpope/vim-endwise'
 " javascript / JSX
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'leafgarland/typescript-vim'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript','css','json'] }
 
 "ruby/rails
 Plug 'tpope/vim-rails'
