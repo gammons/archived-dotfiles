@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.42 for grant on Sun Jul  7 07:22:29 2019.
+# Written by xscreensaver-demo 5.43 for grant on Sun Aug 18 09:00:38 2019.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	0:10:00
@@ -35,7 +35,7 @@ chooseRandomImages: False
 imageDirectory:	
 
 mode:		one
-selected:	233
+selected:	205
 
 textMode:	file
 textLiteral:	XScreenSaver
@@ -173,7 +173,7 @@ programs:								      \
 				twang -root				    \n\
 - GL: 				antspotlight -root			    \n\
 				apple2 -root				    \n\
-  GL: 				atunnel -root				    \n\
+  Gray: 			atunnel -root				    \n\
 				barcode -root				    \n\
   GL: 				blinkbox -root				    \n\
   GL: 				blocktube -root				    \n\
@@ -280,6 +280,8 @@ programs:								      \
 				vfeedback -root				    \n\
 		   "ATV4-1080" 	atv4-1080				    \n\
 		     "ATV4-4k" 	atv4-4k					    \n\
+  GL: 				deepstars -root				    \n\
+  GL: 				gravitywell -root			    \n\
 
 
 pointerPollTime:    0:00:05

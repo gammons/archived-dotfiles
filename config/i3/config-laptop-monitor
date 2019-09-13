@@ -145,8 +145,8 @@ bindsym $mod+r mode "resize"
 # My vars
 ############################
 
-set $wallpaper_script $HOME/.bin/wallpaper
 set $ruby ruby
+set $wallpaper_script $HOME/.bin/wallpaper
 
 ############################
 # Exec this stuff

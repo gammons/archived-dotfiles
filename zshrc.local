@@ -1,5 +1,5 @@
 export WINIT_HIDPI_FACTOR=2.0
-export MOZ_USE_XINPUT2=1
+export MOZ_ENABLE_WAYLAND=1
 
 export JAVA_HOME=/usr/lib/jvm/default
 export ANDROID_HOME=/home/$USER/Android/sdk
