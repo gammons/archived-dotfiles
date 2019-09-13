@@ -244,7 +244,7 @@ gaps outer 15
 set $mode_gaps Toggle gaps: (1)OFF (2)NORMAL (3)HUGE
 mode "$mode_gaps" {
   bindsym 1 mode "none", gaps inner all set 0, gaps outer all set 0
-  bindsym 2 mode "bigger", gaps inner all set 12, gaps outer all set 12
+  bindsym 2 mode "bigger", gaps inner all set 20, gaps outer all set 20
   bindsym 3 mode "huge", gaps inner all set 100, gaps outer all set 10
   bindsym Return mode "default"
   bindsym Escape mode "default"
