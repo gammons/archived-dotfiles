@@ -1,5 +1,5 @@
 #!/bin/bash
 
-wget -q -O /tmp/unsplash_wallpaper-$USER.jpg https://source.unsplash.com/random/3840x2160?nature,forest,mountains,ocean,water
+wget -q -O /tmp/unsplash_wallpaper-$USER.jpg https://source.unsplash.com/3840x2160?autumn
 /usr/bin/feh --randomize --bg-center /tmp/unsplash_wallpaper-$USER.jpg
 
