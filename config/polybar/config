@@ -27,7 +27,7 @@ font-2 = Weather Icons:size=18;0
 
 modules-left = i3
 modules-center = weather
-modules-right = power_now backlight battery cpuhz cpu volume mic whoami date mail
+modules-right = power_now backlight battery cpuhz cpu volume mic whoami date
 
 tray-position = right
 tray-padding = 2
