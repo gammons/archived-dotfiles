@@ -22,6 +22,7 @@ set winwidth=84
 set winheight=10
 set winminheight=5
 set wrap
+set tags^=./.git/tags;
 
 let g:ale_emit_conflict_warnings = 0
 let NERDTreeShowHidden=1 "show hidden files in NERD
@@ -72,7 +73,7 @@ let g:ale_fixers = {
       \   'markdown': [],
       \}
 
-let g:ale_fix_on_save = 1
+"let g:ale_fix_on_save = 1
 let g:ale_sign_column_always = 1
 let g:ale_enabled = 1
 
