@@ -26,7 +26,7 @@ font-1 = FontAwesome:size=14;0
 font-2 = Weather Icons:size=18;0
 
 modules-left = i3
-modules-center = weather
+modules-center = weather stonks_tsla stonks_qqq
 modules-right = power_now backlight battery cpuhz cpu volume mic whoami date
 
 tray-position = right
@@ -250,6 +250,26 @@ type = custom/script
 label = %{T3}%output%
 interval = 200
 exec = ruby ~/.config/polybar/polyweather.rb
+
+;######################################################################
+; stonks TSLA module
+;######################################################################
+
+[module/stonks_tsla]
+type = custom/script
+label = %{T3}%output%
+interval = 120
+exec = ruby ~/.config/polybar/stonks.rb TSLA
+
+;######################################################################
+; stonks QQQ module
+;######################################################################
+
+[module/stonks_qqq]
+type = custom/script
+label = %{T3}%output%
+interval = 120
+exec = ruby ~/.config/polybar/stonks.rb QQQ
 
 ;######################################################################
 ; power (in watts) module
