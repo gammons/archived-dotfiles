@@ -26,6 +26,10 @@ class Stonks
   end
 end
 
-stock = Stonks.new("LHOBSQS63T3BNXII", ARGV[0])
-stock.fetch
-puts stock.to_s
+begin
+  stock = Stonks.new("LHOBSQS63T3BNXII", ARGV[0])
+  stock.fetch
+  puts stock.to_s
+rescue
+  nil
+end
