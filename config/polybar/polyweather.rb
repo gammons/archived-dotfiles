@@ -22,7 +22,7 @@ class Polyweather
   end
 
   def to_s
-    puts "#{icon}\t #{temperature}\u{00B0}F\t #{summary}"
+    "#{icon} #{temperature}\u{00B0}F #{summary}"
   end
 
   def temperature
