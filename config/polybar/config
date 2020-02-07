@@ -42,7 +42,7 @@ tray-offset-y=1
 
 [module/cpu]
 type = internal/cpu
-interval = 0.5
+interval = 2
 
 format = <label> <ramp-coreload>
 
@@ -84,7 +84,7 @@ type = internal/temperature
 
 ; Seconds to sleep between updates
 ; Default: 1
-interval = 0.5
+interval = 2
 
 label-padding = 5
 
@@ -120,7 +120,7 @@ label-padding = 4
 type = internal/date
 
 ; Seconds to sleep between updates
-interval = 1.0
+interval = 2.0
 
 ; See "man date" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
@@ -296,7 +296,7 @@ exec = ~/.config/polybar/cpupower.sh
 
 [module/mic]
 type = custom/script
-interval = 0.5
+interval = 5
 exec = ~/.config/polybar/mic
 format =  <label>
 
@@ -323,7 +323,7 @@ password =
 
 ; Seconds to sleep between progressbar/song timer sync
 ; Default: 1
-interval = 2
+interval = 5
 
 ; Available tags:
 ;   <label-song> (default)
