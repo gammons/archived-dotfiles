@@ -26,7 +26,7 @@ font-1 = FontAwesome:size=14;0
 font-2 = Weather Icons:size=18;0
 
 modules-left = i3
-modules-center = weather stonks_tsla stonks_qqq
+modules-center = weather
 modules-right = power_now backlight battery cpuhz cpu volume mic whoami date
 
 tray-position = right
@@ -269,7 +269,7 @@ exec = ruby ~/.config/polybar/stonks.rb TSLA
 type = custom/script
 label = %{T3}%output%
 interval = 120
-exec = ruby ~/.config/polybar/stonks.rb QQQ
+exec = ruby ~/.config/polybar/stonks.rb SPY
 
 ;######################################################################
 ; power (in watts) module
@@ -296,7 +296,7 @@ exec = ~/.config/polybar/cpupower.sh
 
 [module/mic]
 type = custom/script
-interval = 5
+interval = 0.5
 exec = ~/.config/polybar/mic
 format =  <label>
 
