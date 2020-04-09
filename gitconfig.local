@@ -103,7 +103,7 @@
   default = upstream
 [core]
   autocrlf = false
-  editor = vim
+  editor = nvim
   excludesfile = ~/.yadr/git/gitignore
 [include]
   path = .gitconfig.user
