@@ -62,23 +62,23 @@ highlight ALEError ctermfg=124
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
 let g:ale_linters = {
-\   'javascript': ['flow-language-server', 'eslint','prettier'],
-\   'javascript.jsx': ['flow-language-server', 'eslint','prettier'],
+\   'javascript': ['flow-language-server', 'eslint'],
+\   'javascript.jsx': ['flow-language-server', 'eslint'],
+\   'css': ['prettier'],
 \}
 let g:ale_fixers = {
-      \   'javascript': ['eslint','prettier','importjs'],
-      \   'javascript.jsx': ['eslint','prettier','importjs'],
+      \   'javascript': ['eslint','importjs'],
+      \   'javascript.jsx': ['eslint','importjs'],
       \   'css': ['prettier'],
       \   'ruby': ['rubocop'],
       \   'markdown': [],
       \}
 
-"let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 1
 let g:ale_sign_column_always = 1
 let g:ale_enabled = 1
 
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.yaml,*.html PrettierAsync
 
 nnoremap <C-p> :FZF<CR>
 nnoremap <Leader>t :TestNearest<CR>
