@@ -5,6 +5,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'janko-m/vim-test'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-surround'
+Plug 'ycm-core/YouCompleteMe'
 
 " Colors
 Plug 'danielwe/base16-vim'
