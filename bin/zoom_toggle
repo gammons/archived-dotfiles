@@ -3,13 +3,11 @@
 require 'json'
 
 def show_zoom
-  `i3-msg '[title="^Zoom Meeting"] move window to workspace current'`
-  `i3-msg '[title="^Zoom Group Chat"] move window to workspace current'`
+  `i3-msg '[class="zoom"] move window to workspace current'`
 end
 
 def hide_zoom
-  `i3-msg '[title="^Zoom Meeting"] move window to workspace 9'`
-  `i3-msg '[title="^Zoom Group Chat"] move window to workspace 9'`
+  `i3-msg '[class="zoom"] move window to workspace 9'`
 end
 
 def zoom_hidden?
