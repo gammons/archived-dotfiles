@@ -175,7 +175,7 @@ hide_edge_borders both
 ############################
 
 bindsym $mod+c exec --no-startup-id zenity --calendar
-bindsym --release F12 exec --no-startup-id deepin-screenshot -n
+bindsym --release F12 exec --no-startup-id gnome-screenshot -ac
 
 bindsym $mod+u [title="dropdown-terminal"] scratchpad show; move position center
 bindsym $mod+shift+u exec --no-startup-id $term --title=dropdown-terminal
