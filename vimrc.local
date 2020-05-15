@@ -64,6 +64,7 @@ let g:ale_sign_warning = '⚠'
 let g:ale_linters = {
 \   'javascript': ['flow-language-server', 'eslint'],
 \   'javascript.jsx': ['flow-language-server', 'eslint'],
+\   'ruby': ['rubocop'],
 \   'css': ['prettier'],
 \}
 let g:ale_fixers = {
