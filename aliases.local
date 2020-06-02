@@ -19,6 +19,7 @@ alias gc="git commit"
 alias gca="git commit --all"
 alias gco="git checkout"
 alias gp="git push"
+alias irb="irb -r \"active_support/core_ext/numeric/time\""
 
 alias u="CACHE=true uni"
 alias pr="hub pull-request"
