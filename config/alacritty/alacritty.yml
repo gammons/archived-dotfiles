@@ -18,6 +18,7 @@ window:
   # Window dimensions in character columns and lines
   # Falls back to size specified by window manager if set to 0x0.
   # (changes require restart)
+  dynamic_title: true
   dimensions:
     columns: 80
     lines: 24
@@ -175,7 +176,7 @@ colors:
 #
 # To completely disable the visual bell, set its duration to 0.
 #
-visual_bell:
+bell:
   animation: EaseOutExpo
   duration: 1
 
@@ -221,8 +222,6 @@ mouse:
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
-
-dynamic_title: true
 
 mouse.hide_when_typing: true
 
