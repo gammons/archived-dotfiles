@@ -5,7 +5,8 @@ alias ck='cd ~/local_code/convertkit'
 alias al='vim ~/dotfiles-local/aliases.local'
 alias directors='vim ~/notes/ck/directors_updates.md'
 
-alias l="ls -lart"
+#alias l="ls -lart"
+alias l="exa --long --header"
 alias g="git status"
 
 alias n="cd ~/notes"
@@ -29,9 +30,10 @@ alias wm="date > ~/workmail/.last_mutt_open && neomutt -F ~/.workmuttrc"
 alias r="ranger"
 
 alias t="ultralist"
+alias ts="script -c \"ultralist l\"  < /dev/null | fzf --ansi"
 alias tc="ultralist l due:agenda group:context"
 alias td="ultralist l due:agenda group:context"
-alias tp="ultralist l due:agenda group:project"
+alias tp="ultralist l group:status"
 alias tl="ultralist l due:agenda group:project"
 alias tod="ultralist l group:project due:tod"
 alias tom="ultralist l group:project due:tom"
@@ -41,6 +43,11 @@ alias wed="ultralist l group:project due:wed"
 alias thu="ultralist l group:project due:thu"
 alias fri="ultralist l group:project due:fri"
 alias c="ultralist l completed:tod"
+
+alias now="ultralist l status:now duebefore:tom"
+alias wait="ultralist l status:waiting"
+
+alias nx="ultralist l status:next"
 
 alias j="fg %-"
 alias dev="tmuxinator development"
@@ -58,10 +65,7 @@ alias gp="git pull; git push"
 alias pull="git fetch && git rebase"
 alias push="git push"
 alias hps="heroku ps -a ckapp-prod"
-alias teams="cat ~/notes/ck/teams.md"
-alias standup="vim ~/notes/ck/standup.md"
 alias lc="cd ~/local_code"
-alias un="vim ~/notes/ultradeck/next.md"
 
 alias dark="base16_default-dark"
 alias light="base16_solarized-light"
