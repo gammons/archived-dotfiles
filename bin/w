@@ -2,4 +2,4 @@
 require 'date'
 d = Date.today
 monday = d - (d.wday - 1)
-system("vim ~/notes/ck/week-of-#{monday.strftime("%b").downcase}-#{monday.day}.md")
+system("nvim ~/notes/ck/week-of-#{monday.strftime("%b").downcase}-#{monday.day}.md")
