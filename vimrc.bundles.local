@@ -30,10 +30,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'tpope/vim-rails'
 
 " Markdown
-Plug 'gabrielelana/vim-markdown' ", { 'for': 'markdown' }
-
-" Other plugins
-" Plug 'alvan/vim-closetag'   " close xhtml tags
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }

@@ -104,3 +104,5 @@ let test#ruby#rspec#executable = 'bundle exec rspec'
 let g:strip_whitespace_on_save=1
 
 command! Wq wq
+
+let g:vim_markdown_new_list_item_indent = 0
