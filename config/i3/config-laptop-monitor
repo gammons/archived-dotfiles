@@ -156,7 +156,6 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 exec --no-startup-id $wallpaper_script
 exec --no-startup-id nm-applet
-exec --no-startup-id xscreensaver -nosplash
 exec --no-startup-id picom -D 0 -b -i 1
 exec --no-startup-id gnome-flashback
 exec --no-startup-id copyq
@@ -205,9 +204,6 @@ bindsym $mod+F8 exec --no-startup-id ~/.bin/desktop.sh
 # Brightness
 bindsym $mod+F11 exec --no-startup-id brightnessctl set 5%-
 bindsym $mod+F12 exec --no-startup-id brightnessctl set +5%
-
-
-bindsym $mod+z exec --no-startup-id xscreensaver-command -lock
 
 bindsym $mod+i exec --no-startup-id $ruby $HOME/.bin/openzoom 9849040235
 bindsym $mod+o exec --no-startup-id $ruby $HOME/.bin/openzoom 4283094446

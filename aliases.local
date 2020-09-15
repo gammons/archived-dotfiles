@@ -6,7 +6,7 @@ alias al='vim ~/dotfiles-local/aliases.local'
 alias directors='vim ~/notes/ck/directors_updates.md'
 
 #alias l="ls -lart"
-alias l="exa --long --header -a"
+alias l="exa --long --header -a -s modified"
 alias g="git status"
 
 alias n="cd ~/notes"
