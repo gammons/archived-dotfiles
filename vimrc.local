@@ -68,8 +68,8 @@ let g:ale_linters = {
 \   'css': ['prettier'],
 \}
 let g:ale_fixers = {
-      \   'javascript': ['eslint','importjs'],
-      \   'javascript.jsx': ['eslint','importjs'],
+      \   'javascript': ['eslint','importjs','prettier'],
+      \   'javascript.jsx': ['eslint','importjs','prettier'],
       \   'css': ['prettier'],
       \   'ruby': ['rubocop'],
       \   'markdown': [],
