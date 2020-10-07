@@ -5,7 +5,6 @@ alias ck='cd ~/local_code/convertkit'
 alias al='vim ~/dotfiles-local/aliases.local'
 alias directors='vim ~/notes/ck/directors_updates.md'
 
-#alias l="ls -lart"
 alias l="exa --long --header -a -s modified"
 alias g="git status"
 
@@ -22,8 +21,6 @@ alias gco="git checkout"
 alias gp="git push"
 alias irb="irb -r \"active_support/core_ext/numeric/time\""
 
-alias u="CACHE=true uni"
-alias pr="hub pull-request"
 alias be="bundle exec"
 alias m="date > ~/mail/.last_mutt_open && neomutt"
 alias wm="date > ~/workmail/.last_mutt_open && neomutt -F ~/.workmuttrc"
@@ -43,6 +40,7 @@ alias wed="ultralist l group:project due:wed"
 alias thu="ultralist l group:project due:thu"
 alias fri="ultralist l group:project due:fri"
 alias c="ultralist l completed:tod"
+alias waiting="ultralist a status:waiting"
 
 alias now="ultralist l status:now duebefore:tom"
 alias wait="ultralist l status:waiting"
@@ -76,25 +74,4 @@ alias rsh="docker-compose run app /bin/bash"
 
 alias kc="kubectl"
 
-alias db_connect_to_master='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_MASTER_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
-alias db_connect_to_slave='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
-alias db_connect_to_slave2='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE2_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
-alias db_connect_to_slave3='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE3_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
-
-alias db_connect_to_slave4='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE4_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
-alias db_connect_to_slave5='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_SLAVE5_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
-alias db_connect_to_versions='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_VERSIONS_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
-
-alias innodb="db_connect_to_master -e 'show engine innodb status\G'"
-
-alias db_connect_to_staging='mysql -u $STAG_USER --password=$STAG_PASSWORD -h $DB_STAGING_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
-alias db_connect_to_staging2='mysql -u $STAG_USER --password=$STAG_PASSWORD -h $DB_STAGING2_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
-alias db_connect_to_blue='mysql -u $DB_USER --password=$DB_PASSWORD -h $DB_BLUE_URL --ssl-ca=./config/certs/amazon-rds-ca-cert.pem'
-
-alias prod_console="ssh -t 172.21.95.100 \"sudo su -c 'cd /srv/ckapp/current && bundle exec rails c' -s /bin/sh ckapp\""
-alias utility="ssh 172.21.149.121"
-alias expose="ssh -R vitium:80:localhost:3000 serveo.net"
-
 alias weather='curl wttr.in/conshohocken'
-alias fix_video='v4l2ctrl -d /dev/video2 -l ~/.config/webcam-settings'
-
