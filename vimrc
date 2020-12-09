@@ -14,6 +14,7 @@ set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 
+filetype plugin on
 filetype plugin indent on
 
 " When the type of shell script is /bin/sh, assume a POSIX-compatible
@@ -167,34 +168,22 @@ colorscheme base16-default-dark
 
 
 " remove this for the moment
-" autocmd BufNewFile,BufRead *.tsx set filetype=typescript.jsx
+autocmd BufNewFile,BufRead *.tsx set filetype=typescript.jsx
 " autocmd BufRead,BufNewFile *.md setlocal nospell
-
 
 " ALE config
 let g:ale_emit_conflict_warnings = 0
 
 highlight ALEWarning ctermfg=yellow
 highlight ALEError ctermfg=124
+let g:ale_enabled = 1
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
-let g:ale_linters = {
-\   'javascript': ['flow-language-server', 'eslint'],
-\   'javascript.jsx': ['flow-language-server', 'eslint'],
-\   'ruby': ['rubocop'],
-\   'css': ['prettier'],
-\}
-let g:ale_fixers = {
-      \   'javascript': ['eslint','importjs','prettier'],
-      \   'javascript.jsx': ['eslint','importjs','prettier'],
-      \   'css': ['prettier'],
-      \   'ruby': ['rubocop'],
-      \   'markdown': [],
-      \}
 
+let g:ale_linters_explicit = 1
 let g:ale_fix_on_save = 1
 let g:ale_sign_column_always = 1
-let g:ale_enabled = 1
+let g:ale_completion_autoimport = 1
 
 let g:prettier#autoformat = 0
 
@@ -217,3 +206,7 @@ let g:strip_whitespace_on_save=1
 command! Wq wq
 
 let g:vim_markdown_new_list_item_indent = 0
+
+filetype on
+filetype plugin on
+filetype plugin indent on
