@@ -1,0 +1,77 @@
+alias realias='source ~/.aliases'
+alias dots='cd ~/dotfiles'
+alias ck='cd ~/local_code/convertkit'
+
+alias al='vim ~/dotfiles/aliases'
+alias directors='vim ~/notes/ck/directors_updates.md'
+
+alias l="exa --long --header -a -s modified"
+alias g="git status"
+
+alias n="cd ~/notes"
+alias nc="cd ~/notes/ck"
+alias cn="cd ~/notes/ck"
+
+alias ga="git add"
+alias gd="git diff"
+alias gdc="gd --cached"
+alias gc="git commit"
+alias gca="git commit --all"
+alias gco="git checkout"
+alias gp="git push"
+alias irb="irb -r \"active_support/core_ext/numeric/time\""
+
+alias be="bundle exec"
+alias m="date > ~/mail/.last_mutt_open && neomutt"
+alias wm="date > ~/workmail/.last_mutt_open && neomutt -F ~/.workmuttrc"
+alias r="ranger"
+
+alias t="ultralist"
+alias ts="script -c \"ultralist l\"  < /dev/null | fzf --ansi"
+alias tc="ultralist l due:agenda group:context"
+alias td="ultralist l due:agenda group:context"
+alias tp="ultralist l group:status"
+alias tl="ultralist l due:agenda group:project"
+alias tod="ultralist l group:project due:tod"
+alias tom="ultralist l group:project due:tom"
+alias mon="ultralist l group:project due:mon"
+alias tue="ultralist l group:project due:tue"
+alias wed="ultralist l group:project due:wed"
+alias thu="ultralist l group:project due:thu"
+alias fri="ultralist l group:project due:fri"
+alias c="ultralist l completed:tod"
+alias waiting="ultralist a status:waiting"
+
+alias now="ultralist l status:now duebefore:tom"
+alias wait="ultralist l status:waiting"
+
+alias nx="ultralist l status:next"
+
+alias j="fg %-"
+alias dev="tmuxinator development"
+alias pc="tmuxinator console"
+alias ud="tmuxinator ud"
+alias v='vim'
+alias vim='nvim'
+alias s="tmux attach-session -t '$USER' || tmux new-session -s '$USER'"
+alias tm="tmuxinator grant"
+alias spotify="spotify --force-device-scale-factor=1.5 %U"
+alias f="fzf-tmux"
+alias fs="foreman start -f Procfile.dev"
+alias ic="vim ~/.config/i3/config"
+alias gp="git pull; git push"
+alias pull="git fetch && git rebase"
+alias push="git push"
+alias hps="heroku ps -a ckapp-prod"
+alias lc="cd ~/local_code"
+
+alias dark="base16_default-dark"
+alias light="base16_solarized-light"
+
+alias rs="docker-compose run -e \"RAILS_ENV=test\" app rspec"
+alias rc="docker-compose run app rails c"
+alias rsh="docker-compose run app /bin/bash"
+
+alias kc="kubectl"
+
+alias weather='curl wttr.in/conshohocken'
