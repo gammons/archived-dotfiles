@@ -1,4 +1,7 @@
+call plug#begin('~/.vim/plugged')
+
 " Essentials
+Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdTree'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
@@ -8,7 +11,8 @@ Plug 'tpope/vim-surround'
 Plug 'ycm-core/YouCompleteMe'
 
 " Colors
-Plug 'danielwe/base16-vim'
+" Plug 'danielwe/base16-vim'
+Plug 'chriskempson/base16-vim'
 
 " Searching
 Plug 'google/vim-searchindex' " show number of search results
@@ -35,3 +39,5 @@ Plug 'plasticboy/vim-markdown'
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+
+call plug#end()
