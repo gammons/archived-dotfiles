@@ -8,10 +8,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'janko-m/vim-test'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-surround'
-Plug 'ycm-core/YouCompleteMe'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Colors
-" Plug 'danielwe/base16-vim'
 Plug 'chriskempson/base16-vim'
 
 " Searching
@@ -20,7 +19,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Global syntax
-Plug 'junegunn/rainbow_parentheses.vim'  " Make parens easier to see
 Plug 'tomtom/tcomment_vim' " Handle commenting for all languages
 Plug 'tpope/vim-endwise'
 
@@ -34,10 +32,9 @@ Plug 'leafgarland/typescript-vim'
 Plug 'tpope/vim-rails'
 
 " Markdown
-Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
 " Go
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()

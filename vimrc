@@ -207,6 +207,7 @@ command! Wq wq
 
 let g:vim_markdown_new_list_item_indent = 0
 
-filetype on
-filetype plugin on
-filetype plugin indent on
+let g:deoplete#enable_at_startup = 1
+
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"
