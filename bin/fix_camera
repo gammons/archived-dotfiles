@@ -1,6 +1,5 @@
 #!/bin/sh
 
-# http://osxdaily.com/2013/12/27/fix-there-is-no-connected-camera-error-mac/<Paste>
-sudo killall VDCAssistant AppleCameraAssistant
-
-echo "Now restart the application or reload the tab that needed the camera"
+v4l2-ctl -d /dev/video2 --set-ctrl=backlight_compensation=1
+v4l2-ctl -d /dev/video2 --set-ctrl=brightness=160
+echo "ok"
