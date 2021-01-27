@@ -249,7 +249,7 @@ format =  <label>
 type = custom/script
 label = %{T3}%output%
 interval = 200
-exec = ruby ~/.config/polybar/polyweather.rb
+exec = ~/.asdf/shims/ruby ~/.config/polybar/polyweather.rb
 
 ;######################################################################
 ; stonks TSLA module
@@ -259,7 +259,7 @@ exec = ruby ~/.config/polybar/polyweather.rb
 type = custom/script
 label = %{T3}%output%
 interval = 120
-exec = ruby ~/.config/polybar/stonks.rb TSLA
+exec = ~/.asdf/shims/ruby ~/.config/polybar/stonks.rb TSLA
 
 ;######################################################################
 ; stonks QQQ module
@@ -269,7 +269,7 @@ exec = ruby ~/.config/polybar/stonks.rb TSLA
 type = custom/script
 label = %{T3}%output%
 interval = 120
-exec = ruby ~/.config/polybar/stonks.rb SPY
+exec = ~/.asdf/shims/ruby ~/.config/polybar/stonks.rb SPY
 
 ;######################################################################
 ; power (in watts) module
