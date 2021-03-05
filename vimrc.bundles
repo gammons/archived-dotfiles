@@ -31,6 +31,9 @@ Plug 'leafgarland/typescript-vim'
 "ruby/rails
 Plug 'tpope/vim-rails'
 
+"solidity
+Plug 'TovarishFin/vim-solidity'
+
 " Markdown
 Plug 'plasticboy/vim-markdown'
 
