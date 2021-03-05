@@ -138,7 +138,7 @@ set tags^=./.git/tags;
 " keyboard mappings
 nnoremap <cr> :nohlsearch<cr>
 map <Leader>co :TComment<CR>
-nnoremap <C-p> :FZF<CR>
+nnoremap <C-p> :GFiles<CR>
 nnoremap <Leader>t :TestNearest<CR>
 nnoremap <Leader>r :TestFile<CR>
 noremap <Leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
