@@ -174,7 +174,7 @@ hide_edge_borders both
 ############################
 
 bindsym $mod+c exec --no-startup-id zenity --calendar
-bindsym --release F12 exec --no-startup-id maim -s | xclip -selection clipboard -t image/png
+bindsym --release F12 exec --no-startup-id flameshot gui
 
 bindsym $mod+u [title="dropdown-terminal"] scratchpad show; move position center
 bindsym $mod+shift+u exec --no-startup-id $term --title=dropdown-terminal
