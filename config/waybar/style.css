@@ -1,7 +1,7 @@
 * {
   border: none;
   border-radius: 0;
-  font-size: 22px;
+  font-size: 13px;
   min-height: 0;
 }
 
@@ -36,5 +36,5 @@ window#waybar {
 #workspaces,
 #tray,
 #mode {
-  padding: 0 10px;
+  padding: 0 15px;
 }

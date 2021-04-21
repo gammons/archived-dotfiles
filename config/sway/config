@@ -1,32 +1,42 @@
-output eDP-1 scale 1.0 pos 0 0 res 3840x2160
-output DP-2 scale 0.7 pos 3840 0 res 3840x2160
+output eDP-1 scale 1.75 pos 0 0 res 3840x2160
+# output eDP-1 scale 2 pos 0 0 res 3840x2160
+# output DP-2 scale 0.7 pos 3840 0 res 3840x2160
 
-default_border pixel
+############################
+# Keyboard
+############################
 
-# keyboard stuff
 input "*" {
   repeat_delay 200
-  repeat_rate 35
+  repeat_rate 55
   xkb_options ctrl:nocaps
 }
 
-# mouse stuff
-input "1739:30383:DELL08AF:00_06CB:76AF_Touchpad" {
-  natural_scroll enabled
-  accel_profile flat
-  dwt enabled
-  scroll_method two_finger
-  tap disabled
-  scroll_factor 1.0
-  tap_button_map lrm
-  middle_emulation enabled
-  click_method clickfinger
+############################
+# Touchpad
+############################
+
+input "1267:12572:DELL097D:00_04F3:311C_Touchpad" {
+ natural_scroll enabled
+ dwt enabled
+ scroll_method two_finger
+ tap disabled
+ scroll_factor 1.0
+ tap_button_map lrm
+ middle_emulation enabled
+ click_method clickfinger
 }
 
-input "1133:49224:Logitech_G9_Laser_Mouse"  {
-  scroll_factor 4.0
+############################
+# Desktop mouse
+############################
+input "5426:123:Razer_Razer_Viper_Ultimate_Dongle"  {
+  scroll_factor 3.0
 }
 
+############################
+# Bar
+############################
 bar {
   swaybar_command waybar
 }
@@ -36,7 +46,7 @@ bar {
 ############################
 
 set $mod Mod1
-set $term alacritty
+set $term kitty
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -190,6 +200,7 @@ set $locker 'swaylock -c 1d2021 --incide-color 000000b3'
 exec --no-startup-id dunst -config $HOME/.dunstrc
 exec swayidle -w timeout 1800 $locker
 exec swaybg --color=#000000
+exec --no-startup-id nm-applet
 
 ############################
 # Further customization
@@ -205,7 +216,6 @@ hide_edge_borders smart
 ############################
 
 bindsym $mod+c exec --no-startup-id zenity --calendar
-# bindsym --release F12 exec --no-startup-id spectacle
 bindsym --release F12 exec --no-startup-id slurp | grim -g - - | wl-copy
 
 bindsym $mod+u [title="dropdown-terminal"] scratchpad show; move position center
@@ -277,7 +287,7 @@ mode "$mode_gaps" {
 
 bindsym $mod+g mode "$mode_gaps"
 
-default_border pixel 5
+default_border pixel 2
 
 ############################
 # Scratchpad
@@ -287,4 +297,5 @@ for_window [title="dropdown-terminal"] floating enable
 for_window [title="dropdown-terminal"] resize set 925 700
 for_window [title="dropdown-terminal"] move position center
 for_window [title="dropdown-terminal"] move scratchpad
+for_window [title="Meet - "] sticky enable
 exec --no-startup-id $term --title=dropdown-terminal
