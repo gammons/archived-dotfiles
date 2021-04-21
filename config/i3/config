@@ -160,6 +160,8 @@ exec --no-startup-id picom -D 0 -b -i 1
 exec --no-startup-id gnome-flashback
 exec --no-startup-id indicator-sound-switcher
 exec --no-startup-id copyq
+exec --no-startup-id redshift
+exec --no-startup-id xscreensaver
 
 ############################
 # Further customization
