@@ -1,6 +1,7 @@
 require 'net/http'
 require 'uri'
 require 'json'
+require "byebug"
 
 class Polyweather
   def initialize(api_key, lat, long)
@@ -10,9 +11,10 @@ class Polyweather
   end
 
   def fetch
-    url = "https://api.darksky.net/forecast/#{api_key}/#{lat},#{long}"
+    url = "https://api.weather.com/v3/wx/observations/current?apiKey=e1f10a1e78da46f5b10a1e78da96f525&geocode=40.07%2C-75.3&units=e&language=en-US&format=json"
     uri = URI.parse(url)
     response = Net::HTTP.get_response(uri)
+    result = JSON.parse(response.body)
     @result = JSON.parse(response.body)
   end
 
@@ -22,33 +24,19 @@ class Polyweather
   end
 
   def to_s
-    "#{icon} #{temperature}\u{00B0}F #{summary}"
+    "#{temperature}\u{00B0}F / #{humidity}% - #{summary}"
+  end
+
+  def humidity
+    result["relativeHumidity"]
   end
 
   def temperature
-    url = "https://stationdata.wunderground.com/cgi-bin/stationlookup?station=KPACONSH4&units=english&v=2.0&format=json"
-    uri = URI.parse(url)
-    response = Net::HTTP.get_response(uri)
-    result = JSON.parse(response.body)
-    result["stations"]["KPACONSH4"]["temperature"]
+    result["temperature"]
   end
 
   def summary
-    currently["summary"]
-  end
-
-  def icon
-    case currently["icon"]
-    when "clear-day" then "\u{f00d}"
-    when "clear-night" then "\u{f00d}"
-    when "rain" then "\u{f019}"
-    when "snow" then "\u{f01b}"
-    when "sleet" then "\u{f0b5}"
-    when "wind" then "\u{f050}"
-    when "cloudy" then "\u{f013}"
-    when "partly-cloudy-day" then "\u{f002}"
-    when "partly-cloudy-night" then "\u{f086}"
-    end
+    result["wxPhraseLong"]
   end
 
   private
