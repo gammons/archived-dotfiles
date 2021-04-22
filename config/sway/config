@@ -1,5 +1,6 @@
-output eDP-1 scale 1.75 pos 0 0 res 3840x2160
-# output eDP-1 scale 2 pos 0 0 res 3840x2160
+output eDP-1 scale 1.75 pos 0 0 res 3840x2400
+
+output DP-1 scale 1.0 pos 3840 0 res 3840x2160
 # output DP-2 scale 0.7 pos 3840 0 res 3840x2160
 
 ############################
