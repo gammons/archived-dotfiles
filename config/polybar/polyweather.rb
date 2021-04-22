@@ -1,7 +1,6 @@
 require 'net/http'
 require 'uri'
 require 'json'
-require "byebug"
 
 class Polyweather
   def initialize(api_key, lat, long)
