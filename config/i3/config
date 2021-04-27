@@ -154,7 +154,7 @@ set $wallpaper_script $HOME/.bin/wallpaper
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec --no-startup-id dwell -s forest
+exec --no-startup-id dwall -s forest
 exec --no-startup-id nm-applet
 exec --no-startup-id picom -D 0 -b -i 1
 exec --no-startup-id gnome-flashback
