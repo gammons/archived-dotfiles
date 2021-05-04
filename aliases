@@ -91,3 +91,5 @@ alias rsh="docker-compose run app /bin/bash"
 alias kc="kubectl"
 
 alias weather='curl wttr.in/conshohocken'
+
+alias fn="fishnet"
