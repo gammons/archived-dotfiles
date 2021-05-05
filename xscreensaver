@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.43 for grant on Sun Aug 18 09:00:38 2019.
+# Written by xscreensaver-demo 5.44 for grant on Thu Apr 22 16:45:21 2021.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	0:10:00
@@ -35,7 +35,7 @@ chooseRandomImages: False
 imageDirectory:	
 
 mode:		one
-selected:	205
+selected:	234
 
 textMode:	file
 textLiteral:	XScreenSaver
@@ -282,6 +282,9 @@ programs:								      \
 		     "ATV4-4k" 	atv4-4k					    \n\
   GL: 				deepstars -root				    \n\
   GL: 				gravitywell -root			    \n\
+				scooter -root				    \n\
+  GL: 				etruscanvenus -root			    \n\
+  GL: 				gibson -root				    \n\
 
 
 pointerPollTime:    0:00:05
