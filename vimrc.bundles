@@ -1,22 +1,21 @@
 call plug#begin('~/.vim/plugged')
 
 " Essentials
-Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdTree'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'janko-m/vim-test'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-surround'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Colors
 Plug 'chriskempson/base16-vim'
 
 " Searching
-Plug 'google/vim-searchindex' " show number of search results
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+" Plug 'google/vim-searchindex' " show number of search results
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf.vim'
 
 " Global syntax
 Plug 'tomtom/tcomment_vim' " Handle commenting for all languages
@@ -39,5 +38,16 @@ Plug 'plasticboy/vim-markdown'
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" autocompletion
+Plug 'hrsh7th/nvim-compe'
+
+" dependencies
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
+
+" telescope
+Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
