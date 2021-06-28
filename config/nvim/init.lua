@@ -42,6 +42,10 @@ paq { 'nvim-telescope/telescope.nvim' }
 
 paq { 'scrooloose/nerdTree' }
 
+paq { 'itchyny/lightline.vim' }
+
+
+
 g['deoplete#enable_at_startup'] = 1  -- enable deoplete at startup
 
 -------------------- OPTIONS -------------------------------
