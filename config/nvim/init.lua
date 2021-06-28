@@ -40,6 +40,8 @@ paq { 'nvim-lua/popup.nvim' }
 paq { 'nvim-lua/plenary.nvim' }
 paq { 'nvim-telescope/telescope.nvim' }
 
+paq { 'scrooloose/nerdTree' }
+
 g['deoplete#enable_at_startup'] = 1  -- enable deoplete at startup
 
 -------------------- OPTIONS -------------------------------
@@ -69,10 +71,15 @@ opt.wrap = false                    -- Disable line wrap
 -------------------- MAPPINGS ------------------------------
 --
 ---- <Tab> to navigate the completion menu
+
+vim.g.mapleader = ","
+
 map('i', '<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<Tab>"', {expr = true})
 map('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', {expr = true})
 
 map('', '<C-p>', "<cmd>Telescope find_files<cr>")
+vim.api.nvim_set_keymap('', '<leader>n', "<cmd>NERDTreeToggle<cr>", {noremap = true, silent = false})
+vim.api.nvim_set_keymap('', '<leader>w', "<cmd>wq!<cr>", {noremap = true, silent = false})
 
 -------------------- TREE-SITTER ---------------------------
 local ts = require 'nvim-treesitter.configs'
