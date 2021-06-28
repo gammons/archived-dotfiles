@@ -46,7 +46,7 @@ g['deoplete#enable_at_startup'] = 1  -- enable deoplete at startup
 
 -------------------- OPTIONS -------------------------------
 cmd 'colorscheme base16-default-dark'            -- Put your favorite colorscheme here
-opt.completeopt = {'menuone', 'noinsert', 'noselect'}  -- Completion options (for deoplete)
+opt.completeopt = "menuone,noselect"
 opt.expandtab = true                -- Use spaces instead of tabs
 opt.hidden = true                   -- Enable background buffers
 opt.backup = false
@@ -68,8 +68,36 @@ opt.termguicolors = true            -- True color support
 opt.wildmode = {'list', 'longest'}  -- Command-line completion mode
 opt.wrap = false                    -- Disable line wrap
 
+-------------------- Completion ------------------------------
+
+require'compe'.setup {
+  enabled = true;
+  autocomplete = true;
+  debug = false;
+  min_length = 1;
+  preselect = 'enable';
+  throttle_time = 80;
+  source_timeout = 200;
+  resolve_timeout = 800;
+  incomplete_delay = 400;
+  max_abbr_width = 100;
+  max_kind_width = 100;
+  max_menu_width = 100;
+  documentation = true;
+
+  source = {
+    path = true;
+    buffer = true;
+    calc = true;
+    nvim_lsp = true;
+    nvim_lua = true;
+    vsnip = true;
+    ultisnips = true;
+  };
+}
+
 -------------------- MAPPINGS ------------------------------
---
+
 ---- <Tab> to navigate the completion menu
 
 vim.g.mapleader = ","
@@ -94,3 +122,6 @@ lsp.ccls.setup {}
 -- root_dir is where the LSP server will start: here at the project root otherwise in current folder
 lsp.pyls.setup {root_dir = lsp.util.root_pattern('.git', fn.getcwd())}
 -- lspfuzzy.setup {}  -- Make the LSP client use FZF instead of the quickfix list
+
+require'lspconfig'.gopls.setup{}
+require'lspconfig'.solargraph.setup{}
