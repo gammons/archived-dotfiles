@@ -13,6 +13,7 @@ alias al='vim ~/dotfiles/aliases'
 
 alias l="exa --long --header -a -s modified"
 alias g="git status"
+alias n="cd ~/notes"
 
 ###########
 # Git
