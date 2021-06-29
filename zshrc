@@ -37,5 +37,7 @@ export ZSH="/home/grant/.oh-my-zsh"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+# secrets
+[[ -f ~/.secrets ]] && source ~/.secrets
 
 eval "$(starship init zsh)"
