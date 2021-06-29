@@ -18,35 +18,31 @@ end
 cmd 'packadd paq-nvim'               -- load the package manager
 local paq = require('paq-nvim').paq  -- a convenient alias
 paq {'savq/paq-nvim', opt = true}    -- paq-nvim manages itself
+
+-- Colors
 paq { 'RRethy/nvim-base16' }         -- base16 color schemes
 
 -- autocompletion
--- paq {'shougo/deoplete-lsp'}
--- paq {'shougo/deoplete.nvim', run = fn['remote#host#UpdateRemotePlugins']}
 paq { 'hrsh7th/nvim-compe' }
 
 -- tree sitter
 paq {'nvim-treesitter/nvim-treesitter'}
 paq {'neovim/nvim-lspconfig'}
 
--- fzf finding
--- paq {'junegunn/fzf', run = fn['fzf#install']}
--- paq {'junegunn/fzf.vim'}
--- paq {'ojroques/nvim-lspfuzzy'}
-
---- telescope for finding things
-
+-- telescope for finding things
 paq { 'nvim-lua/popup.nvim' }
 paq { 'nvim-lua/plenary.nvim' }
 paq { 'nvim-telescope/telescope.nvim' }
 
+-- Essential plugins
 paq { 'scrooloose/nerdTree' }
-
 paq { 'itchyny/lightline.vim' }
 
-
-
-g['deoplete#enable_at_startup'] = 1  -- enable deoplete at startup
+-- Tpope things
+paq { 'tpope/vim-fugitive' }
+paq { 'tpope/vim-surround' }
+paq { 'tomtom/tcomment_vim' }
+paq { 'tpope/vim-endwise' }
 
 -------------------- OPTIONS -------------------------------
 cmd 'colorscheme base16-default-dark'            -- Put your favorite colorscheme here
