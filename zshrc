@@ -32,4 +32,7 @@ _load_settings "$HOME/.zsh/configs"
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
+# secrets
+[[ -f ~/.secrets ]] && source ~/.secrets
+
 eval "$(starship init zsh)"
