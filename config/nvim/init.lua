@@ -1,4 +1,4 @@
--- This config was based upon the following resources: 
+-- This config was based upon the following resources:
 -- https://oroques.dev/notes/neovim-init/
 -- https://crispgm.com/page/neovim-is-overpowering.html
 
@@ -15,34 +15,42 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -------------------- PLUGINS -------------------------------
-cmd 'packadd paq-nvim'               -- load the package manager
-local paq = require('paq-nvim').paq  -- a convenient alias
-paq {'savq/paq-nvim', opt = true}    -- paq-nvim manages itself
+require('packer').startup(function()
+  use 'wbthomason/packer.nvim'
 
--- Colors
-paq { 'RRethy/nvim-base16' }         -- base16 color schemes
+  -- Colors - base16 color schemes
+  use 'RRethy/nvim-base16'
 
--- autocompletion
-paq { 'hrsh7th/nvim-compe' }
+  -- autocompletion
+  use 'hrsh7th/nvim-compe'
 
--- tree sitter
-paq {'nvim-treesitter/nvim-treesitter'}
-paq {'neovim/nvim-lspconfig'}
+  -- tree sitter
+  use 'nvim-treesitter/nvim-treesitter'
+  use 'neovim/nvim-lspconfig'
 
--- telescope for finding things
-paq { 'nvim-lua/popup.nvim' }
-paq { 'nvim-lua/plenary.nvim' }
-paq { 'nvim-telescope/telescope.nvim' }
+  -- telescope for finding things
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-telescope/telescope.nvim'
 
--- Essential plugins
-paq { 'scrooloose/nerdTree' }
-paq { 'itchyny/lightline.vim' }
+  -- Essential plugins
+  use 'scrooloose/nerdTree'
+  use 'itchyny/lightline.vim'
 
--- Tpope things
-paq { 'tpope/vim-fugitive' }
-paq { 'tpope/vim-surround' }
-paq { 'tomtom/tcomment_vim' }
-paq { 'tpope/vim-endwise' }
+  -- Tpope things
+  use 'tpope/vim-fugitive'
+  use 'tpope/vim-surround'
+  use 'tpope/vim-endwise'
+
+  use 'preservim/nerdcommenter'
+
+  -- highlight whitesace
+  use 'ntpeters/vim-better-whitespace'
+
+  use {'prettier/vim-prettier', run = 'yarn install'}
+
+end)
+
 
 -------------------- OPTIONS -------------------------------
 cmd 'colorscheme base16-default-dark'            -- Put your favorite colorscheme here
@@ -96,9 +104,8 @@ require'compe'.setup {
   };
 }
 
--------------------- MAPPINGS ------------------------------
 
----- <Tab> to navigate the completion menu
+-------------------- MAPPINGS ------------------------------
 
 vim.g.mapleader = ","
 
@@ -106,6 +113,8 @@ map('i', '<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<Tab>"', {expr = true})
 map('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', {expr = true})
 
 map('', '<C-p>', "<cmd>Telescope find_files<cr>")
+-- map('', '<cr>', ':nohlsearch<cr>')
+
 vim.api.nvim_set_keymap('', '<leader>n', "<cmd>NERDTreeToggle<cr>", {noremap = true, silent = false})
 vim.api.nvim_set_keymap('', '<leader>w', "<cmd>wq!<cr>", {noremap = true, silent = false})
 
@@ -113,15 +122,73 @@ vim.api.nvim_set_keymap('', '<leader>w', "<cmd>wq!<cr>", {noremap = true, silent
 local ts = require 'nvim-treesitter.configs'
 ts.setup {ensure_installed = 'maintained', highlight = {enable = true}}
 
+-------------------- Prettier ------------------------------
+vim.cmd("let g:prettier#autoformat_config_present = 1")
+vim.cmd("let g:prettier#autoformat_require_pragma = 0")
+
+-------------------- Whitespace ------------------------------
+vim.cmd("let g:strip_whitespace_on_save=1")
+
+-------------------- Telescope ---------------------------
+require('telescope').setup{
+  defaults = {
+    file_sorter = require'telescope.sorters'.get_fzy_sorter
+  }
+}
+
 -------------------- LSP -----------------------------------
 local lsp = require 'lspconfig'
--- local lspfuzzy = require 'lspfuzzy'
 
 -- For ccls we use the default settings
 lsp.ccls.setup {}
 -- root_dir is where the LSP server will start: here at the project root otherwise in current folder
-lsp.pyls.setup {root_dir = lsp.util.root_pattern('.git', fn.getcwd())}
--- lspfuzzy.setup {}  -- Make the LSP client use FZF instead of the quickfix list
+--
 
+lsp.diagnosticls.setup {
+  filetypes = {"javascript", "javascriptreact", "typescript", "typescriptreact", "css"},
+  init_options = {
+    filetypes = {
+      javascript = "eslint",
+      typescript = "eslint",
+      javascriptreact = "eslint",
+      typescriptreact = "eslint"
+    },
+    linters = {
+      eslint = {
+        sourceName = "eslint",
+        command = "./node_modules/.bin/eslint",
+        rootPatterns = {
+          ".eslitrc.js",
+          "package.json"
+        },
+        debounce = 100,
+        args = {
+          "--cache",
+          "--stdin",
+          "--stdin-filename",
+          "%filepath",
+          "--format",
+          "json"
+        },
+        parseJson = {
+          errorsRoot = "[0].messages",
+          line = "line",
+          column = "column",
+          endLine = "endLine",
+          endColumn = "endColumn",
+          message = "${message} [${ruleId}]",
+          security = "severity"
+        },
+        securities = {
+          [2] = "error",
+          [1] = "warning"
+        }
+      }
+    }
+  }
+}
+
+-- Set up language-specific stuff
 require'lspconfig'.gopls.setup{}
+require'lspconfig'.tsserver.setup{}
 require'lspconfig'.solargraph.setup{}
