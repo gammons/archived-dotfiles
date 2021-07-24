@@ -116,7 +116,8 @@ map('i', '<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<Tab>"', {expr = true})
 map('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', {expr = true})
 
 map('', '<C-p>', "<cmd>Telescope find_files<cr>")
--- map('', '<cr>', ':nohlsearch<cr>')
+map('', '<cr>', ':nohlsearch<cr>')
+map('', '<C-_>', ":call NERDComment('x','toggle')<cr>")
 
 vim.api.nvim_set_keymap('', '<leader>n', "<cmd>NERDTreeToggle<cr>", {noremap = true, silent = false})
 vim.api.nvim_set_keymap('', '<leader>w', "<cmd>wq!<cr>", {noremap = true, silent = false})
