@@ -49,6 +49,9 @@ require('packer').startup(function()
 
   use {'prettier/vim-prettier', run = 'yarn install'}
 
+  -- better markdown support
+  use 'plasticboy/vim-markdown'
+
 end)
 
 
@@ -125,6 +128,9 @@ ts.setup {ensure_installed = 'maintained', highlight = {enable = true}}
 -------------------- Prettier ------------------------------
 vim.cmd("let g:prettier#autoformat_config_present = 1")
 vim.cmd("let g:prettier#autoformat_require_pragma = 0")
+
+-------------------- Markdown options ------------------------
+vim.cmd("let g:vim_markdown_folding_disabled = 1")
 
 -------------------- Whitespace ------------------------------
 vim.cmd("let g:strip_whitespace_on_save=1")
