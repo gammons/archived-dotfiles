@@ -31,13 +31,13 @@ _load_settings "$HOME/.zsh/configs"
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.secrets ]] && source ~/.secrets
 
 export ZSH="/home/grant/.oh-my-zsh"
 
-plugins=(git)
+# oh-my-zsh plugins
+plugins=(git docker sudo ruby asdf golang rake rails)
 
 source $ZSH/oh-my-zsh.sh
-# secrets
-[[ -f ~/.secrets ]] && source ~/.secrets
 
 eval "$(starship init zsh)"
