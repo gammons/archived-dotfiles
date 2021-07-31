@@ -29,6 +29,8 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
+autoload -Uz compinit && compinit
+
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f ~/.secrets ]] && source ~/.secrets
