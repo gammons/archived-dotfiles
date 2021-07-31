@@ -42,6 +42,7 @@ require('packer').startup(function()
   use 'tpope/vim-surround'
   use 'tpope/vim-endwise'
 
+  -- For commenting out code
   use 'preservim/nerdcommenter'
 
   -- highlight whitesace
@@ -94,7 +95,7 @@ require'compe'.setup {
   max_abbr_width = 100;
   max_kind_width = 100;
   max_menu_width = 100;
-  documentation = true;
+  documentation = false;
 
   source = {
     path = true;
@@ -199,3 +200,4 @@ lsp.diagnosticls.setup {
 require'lspconfig'.gopls.setup{}
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.solargraph.setup{}
+
