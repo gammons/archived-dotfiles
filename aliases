@@ -13,7 +13,17 @@ alias al='vim ~/dotfiles/aliases'
 
 alias l="exa --long --header -a -s modified"
 alias g="git status"
-alias n="cd ~/notes"
+
+###########
+# Notes
+###########
+tomorrow=$(date -d "tomorrow" +%Y-%m-%d)
+today=$(date +%Y-%m-%d)
+yesterday=$(date -d "yesterday" +%Y-%m-%d)
+
+alias tom="vim ~/notes/dailynotes/$tomorrow.md"
+alias tod="vim ~/notes/dailynotes/$today.md"
+alias yes="vim ~/notes/dailynotes/$yesterday.md"
 
 ###########
 # Git
@@ -42,7 +52,6 @@ alias tp="ultralist l group:status completed:false"
 alias tl="ultralist l due:agenda group:project"
 
 alias tod="ultralist l group:project due:tod completed:false"
-alias tom="ultralist l group:project due:tom completed:false"
 alias mon="ultralist l group:project due:mon completed:false"
 alias tue="ultralist l group:project due:tue completed:false"
 alias wed="ultralist l group:project due:wed completed:false"
