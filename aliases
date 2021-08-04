@@ -21,9 +21,25 @@ tomorrow=$(date -d "tomorrow" +%Y-%m-%d)
 today=$(date +%Y-%m-%d)
 yesterday=$(date -d "yesterday" +%Y-%m-%d)
 
+monday=$(date -d "monday" +%Y-%m-%d)
+tuesday=$(date -d "tuesday" +%Y-%m-%d)
+wednesday=$(date -d "wednesday" +%Y-%m-%d)
+thursday=$(date -d "thursday" +%Y-%m-%d)
+friday=$(date -d "friday" +%Y-%m-%d)
+saturday=$(date -d "saturday" +%Y-%m-%d)
+sunday=$(date -d "sunday" +%Y-%m-%d)
+
 alias tom="vim ~/notes/dailynotes/$tomorrow.md"
 alias tod="vim ~/notes/dailynotes/$today.md"
 alias yes="vim ~/notes/dailynotes/$yesterday.md"
+
+alias mon="vim ~/notes/dailynotes/$monday.md"
+alias tue="vim ~/notes/dailynotes/$tuesday.md"
+alias wed="vim ~/notes/dailynotes/$wednesday.md"
+alias thu="vim ~/notes/dailynotes/$thursday.md"
+alias fri="vim ~/notes/dailynotes/$friday.md"
+alias sat="vim ~/notes/dailynotes/$saturday.md"
+alias sun="vim ~/notes/dailynotes/$sunday.md"
 
 ###########
 # Git
@@ -50,14 +66,6 @@ alias tc="ultralist l due:agenda group:context"
 alias td="ultralist l due:agenda group:context status:-commpleted"
 alias tp="ultralist l group:status completed:false"
 alias tl="ultralist l due:agenda group:project"
-
-alias tod="ultralist l group:project due:tod completed:false"
-alias mon="ultralist l group:project due:mon completed:false"
-alias tue="ultralist l group:project due:tue completed:false"
-alias wed="ultralist l group:project due:wed completed:false"
-alias thu="ultralist l group:project due:thu completed:false"
-alias fri="ultralist l group:project due:fri completed:false"
-
 
 alias aw="ultralist a status:waiting"
 alias an="ultralist a status:now"
