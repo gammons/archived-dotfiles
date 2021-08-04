@@ -27,6 +27,7 @@ require('packer').startup(function()
   -- tree sitter
   use 'nvim-treesitter/nvim-treesitter'
   use 'neovim/nvim-lspconfig'
+  use 'glepnir/lspsaga.nvim'
 
   -- telescope for finding things
   use 'nvim-lua/popup.nvim'
@@ -196,8 +197,45 @@ lsp.diagnosticls.setup {
   }
 }
 
--- Set up language-specific stuff
-require'lspconfig'.gopls.setup{}
-require'lspconfig'.tsserver.setup{}
-require'lspconfig'.solargraph.setup{}
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    underline = true, -- show that there is a problem
+    virtual_text = false, -- I can't deal with virtual text
+  }
+)
 
+local on_attach = function(client, bufnr)
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  local opts = { noremap=true, silent=true }
+
+  buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  buf_set_keymap('n', '<Leader>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
+  buf_set_keymap('n', '<Leader>d', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+
+  if client.resolved_capabilities.document_formatting then
+    vim.api.nvim_command [[augroup Format]]
+    vim.api.nvim_command [[autocmd! * <buffer>]]
+    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+    vim.api.nvim_command [[augroup END]]
+  end
+end
+
+
+local nvim_lsp = require 'lspconfig'
+local servers = { "gopls", "tsserver", "solargraph" }
+for _, lsp in ipairs(servers) do
+  nvim_lsp[lsp].setup {
+    on_attach = on_attach,
+    flags = {
+      debounce_text_changes = 150,
+    }
+  }
+end
+
+-- Set up language-specific stuff
+-- require'lspconfig'.gopls.setup{}
+-- require'lspconfig'.tsserver.setup{}
+-- require'lspconfig'.solargraph.setup{}
+
+local saga = require 'lspsaga'
+saga.init_lsp_saga()
