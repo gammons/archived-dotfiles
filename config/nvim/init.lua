@@ -121,6 +121,9 @@ map('', '<C-p>', "<cmd>Telescope find_files<cr>")
 map('', '<cr>', ':nohlsearch<cr>')
 map('', '<C-_>', ":call nerdcommenter#Comment('x','toggle')<cr>")
 
+map('', '<Leader>e', ":e <C-R>=expand(\"%:p:h\") . '/'<CR>")
+map('', '<Leader>s', ":split <C-R>=expand(\"%:p:h\") . '/'<CR>")
+
 vim.api.nvim_set_keymap('', '<leader>n', "<cmd>NERDTreeToggle<cr>", {noremap = true, silent = false})
 vim.api.nvim_set_keymap('', '<leader>w', "<cmd>wq!<cr>", {noremap = true, silent = false})
 
