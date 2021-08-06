@@ -231,10 +231,5 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- Set up language-specific stuff
--- require'lspconfig'.gopls.setup{}
--- require'lspconfig'.tsserver.setup{}
--- require'lspconfig'.solargraph.setup{}
-
 local saga = require 'lspsaga'
 saga.init_lsp_saga()
