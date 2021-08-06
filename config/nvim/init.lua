@@ -119,7 +119,7 @@ map('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', {expr = true})
 
 map('', '<C-p>', "<cmd>Telescope find_files<cr>")
 map('', '<cr>', ':nohlsearch<cr>')
-map('', '<C-_>', ":call NERDComment('x','toggle')<cr>")
+map('', '<C-_>', ":call nerdcommenter#Comment('x','toggle')<cr>")
 
 vim.api.nvim_set_keymap('', '<leader>n', "<cmd>NERDTreeToggle<cr>", {noremap = true, silent = false})
 vim.api.nvim_set_keymap('', '<leader>w', "<cmd>wq!<cr>", {noremap = true, silent = false})
@@ -151,7 +151,6 @@ local lsp = require 'lspconfig'
 -- For ccls we use the default settings
 lsp.ccls.setup {}
 -- root_dir is where the LSP server will start: here at the project root otherwise in current folder
---
 
 lsp.diagnosticls.setup {
   filetypes = {"javascript", "javascriptreact", "typescript", "typescriptreact", "css"},
