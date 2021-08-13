@@ -42,6 +42,7 @@ require('packer').startup(function()
   use 'tpope/vim-fugitive'
   use 'tpope/vim-surround'
   use 'tpope/vim-endwise'
+  use 'tpope/vim-rails'
 
   -- For commenting out code
   use 'preservim/nerdcommenter'
@@ -54,6 +55,8 @@ require('packer').startup(function()
   -- better markdown support
   use 'plasticboy/vim-markdown'
 
+  -- testing made easy
+  use 'janko-m/vim-test'
 end)
 
 
@@ -125,6 +128,11 @@ map('', '<C-_>', ":call nerdcommenter#Comment('x','toggle')<cr>")
 
 map('', '<Leader>e', ":e <C-R>=expand(\"%:p:h\") . '/'<CR>")
 map('', '<Leader>s', ":split <C-R>=expand(\"%:p:h\") . '/'<CR>")
+
+-- testing
+map('', '<Leader>r', ":TestFile<CR>")
+map('', '<Leader>a', ":TestSuite<CR>")
+map('', '<Leader>t', ":TestSuite<CR>")
 
 vim.api.nvim_set_keymap('', '<leader>n', "<cmd>NERDTreeToggle<cr>", {noremap = true, silent = false})
 vim.api.nvim_set_keymap('', '<leader>w', "<cmd>wq!<cr>", {noremap = true, silent = false})
