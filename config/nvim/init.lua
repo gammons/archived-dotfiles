@@ -114,6 +114,8 @@ require'compe'.setup {
   };
 }
 
+cmd("autocmd FileType markdown call compe#setup({'enabled': v:false})")
+
 
 -------------------- MAPPINGS ------------------------------
 
