@@ -231,12 +231,14 @@ smart_gaps on
 gaps inner 15
 gaps outer 15
 
-set $mode_gaps Toggle gaps: (1)OFF (2)NORMAL (3) BIG (4) HUGE
+set $mode_gaps Toggle gaps: 1:none, 2:small, 3:medium, 4:bigger, 5:huge
 mode "$mode_gaps" {
   bindsym 1 mode "none", gaps inner all set 0, gaps outer all set 0
-  bindsym 2 mode "medium", gaps inner all set 10, gaps outer all set 10
-  bindsym 3 mode "bigger", gaps inner all set 20, gaps outer all set 20
-  bindsym 4 mode "huge", gaps inner all set 100, gaps outer all set 10
+  bindsym 2 mode "small", gaps inner all set 5, gaps outer all set 5
+  bindsym 3 mode "medium", gaps inner all set 10, gaps outer all set 10
+  bindsym 4 mode "bigger", gaps inner all set 20, gaps outer all set 20
+  bindsym 5 mode "huge", gaps inner all set 100, gaps outer all set 10
+
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
@@ -253,5 +255,5 @@ for_window [title="dropdown-terminal"] floating enable
 for_window [title="dropdown-terminal"] resize set 925 700
 for_window [title="dropdown-terminal"] move position center
 for_window [title="dropdown-terminal"] move scratchpad
-for_window [title="Meet - "] sticky enable
+# for_window [title="Meet - "] sticky enable
 exec --no-startup-id $term --title=dropdown-terminal
