@@ -52,9 +52,6 @@ require('packer').startup(function()
 
   use {'prettier/vim-prettier', run = 'yarn install'}
 
-  -- better markdown support
-  use 'plasticboy/vim-markdown'
-
   -- testing made easy
   use 'janko-m/vim-test'
 end)
