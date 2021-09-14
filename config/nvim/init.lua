@@ -113,6 +113,7 @@ require'compe'.setup {
 
 cmd("autocmd FileType markdown call compe#setup({'enabled': v:false})")
 cmd("autocmd FileType gitcommit call compe#setup({'enabled': v:false})")
+cmd("command! Wq wq")
 
 -------------------- MAPPINGS ------------------------------
 
