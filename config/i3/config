@@ -161,6 +161,7 @@ exec --no-startup-id gnome-flashback
 exec --no-startup-id copyq
 exec --no-startup-id xscreensaver
 exec --no-startup-id indicator-sound-switcher
+exec --no-startup-id xset dpms 0 20 0
 
 ############################
 # Further customization
