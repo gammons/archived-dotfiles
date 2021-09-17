@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.44 for grant on Thu Apr 22 16:45:21 2021.
+# Written by xscreensaver-demo 6.01 for grant-work on Fri Sep 17 06:13:01 2021.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	0:10:00
@@ -10,25 +10,20 @@ passwdTimeout:	0:00:30
 visualID:	default
 installColormap:    True
 verbose:	False
-timestamp:	True
 splash:		True
 splashDuration:	0:00:05
 demoCommand:	xscreensaver-demo
-prefsCommand:	xscreensaver-demo -prefs
 nice:		10
-memoryLimit:	0
 fade:		True
 unfade:		False
 fadeSeconds:	0:00:03
-fadeTicks:	20
-captureStderr:	True
 ignoreUninstalledPrograms:False
 font:		*-medium-r-*-140-*-m-*
-dpmsEnabled:	False
+dpmsEnabled:	True
 dpmsQuickOff:	False
-dpmsStandby:	2:00:00
-dpmsSuspend:	2:00:00
-dpmsOff:	4:00:00
+dpmsStandby:	0:05:00
+dpmsSuspend:	0:10:00
+dpmsOff:	0:15:00
 grabDesktopImages:  True
 grabVideoFrames:    False
 chooseRandomImages: False
@@ -42,6 +37,7 @@ textLiteral:	XScreenSaver
 textFile:	
 textProgram:	fortune
 textURL:	https://en.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss
+dialogTheme:	default
 
 programs:								      \
 				maze -root				    \n\
@@ -285,15 +281,12 @@ programs:								      \
 				scooter -root				    \n\
   GL: 				etruscanvenus -root			    \n\
   GL: 				gibson -root				    \n\
+  GL: 				beats -root				    \n\
+  GL: 				covid19 -root				    \n\
+  GL: 				headroom -root				    \n\
+  GL: 				sphereeversion -root			    \n\
 
 
-pointerPollTime:    0:00:05
 pointerHysteresis:  10
-windowCreationTimeout:0:00:30
-initialDelay:	0:00:00
-GetViewPortIsFullOfLies:False
-procInterrupts:	True
-xinputExtensionDev: False
-overlayStderr:	True
 authWarningSlack:   20
 
