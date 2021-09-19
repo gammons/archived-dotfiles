@@ -287,7 +287,7 @@ _git ()
 		emulate ksh -c _${service//-/_}
 	fi
 
-	let _ret && _default && _ret=0
+	let _ret && _ret=0
 	return _ret
 }
 
