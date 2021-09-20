@@ -162,6 +162,7 @@ exec --no-startup-id copyq
 exec --no-startup-id xscreensaver
 exec --no-startup-id indicator-sound-switcher
 exec --no-startup-id xset dpms 300 600 900
+exec --no-startup-id echo 4 > /tmp/libinput_discrete_deltay_multiplier
 
 ############################
 # Further customization
