@@ -159,7 +159,6 @@ exec --no-startup-id nm-applet
 exec --no-startup-id picom -D 0 -b -i 1
 exec --no-startup-id gnome-flashback
 exec --no-startup-id copyq
-#exec --no-startup-id xscreensaver
 exec --no-startup-id indicator-sound-switcher
 exec --no-startup-id xset dpms 300 600 0
 exec --no-startup-id xss-lock simplelock unsplash 3840x2160 chillwave
