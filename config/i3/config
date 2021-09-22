@@ -159,9 +159,10 @@ exec --no-startup-id nm-applet
 exec --no-startup-id picom -D 0 -b -i 1
 exec --no-startup-id gnome-flashback
 exec --no-startup-id copyq
-exec --no-startup-id xscreensaver
+#exec --no-startup-id xscreensaver
 exec --no-startup-id indicator-sound-switcher
-exec --no-startup-id xset dpms 300 600 900
+exec --no-startup-id xset dpms 300 600 0
+exec --no-startup-id xss-lock simplelock unsplash 3840x2160 chillwave
 exec --no-startup-id echo 4 > /tmp/libinput_discrete_deltay_multiplier
 
 ############################
@@ -208,10 +209,6 @@ bindsym $mod+F8 exec --no-startup-id ~/.bin/desktop.sh
 # Brightness
 bindsym $mod+F11 exec --no-startup-id brightnessctl set 5%-
 bindsym $mod+F12 exec --no-startup-id brightnessctl set +5%
-
-bindsym $mod+i exec --no-startup-id $ruby $HOME/.bin/openzoom 9849040235
-bindsym $mod+o exec --no-startup-id $ruby $HOME/.bin/openzoom 4283094446
-bindsym $mod+Shift+o exec --no-startup-id $HOME/.bin/killzoom
 
 ############################
 # Window behaviors
