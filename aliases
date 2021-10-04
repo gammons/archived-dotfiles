@@ -29,17 +29,17 @@ friday=$(date -d "friday" +%Y-%m-%d)
 saturday=$(date -d "saturday" +%Y-%m-%d)
 sunday=$(date -d "sunday" +%Y-%m-%d)
 
-alias tom="vim ~/notes/dailynotes/$tomorrow.md"
-alias tod="vim ~/notes/dailynotes/$today.md"
-alias yes="vim ~/notes/dailynotes/$yesterday.md"
+alias tom="vim ~/notes/dailynotes/$(gdate tomorrow).md"
+alias tod="vim ~/notes/dailynotes/$(gdate today).md"
+alias yes="vim ~/notes/dailynotes/$(gdate yesterday).md"
 
-alias mon="vim ~/notes/dailynotes/$monday.md"
-alias tue="vim ~/notes/dailynotes/$tuesday.md"
-alias wed="vim ~/notes/dailynotes/$wednesday.md"
-alias thu="vim ~/notes/dailynotes/$thursday.md"
-alias fri="vim ~/notes/dailynotes/$friday.md"
-alias sat="vim ~/notes/dailynotes/$saturday.md"
-alias sun="vim ~/notes/dailynotes/$sunday.md"
+alias mon="vim ~/notes/dailynotes/$(gdate monday).md"
+alias tue="vim ~/notes/dailynotes/$(gdate tuesday).md"
+alias wed="vim ~/notes/dailynotes/$(gdate wednesday).md"
+alias thu="vim ~/notes/dailynotes/$(gdate thursday).md"
+alias fri="vim ~/notes/dailynotes/$(gdate friday).md"
+alias sat="vim ~/notes/dailynotes/$(gdate saturday).md"
+alias sun="vim ~/notes/dailynotes/$(gdate sunday).md"
 
 ###########
 # Git
