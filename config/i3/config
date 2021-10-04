@@ -160,8 +160,8 @@ exec --no-startup-id picom -D 0 -b -i 1
 exec --no-startup-id gnome-flashback
 exec --no-startup-id copyq
 exec --no-startup-id indicator-sound-switcher
-exec --no-startup-id xset dpms 300 600 0
 exec --no-startup-id xss-lock simplelock unsplash 3840x2160 chillwave
+exec --no-startup-id xautolock -time 90 -locker "systemctl suspend" -corners "--00"
 exec --no-startup-id echo 4 > /tmp/libinput_discrete_deltay_multiplier
 
 ############################
